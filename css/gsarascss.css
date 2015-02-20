@@ -1,0 +1,99 @@
+header{
+    width: 100%;
+    margin-bottom: 2em;
+    border-bottom: 1px solid black;
+}
+            
+header a{
+    text-decoration: none;
+}
+            
+.headerImage{
+    width: 30%;
+    display: inline-block;
+}
+            
+.headerNav, .headerLogin{
+    height: 50px;
+}
+            
+.headerNav li{
+    display: inline-block;
+}
+
+.headerNav li:not(:last-child){
+    margin-right: 5em;
+}
+            
+.rightSide{
+    display: inline-block;
+    vertical-align: top;
+    width: 70%;
+}
+            
+.headerLogin{
+    text-align: right;
+}
+            
+.headerNav ul{
+    text-align: right;
+}
+
+.wrapper{
+    width: 1000px;
+    margin: 0px auto;
+}
+            
+.content{
+    height: 30em;
+}
+            
+#leftForm{
+    float: left;
+    width: 50%;
+    border-right: 1px solid #000;
+    height: 20em;
+}
+            
+#rightForm{
+    float: right;
+    width: 49%;
+    height: 20em;
+}
+    
+.inputField{
+    margin: 0px auto;
+    width: 25.5em;
+    margin-top: 1em;
+    height: 2em;
+}
+
+.inputField input{
+    width: 23em;
+}
+            
+#submitButton{
+    width: 7em;
+	height: 2em;
+	border: 0px;
+    margin: 0px auto;
+	cursor: pointer;
+}
+
+.buttonHolder{
+    margin-top: 1em;
+}
+            
+.inputBox{
+    height: 2em;
+}
+
+footer{
+    width: 100%;
+    margin-top: 2em;
+}
+            
+footer p{
+    width: 15%;
+    margin: 0px auto;
+}
