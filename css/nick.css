@@ -1,21 +1,21 @@
-.person {
+.person { /* float all pics to the left */
     float: left
 }
-.person img {
+.person img { /* position the three pics that are in a row */
     position: relative;
     width:  13em;
     height: 16em;
     padding-right: 1em;
     padding-left: 1em;
 }
-.person p {
+.person p { /* position names underneath each pic */
     position: relative;
     left: 1em;
 }
-.personBelow {
+.personBelow { /* float bottom pic left */
     float: left;
 }
-.personBelow img {
+.personBelow img { /* align bottom pic to middle top pic */
     position: relative;
     top: 19em;
     right: 30em;
@@ -24,11 +24,11 @@
     padding-right: 1em;
     padding-left: 1em;
 }
-.personBelow p {
+.personBelow p { /* align bottom pic name */
     position: relative;
     top: 19em;
     right: 29.1em;
 }
-.aboutDescription p{
+.aboutDescription p{ /* add margin to description text to not run past pics */
     margin-right: 39em;
 }
