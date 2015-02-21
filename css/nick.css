@@ -1,0 +1,34 @@
+.person {
+    float: left
+}
+.person img {
+    position: relative;
+    width:  13em;
+    height: 16em;
+    padding-right: 1em;
+    padding-left: 1em;
+}
+.person p {
+    position: relative;
+    left: 1em;
+}
+.personBelow {
+    float: left;
+}
+.personBelow img {
+    position: relative;
+    top: 19em;
+    right: 30em;
+    width:  13em;
+    height: 16em;
+    padding-right: 1em;
+    padding-left: 1em;
+}
+.personBelow p {
+    position: relative;
+    top: 19em;
+    right: 29.1em;
+}
+.aboutDescription p{
+    margin-right: 39em;
+}
