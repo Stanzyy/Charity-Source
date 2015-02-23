@@ -32,3 +32,24 @@
 .aboutDescription p{ /* add margin to description text to not run past pics */
     margin-right: 39em;
 }
+#name, #email, #subject, #message, .inputTitle {
+    display: block;
+}
+.inputField{
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+.headerImage, .who, .why, .checkUsOut {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    font-size: 4em;
+}
+#goToHomeButton{
+    font-size: 1em;
+    width: 92%
+}
+#landingLogo{
+    width: 92%
+}
