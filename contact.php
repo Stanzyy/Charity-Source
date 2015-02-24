@@ -14,18 +14,7 @@ and open the template in the editor.
     </head>
     <body>
         <div class = "wrapper">
-            <header>
-                <a href="#"><img src="#" /></a>
-                <nav>
-                    <ul>
-                        <li><a href="#">Browse</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </nav>
-                <button id="loginButton">Log in / Sign up</button>
-                <input type="search" />
-            </header>
+            <?php require_once('header.php');?>
             <div class = "contactTitle">
                 <h1> Contact Us </h1>
             </div>
@@ -36,9 +25,7 @@ and open the template in the editor.
 					<div class="inputField"><span class="inputTitle">Message: </span><textarea id="message" cols="40" rows="5"></textarea></div>
 					<div class="inputField buttonHolder"><button id="submitButton">Submit</button></div>
             </div>
-            <footer>
-                
-            </footer>
+            <?php require_once('footer.php');?>
         </div>
         <script type="text/javascript">
 			var contactJS = {
