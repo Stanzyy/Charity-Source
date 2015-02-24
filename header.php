@@ -5,7 +5,13 @@
  --><div class="rightSide">    
         <div class="headerLogin">
             <?php
-                echo "<a href='#'>Log In / Sign Up</a>";
+                if(!isset($_COOKIE['userName'])){
+                    $username = null;
+                    setcookie('userName', $username);
+                    echo "<a href='#'>Log In</a> | <a href='#'>Sign Up</a>";
+                }else{
+                    echo "<a href='#'>Hi " . $_COOKIE['userName'] . "</a> | <p id='logout'>Log Out</p>";
+                }                
             ?>
         </div>
         <nav class="headerNav">
