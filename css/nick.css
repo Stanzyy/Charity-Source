@@ -1,0 +1,55 @@
+.person { /* float all pics to the left */
+    float: left
+}
+.person img { /* position the three pics that are in a row */
+    position: relative;
+    width:  13em;
+    height: 16em;
+    padding-right: 1em;
+    padding-left: 1em;
+}
+.person p { /* position names underneath each pic */
+    position: relative;
+    left: 1em;
+}
+.personBelow { /* float bottom pic left */
+    float: left;
+}
+.personBelow img { /* align bottom pic to middle top pic */
+    position: relative;
+    top: 19em;
+    right: 30em;
+    width:  13em;
+    height: 16em;
+    padding-right: 1em;
+    padding-left: 1em;
+}
+.personBelow p { /* align bottom pic name */
+    position: relative;
+    top: 19em;
+    right: 29.1em;
+}
+.aboutDescription p{ /* add margin to description text to not run past pics */
+    margin-right: 39em;
+}
+#name, #email, #subject, #message, .inputTitle {
+    display: block;
+}
+.inputField{
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+.headerImage, .who, .why, .checkUsOut {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    font-size: 4em;
+}
+#goToHomeButton{
+    font-size: 1em;
+    width: 92%
+}
+#landingLogo{
+    width: 92%
+}

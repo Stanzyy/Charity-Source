@@ -9,6 +9,8 @@ and open the template in the editor.
         <title>Contact Charity Source</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/nick.css">
     </head>
     <body>
         <div class = "wrapper">
@@ -25,20 +27,67 @@ and open the template in the editor.
                 <input type="search" />
             </header>
             <div class = "contactTitle">
-                <h1> Title for contact page </h1>
+                <h1> Contact Us </h1>
             </div>
             <div class = "contactFormDiv">
-                <form id ="contactForm" action = "javascript:void(0)">
-                    Name: <input type="text" name="Name" id="name"><br>
-                    Email: <input type="email" name="Email" id="email"><br>
-                    Subject: <input type="text" name="Subject" id="subject"><br>
-                    Message: <textarea name="textArea" id="textArea"></textarea><br>
-                    <input type="submit" value="Submit">
-                </form>
+                <div class="inputField"><span class="inputTitle">Name: </span><input id="name" type="text"></div>
+					<div class="inputField"><span class="inputTitle">Email: </span><input id="email" type="email"></div>
+					<div class="inputField"><span class="inputTitle">Subject: </span><input id="subject" type="text"></div>
+					<div class="inputField"><span class="inputTitle">Message: </span><textarea id="message" cols="40" rows="5"></textarea></div>
+					<div class="inputField buttonHolder"><button id="submitButton">Submit</button></div>
             </div>
             <footer>
                 
             </footer>
         </div>
+        <script type="text/javascript">
+			var contactJS = {
+				init : function(){
+					$("#submitButton").unbind().click(function(){
+						contactJS.submitForm();
+                        console.log("init called")
+					});
+				},
+
+				submitForm : function(){
+                    console.log("submit form called")
+					var name = $("#name").val();
+					var email = $("#email").val();
+					var subject = $("#subject").val();
+					var message = $("#message").val();
+
+					if(name == "" || email == "" || subject == "" || message == ""){
+						contactJS.messageHandler();
+					}else{
+						$.ajax({
+							type: "GET",
+							url: "functions.php?method=submit",
+							data: {
+								name : name,
+								email : email,
+								subject : subject,
+								message : message
+							},
+							success: function(returnedData){
+								alert(returnedData);
+							},
+							error: function(returnedData){
+								alert(returnedData);
+							}
+						});
+					}
+				},
+
+				messageHandler : function(){
+					//do for each and find first blank, then shove span after input field
+				}
+			}
+
+			$(function(){
+				contactJS.init();
+                console.log("init")
+			});
+		</script>
     </body>
 </html>
+
