@@ -11,6 +11,7 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <link rel="stylesheet" type="text/css" href="css/nick.css">
+        <link rel="stylesheet" type="text/css" href="css/gsarascss.css">
     </head>
     <body>
         <div class = "wrapper">
