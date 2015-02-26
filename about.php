@@ -3,13 +3,14 @@
 	<head>
 		<meta charset='utf-8' />
         <link rel="stylesheet" type="text/css" href="css/nick.css">
-		<title>Charity Source | About</title>
+		<link rel="stylesheet" type="text/css" href="css/gsarascss.css">
+        <title>Charity Source | About</title>
 	</head>
 	<body>
 		<div class="wrapper">
-			<?php require_once('header.php');?>
 			<div class="aboutContent"> <!-- aboutContent div containing all the content on the about page -->
-				<h3>About Us</h3>
+				<?php require_once('header.php');?>
+                <h3>About Us</h3>
 				<div class="aboutDescription">
                     <!-- description about charity source as a whole -->
                     <p> Charity Source will provide a fast, efficient way for users to donate to and support their
@@ -40,13 +41,13 @@
 					<img src="images/josh.jpg" />
 					<p>Josh Blanchette</p>
 				</div>
-				<div class="personBelow">
+				<div class="person">
                     <!-- div renamed to personBelow because this one pic needs to be below all others so special css for it -->
 					<img src="images/nick.jpg" />
 					<p>Nicolas Stanzione</p>
 				</div>
 			</div>
-			<?php require_once('footer.php');?>
+            <?php require_once('footer.php');?> 
 		</div>
 	</body>
 </html>

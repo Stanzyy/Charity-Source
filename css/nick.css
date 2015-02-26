@@ -2,54 +2,34 @@
     float: left
 }
 .person img { /* position the three pics that are in a row */
-    position: relative;
-    width:  13em;
+    width:  14em;
     height: 16em;
     padding-right: 1em;
-    padding-left: 1em;
+    display: inline-block;
 }
 .person p { /* position names underneath each pic */
     position: relative;
-    left: 1em;
 }
-.personBelow { /* float bottom pic left */
-    float: left;
-}
-.personBelow img { /* align bottom pic to middle top pic */
+/*****************************About above Contact below**************************************************************/
+#submitButton { /*drop the submit button a little more below the text area */
     position: relative;
-    top: 19em;
-    right: 30em;
-    width:  13em;
-    height: 16em;
-    padding-right: 1em;
-    padding-left: 1em;
+    top: 4.5em;
 }
-.personBelow p { /* align bottom pic name */
-    position: relative;
-    top: 19em;
-    right: 29.1em;
-}
-.aboutDescription p{ /* add margin to description text to not run past pics */
-    margin-right: 39em;
-}
-#name, #email, #subject, #message, .inputTitle {
+
+#name, #email, #subject, #message, .inputTitle { /* display the input fields in a block style */
     display: block;
 }
-.inputField{
-    margin-left: auto;
-    margin-right: auto;
-    width: 70%;
-}
-.headerImage, .who, .why, .checkUsOut {
+/*****************************Contact above Landing below ***************************************************/
+.headerImage, .who, .why, .checkUsOut { /* center everything and increase font size */
     margin-left: auto;
     margin-right: auto;
     width: 70%;
     font-size: 4em;
 }
-#goToHomeButton{
+#goToHomeButton{ /* increase size of home button */
     font-size: 1em;
     width: 92%
 }
-#landingLogo{
+#landingLogo{ /* alter width of logo */
     width: 92%
 }

@@ -13,21 +13,19 @@ and open the template in the editor.
     </head>
     <body>
         <div class ="wrapper">
-            <?php require_once('header.php');?>
             <div class ="headerImage">
                 <!-- Insert some nice charity image like a big version on the logo -->
                 <img src="images/fakeLogo.png" alt="Charity Source Logo" id ="landingLogo">
             </div>
-            <div class="who">
+            <div class="who"> <!-- paragraph about who we are -->
                 <p> This is a paragraph about who we are </p>
             </div>
-            <div class ="why">
+            <div class ="why"> <!-- paragraph about why you should use our site -->
                 <p> this is a paragraph about why you should donate using our site </p>
             </div>
-            <div class ="checkUsOut">
+            <div class ="checkUsOut"> <!-- button that brings user to home page -->
                 <form><input type="button" value="Check us out" id="goToHomeButton" onClick="window.location.href='home.html'"></form>
             </div>
         </div>
-        <?php require_once('footer.php');?>
     </body>
 </html>
