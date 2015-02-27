@@ -94,9 +94,7 @@
     
 	<body> 
 		<div class="wrapper">
-			<header>
-                <?php require_once('header.php');?>
-			</header>
+            <?php require_once('header.php');?>
 			<div class="browseContent">
 				<div class="filters">
 					<p>Search for a Charity Here:<input ng-model="search1" type="text"></p>
@@ -136,7 +134,7 @@
 					<button id="moreResults">More -></button>
 				</div>
 			</div>
-			<footer><?php require_once('footer.php');?></footer>
+			<?php require_once('footer.php');?>
 		</div>
 	</body>
 </html>

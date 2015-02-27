@@ -5,20 +5,17 @@
 		<title>Charity Source | Home</title>
         <link rel="stylesheet" type="text/css" href="css/gsarascss.css">
         <link rel="stylesheet" type= "text/css" href="css/josh.css">
-        <script type="text/javascript" src="/assets/script/canvasjs.min.js"></script> 
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.4.1/canvas.min.js"></script> 
 	</head>
 	<body>
 		<div class="wrapper">
-			<header>
-                <?php require_once('header.php');?>
-			</header>
+            <?php require_once('header.php');?>
 			<div class="homePageContent">
 				<h3>Top Charities</h3>
-				<div class="charityContainer"><a href="#"><img src= "images/charity1.png"> Link to charity</a></div>
-				<div class="charityContainer"><a href="#"><img src= "images/charity2.png"> Link to charity</a></div>
-				<div class="charityContainer"><a href="#"><img src = "images/charity3.png"> Link to charity</a></div>
+				<div class="charityContainer"><a href="#"><img src= "images/charity1.png" style="height: 75px; width: 75px;"> Link to charity</a></div>
+				<div class="charityContainer"><a href="#"><img src= "images/charity2.png" style="height: 75px; width: 75px;"> Link to charity</a></div>
+				<div class="charityContainer"><a href="#"><img src= "images/charity3.png" style="height: 75px; width: 75px;"> Link to charity</a></div>
 				<div class="infographics"></div>
-                    <!--http://canvasjs.com/html5-javascript-pie-chart/-->
                     <script type="text/javascript">
                         window.onload = function () 
                         {
@@ -66,9 +63,9 @@
 					<div class="slides"></div>
                         
 					<button>Help them out!</button>
-				</div>  
+				</div>
 			</div>
-			<footer></footer>
+			<?php require_once('footer.php');?>
 		</div>
 	</body>
 </html>
