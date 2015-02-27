@@ -1,24 +1,42 @@
-<?php    
+<?php
     header('Access-Control-Allow-Origin: *');
 	$function = $_GET['action'];
     $function();
 
     function signUserIn(){
         $userName = $_GET['userName'];
-        $passWord = $_GET['pword'];
-        echo "signed In"; 
+        $password = $_GET['pword'];
+        $link = mysqli_connect("127.0.0.1","root","","gsarastestdb") or die("Error " . mysqli_error($link));
+        $query = "SELECT * FROM `users` WHERE `email` = '".$userName."' AND `password = '".password."'";
+        $result = mysqli_query($link, $query);
+        while($row = mysqli_fetch_array($result)) { 
+            $UNAME = $row["first"]; 
+        } 
+        session_start();
+        $_SESSION["loggedIn"] = true;
+        $_SESSION["userName"] = $UNAME;
+        echo $UNAME;
     }
 
     function signUserUp(){
         $userName = $_GET['userName'];
+        $firstName = $_GET['firstName'];
+        $lastName = $_GET['lastName'];
         $password = $_GET['pword'];
         $passwordCheck = $_GET['pwordCheck'];
-        echo "Signed Up";
+        $link = mysqli_connect("127.0.0.1","root","","gsarastestdb") or die("Error " . mysqli_error($link));
+        $query = "INSERT INTO `gsarastestdb`.`users` (`email`, `first`, `last`, `password`) VALUES ('".$userName."', '".$firstName."', '".$lastName."', '".$password."')";
+        $result = mysqli_query($link, $query);
+        session_start();
+        $_SESSION["loggedIn"] = true;
+        $_SESSION["userName"] = $firstName;
+        echo "Suceeess";
     }
 
     function signOut(){
-        $username = null;
-        setcookie('userName', $username);
+        session_start();
+        $_SESSION["loggedIn"] = false;
+        $_SESSION["userName"] = null;
     }
 
 	function submit(){

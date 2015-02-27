@@ -18,12 +18,15 @@
                 </div><!--
              --><div id="rightForm">                    
                     <h3>Sign Up</h3>
+                    <div class="inputField"><input class="inputBox" id="firstName" type="test" placeholder="First Name"></div>
+                    <div class="inputField"><input class="inputBox" id="lastName" type="text" placeholder="Last Name"></div>
                     <div class="inputField"><input class="inputBox" id="newUser" type="email" placeholder="Email"></div>
                     <div class="inputField"><input class="inputBox" id="newPassword" type="password" placeholder="Password"></div>
-                    <div class="inputField"><input class="inputBox" id="newPasswordCheck" type="password" placeholder="Confirm Password"></div>                       <div class="inputField buttonHolder"><button class="submitButton" id="signUpButton" type="submit">Submit</button></div>
+                    <div class="inputField"><input class="inputBox" id="newPasswordCheck" type="password" placeholder="Confirm Password"></div>
+                    <div class="inputField buttonHolder"><button class="submitButton" id="signUpButton" type="submit">Submit</button></div>
                 </div>                
             </div>
-            <?php require_once('footer.php');?>            
+            <?php require_once('footer.php');?>
         </div>
         <!--This is a no JS modal popup box from http://www.webdesignerdepot.com/2012/10/creating-a-modal-window-with-html5-and-css3/ -->
         <a href="#openModal" id="popup"></a>
@@ -73,7 +76,8 @@
 							pword: pword
 				        },
 						success: function(returnedData){
-				            alert(returnedData);
+                            alert(returnedData);
+                            location.reload();
 				        },
 						error: function(returnedData){
 				            alert("There was an error with your request, please try again.");
@@ -84,6 +88,8 @@
                 signup: function(){
                     //sign up user
                     var userName = $("#newUser").val();
+                    var firstName = $("#firstName").val();
+                    var lastName = $("#lastName").val();
                     var pword = $("#newPassword").val();
                     var pwordCheck = $("#newPasswordCheck").val();
                     
@@ -93,11 +99,13 @@
 						data: {
                             action: "signUserUp",
 						    userName: userName,
+                            firstName: firstName,
+                            lastName: lastName,
 						    pword: pword,
 				            pwordCheck: pwordCheck
 				        },
 						success: function(returnedData){
-				            alert(returnedData);
+                            alert(returnedData);
                             $("#popup")[0].click();
 						},
 						error: function(returnedData){
@@ -108,13 +116,13 @@
                 
                 signOut: function(){
                     $.ajax({
-                        type: "POST",
+                        type: "GET",
                         url: "functions.php",
                         data: {
                             action: "signOut"
                         },
                         success: function(returnedData){
-                            alert("Logged Out");
+                            alert(returnedData);
                             location.reload();
                         },
                         error: function(returnedData){

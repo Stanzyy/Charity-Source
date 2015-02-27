@@ -8,7 +8,12 @@ header{
 header a{
     text-decoration: none;
 }
-            
+
+header p{
+    display: inline-block;
+    cursor: pointer;
+}
+
 .headerImage{
     width: 30%;
     display: inline-block;
@@ -52,15 +57,15 @@ header a{
             
 #leftForm{
     float: left;
-    width: 50%;
+    width: 49%;
     border-right: 1px solid #000;
-    height: 20em;
+    height: 21em;
 }
             
 #rightForm{
     float: right;
-    width: 49%;
-    height: 20em;
+    width: 50%;
+    height: 21em;
 }
     
 .inputField{
