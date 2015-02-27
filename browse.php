@@ -71,7 +71,7 @@
                     break ; 
                     
                     case 2 : 
-                    echo "<li>Charity Name= " . $row['CharityName']"</li>" ; 
+                    echo "<li>{$row['CharityName']}</li>" ; 
                     break ;
                     
                     case 3 : 

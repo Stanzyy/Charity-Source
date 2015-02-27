@@ -66,7 +66,7 @@
 					<div class="slides"></div>
                         
 					<button>Help them out!</button>
-				</div>
+				</div>  
 			</div>
 			<footer></footer>
 		</div>
