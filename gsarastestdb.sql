@@ -50,27 +50,19 @@ INSERT INTO `charities` (`charityNum`, `CharityName`, `PrivateSupport`, `TotalRe
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Table structure for table `Login`
 --
 
-CREATE TABLE IF NOT EXISTS `users` (
-  `idNO` int(11) NOT NULL AUTO_INCREMENT,
-  `email` varchar(50) NOT NULL,
-  `first` varchar(50) NOT NULL,
-  `last` varchar(50) NOT NULL,
-  `password` varchar(50) NOT NULL,
-  PRIMARY KEY (`idNO`),
-  UNIQUE KEY `idNO` (`idNO`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+CREATE TABLE IF NOT EXISTS `Login` (
+  `loginNum` mediumint(9) NOT NULL AUTO_INCREMENT,
+  `Email` text NOT NULL,
+  `Password` text NOT NULL,
+  `FirstName` text NOT NULL,
+  `LastName` text NOT NULL,
+  PRIMARY KEY (`loginNum`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 --
--- Dumping data for table `users`
+-- Dumping data for table `Login`
 --
 
-INSERT INTO `users` (`idNO`, `email`, `first`, `last`, `password`) VALUES
-(1, 'GregorySaras@gmail.com', 'Greg', 'Saras', 'bacon'),
-(2, 'ngstanzione@gmail.com', 'Nicolas', 'Stanzione', 'tacos');
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
