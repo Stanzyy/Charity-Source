@@ -42,8 +42,8 @@
 		        <h2>Thank you for signing up</h2>
 		        <p>Your profile is now ready for use.</p>
                 <p>Continue to profile?</p>
-		        <a href="index.html">No Thanks</a>
-                <a href="#">Sure!</a>
+		        <a href="index.php">No Thanks</a>
+                <a href="userPage.php">Sure!</a>
 	        </div>
         </div>
         <!--Script includes-->

@@ -7,10 +7,10 @@
         $userName = $_GET['userName'];
         $password = $_GET['pword'];
         $link = mysqli_connect("127.0.0.1","root","","gsarastestdb") or die("Error " . mysqli_error($link));
-        $query = "SELECT * FROM `users` WHERE `email` = '".$userName."' AND `password = '".password."'";
+        $query = "SELECT * FROM `login` WHERE `Email` = '".$userName."' AND `Password` = '".$password."'";
         $result = mysqli_query($link, $query);
         while($row = mysqli_fetch_array($result)) { 
-            $UNAME = $row["first"]; 
+            $UNAME = $row["FirstName"]; 
         } 
         session_start();
         $_SESSION["loggedIn"] = true;
@@ -25,7 +25,7 @@
         $password = $_GET['pword'];
         $passwordCheck = $_GET['pwordCheck'];
         $link = mysqli_connect("127.0.0.1","root","","gsarastestdb") or die("Error " . mysqli_error($link));
-        $query = "INSERT INTO `gsarastestdb`.`users` (`email`, `first`, `last`, `password`) VALUES ('".$userName."', '".$firstName."', '".$lastName."', '".$password."')";
+        $query = "INSERT INTO `gsarastestdb`.`login` (`Email`, `Password`, `FirstName`, `LastName`) VALUES ('".$userName."', '".$password."', '".$firstName."', '".$lastName."')";
         $result = mysqli_query($link, $query);
         session_start();
         $_SESSION["loggedIn"] = true;
