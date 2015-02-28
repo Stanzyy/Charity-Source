@@ -55,6 +55,7 @@ header p{
     height: 30em;
 }
 
+/*Form headings*/
 .formHead h3{
     width: 4em;
     display: inline-block;
@@ -63,11 +64,13 @@ header p{
 .formHead p{
     display: inline-block;
 }
-            
+
+/*Will display error messages if a login or signup failed*/
 #signinErrorContainer, #signupErrorConatiner{
     visibility: hidden;
 }
-            
+
+/*signin/signup forms*/
 #leftForm{
     float: left;
     width: 49%;
@@ -80,7 +83,8 @@ header p{
     width: 50%;
     height: 21em;
 }
-    
+
+/*Input Styling for signup/signin*/
 .inputField{
     margin: 0px auto;
     width: 25.5em;
@@ -91,7 +95,8 @@ header p{
 .inputField input{
     width: 23em;
 }
-            
+
+/*Button styling*/
 .submitButton{
     width: 7em;
 	height: 2em;
