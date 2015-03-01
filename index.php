@@ -4,7 +4,7 @@
 		<meta charset='utf-8' />
 		<title>Charity Source | Home</title>
         <link rel="stylesheet" type="text/css" href="css/gsarascss.css">
-        <link rel="stylesheet" type="text/css" href="css/josh.css">
+        <link rel="stylesheet" type="text/css" href="css/joshindex.css">
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.4.1/canvas.min.js"></script> 
 	</head>
 	<body>
