@@ -4,7 +4,7 @@
 		<meta charset='utf-8' />
 		<title>Charity Source | Home</title>
         <link rel="stylesheet" type="text/css" href="css/gsarascss.css">
-        <link rel="stylesheet" type= "text/css" href="css/josh.css">
+        <link rel="stylesheet" type="text/css" href="css/josh.css">
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.4.1/canvas.min.js"></script> 
 	</head>
 	<body>
@@ -12,10 +12,22 @@
             <?php require_once('header.php');?>
 			<div class="homePageContent">
 				<h3>Top Charities</h3>
-				<div class="charityContainer"><a href="#"><img src= "images/charity1.png" style="height: 75px; width: 75px;"> Link to charity</a></div>
-				<div class="charityContainer"><a href="#"><img src= "images/charity2.png" style="height: 75px; width: 75px;"> Link to charity</a></div>
-				<div class="charityContainer"><a href="#"><img src= "images/charity3.png" style="height: 75px; width: 75px;"> Link to charity</a></div>
-				<div class="infographics"></div>
+                <div class="images">
+				    <div class="charity1">
+                        <a href="#"><img src= "images/charity1.png" style="height: 100px; width: 100px;"> Link to charity</a>
+                    </div>
+                
+				    <div class="charity2">
+                        <a href="#"><img src= "images/charity2.png" style="height: 100px; width: 100px;"> Link to charity</a>
+                    </div>
+                
+				    <div class="charity3">
+                        <a href="#"><img src= "images/charity3.png" style="height: 100px; width: 100px;"> Link to charity</a>
+                    </div>
+                </div>
+				<div class="infographics">
+                    <p>These are the graphs for charity X</p>
+                    
                     <script type="text/javascript">
                         window.onload = function () 
                         {
@@ -59,10 +71,15 @@
 	                   chart.render();
                     }
                 </script>
+                
+                </div>
 				<div class="charityGoals">
-					<div class="slides"></div>
-                        
-					<button>Help them out!</button>
+					<div class="slides">
+                        <p>These are the goals for X charity</p>
+                    </div>
+                    <div class="button">    
+					   <button>Donate Here!</button>
+                    </div>    
 				</div>
 			</div>
 			<?php require_once('footer.php');?>

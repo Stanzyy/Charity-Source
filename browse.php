@@ -4,9 +4,9 @@
 		<meta charset='utf-8' />
 		<title>Charity Source | Browse</title>
         <link rel="stylesheet" type="text/css" href="css/gsarascss.css">
-        <link rel="stylesheet" type= "text/css" href="css/josh.css">
+        <!--<link rel="stylesheet" type= "text/css" href="css/josh.css">-->
 	</head>
-    <?php       
+    <!--
         #username and password in a var#
         ################################
         $username = "gsaras";
@@ -88,7 +88,7 @@
                 }
             }
             echo "</ol>";
-    ?>
+    -->
 
     
     
