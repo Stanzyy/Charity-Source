@@ -14,15 +14,15 @@
 				<h3>Top Charities</h3>
                 <div class="images">
 				    <div class="charity1">
-                        <a href="#"><img src= "images/charity1.png" style="height: 100px; width: 100px;"> Link to charity</a>
+                        <a href="charity.php"><img src= "images/charity1.png" style="height: 100px; width: 100px;"> Link to charity</a>
                     </div>
                 
 				    <div class="charity2">
-                        <a href="#"><img src= "images/charity2.png" style="height: 100px; width: 100px;"> Link to charity</a>
+                        <a href="charity.php"><img src= "images/charity2.png" style="height: 100px; width: 100px;"> Link to charity</a>
                     </div>
                 
 				    <div class="charity3">
-                        <a href="#"><img src= "images/charity3.png" style="height: 100px; width: 100px;"> Link to charity</a>
+                        <a href="charity.php"><img src= "images/charity3.png" style="height: 100px; width: 100px;"> Link to charity</a>
                     </div>
                 </div>
 				<div class="infographics">
