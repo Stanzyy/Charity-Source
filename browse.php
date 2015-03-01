@@ -100,34 +100,34 @@
 					<p>Search for a Charity Here:<input ng-model="search1" type="text"></p>
 					<h3>Available Charities</h3>
 					<ul>
-						<li>Filter 1</li>
-						<li>Filter 2</li>
-						<li>Filter 3</li>
-						<li>Filter 4</li>
+						<li>Filter for Blood</li>
+						<li>Filter for Cancer>
+						<li>Filter for Clothes</li>
+                        <li>Filter for All</li>
 					</ul>
 				</div>
 				<div class="resultList">
 					<div class="result">
-						<a href="#"><img src="images/charity1.png" style="height: 75px; width: 75px;" /></a>
-						<p class="charityDescription"></p>
+						<a href="#"><img src="images/AmericanCancerSociety.png" style="height: 75px; width: 75px;" /></a>
+						<p class="charityDescription1"></p>
                             <p> This is the charity information for charity 1</p>
 						<a href="#">Go!</a>
 					</div>
 					<div class="result">
-						<a href="#"><img src="images/charity2.png" style="height:75px; width:75px;" /></a>
-						<p class="charityDescription"></p>
+						<a href="#"><img src="images/AmericanRedCross.jpg" style="height:75px; width:75px;" /></a>
+						<p class="charityDescription2"></p>
                             <p>This is the charity information for charity 2</p>
 						<a href="#">Go!</a>
 					</div>
 					<div class="result">
-						<a href="#"><img src="images/charity3.png" style="height:75px; width:75px;" /></a>
-						<p class="charityDescription"></p>
+						<a href="#"><img src="images/SalvationArmy.png" style="height:75px; width:75px;" /></a>
+						<p class="charityDescription3"></p>
                             <p> This is the charity information for charity 3</p>
 						<a href="#">Go!</a>
 					</div>
                     <div class="result">
-						<a href="#"><img src="images/charity4.png" style="height:75px; width:75px;" /></a>
-						<p class="charityDescription"></p>
+						<a href="#"><img src="images/UnitedWay.png" style="height:75px; width:75px;" /></a>
+						<p class="charityDescription4"></p>
                             <p> This is the charity information for charity 4</p>
 						<a href="#">Go!</a>
                     </div>
