@@ -98,43 +98,129 @@
 			<div class="browseContent">
 				<div class="filters">
 					<p>Search for a Charity Here:<input ng-model="search1" type="text"></p>
+                    <select class="sort-options">
+                        <option value="">Default</option>
+                        <option value="title">Name</option>
+                        <option value="popularity">Most Popular</option>
+                    </select>
 					<h3>Available Charities</h3>
-					<ul>
-						<li>Filter for Blood</li>
-						<li>Filter for Cancer>
-						<li>Filter for Clothes</li>
-                        <li>Filter for All</li>
-					</ul>
+					
+						<button id="blood">Filter for Blood</button>
+                        <button id="cancer">Filter for Cancer</button>
+						<button id="clothes">Filter for Clothes</button>
+                        <button id="all">Filter for All</button>
+					
 				</div>
 				<div class="resultList">
-					<div class="result">
+					<div class="result cancer" data-name="CancerSociety" data-popularity="3">
 						<a href="#"><img src="images/AmericanCancerSociety.png" style="height: 75px; width: 75px;" /></a>
 						<p class="charityDescription1"></p>
                             <p> This is the charity information for charity 1</p>
 						<a href="#">Go!</a>
 					</div>
-					<div class="result">
+					<div class="result blood" data-name="RedCross" data-popularity="5">
 						<a href="#"><img src="images/AmericanRedCross.jpg" style="height:75px; width:75px;" /></a>
 						<p class="charityDescription2"></p>
                             <p>This is the charity information for charity 2</p>
 						<a href="#">Go!</a>
 					</div>
-					<div class="result">
+					<div class="result clothes" data-name="SalvationArmy" data-popularity="1">
 						<a href="#"><img src="images/SalvationArmy.png" style="height:75px; width:75px;" /></a>
 						<p class="charityDescription3"></p>
                             <p> This is the charity information for charity 3</p>
 						<a href="#">Go!</a>
 					</div>
-                    <div class="result">
+                    <div class="result" data-name="UnitedWay" data-popularity="2">
 						<a href="#"><img src="images/UnitedWay.png" style="height:75px; width:75px;" /></a>
 						<p class="charityDescription4"></p>
                             <p> This is the charity information for charity 4</p>
 						<a href="#">Go!</a>
                     </div>
-					<button id="moreResults">More -></button>
+					<!--<button id="moreResults">More -></button> -->
 				</div>
 			</div>
 			<?php require_once('footer.php');?>
 		</div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="javascripts/modernizr.js"></script>
+        <script src="javascripts/jquery.shuffle.js"></script>
+        <script>
+            var galleryJS = 
+            {
+                Init : function()
+                {
+                    galleryJS.SetGrid();
+                    galleryJS.SetFilter();
+                    galleryJS.SetSort();
+                }, //end of init : function()
+                
+                SetGrid : function(){
+                    var $grid = $('.resultList'),
+                        $sizer = $grid.find('.shuffle__sizer');
+                    
+                    $grid.shuffle({
+                        itemSelector: '.result'
+                    });
+                },
+                
+                SetFilter: function(){
+                    $('#all').unbind().click(function(){
+                        $('.resultList').shuffle('shuffle', function($el, shuffle){
+                            return $el;
+                        });
+                    });
+                    
+                    $('#blood').unbind().click(function(){
+                        $('.resultList').shuffle('shuffle', function($el, shuffle){
+                            return $el.hasClass('blood');                      
+                        });
+                    });
+                    
+                    $('#cancer').unbind().click(function(){
+                        $('.resultList').shuffle('shuffle', function($el, shuffle){
+                            return $el.hasClass('cancer');                      
+                        });
+                    });
+                
+                    $('#clothes').unbind().click(function(){
+                        $('.resultList').shuffle('shuffle', function($el, shuffle){
+                            return $el.hasClass('clothes');                      
+                        });
+                    });
+                }, //end of setFilter function
+                
+                SetSort : function(){
+                    $('.sort-options').on('change', function() {
+                        var sort = this.value,
+                            opts = {};
+                        if(sort === 'title'){
+                            opts = {
+                                by: function($el){
+                                    return $el.data('name')
+                                } //end of by: function
+
+                            };//end of opts
+                        } else if(sort === 'popularity'){
+                            opts = {
+                                by: function($el){
+                                    return $el.data('popularity')
+                                }
+                            
+                            };
+                        
+                        }
+                     $('.resultList').shuffle('sort', opts);
+
+                    });
+                } //end of setsort function
+            }//end of var galleryJS
+                
+            $(function(){
+                
+                galleryJS.Init();
+                
+            }) //end of function() function
+            
+        </script>
 	</body>
 </html>
