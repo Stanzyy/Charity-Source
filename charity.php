@@ -4,7 +4,7 @@
     $query = "SELECT * FROM `charities` WHERE `QueryName` ='" . $CharityQueryName."'";
     $result = mysqli_query($link, $query);
     while($row = mysqli_fetch_array($result))
-    {
+    {   //variable names for information in charitydb
         $charityName =$row["CharityName"];
         $privateSupport =$row["PrivateSupport"];
         $totalRevenue =$row["TotalRevenue"];
