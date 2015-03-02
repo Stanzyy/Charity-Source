@@ -34,6 +34,8 @@ CREATE TABLE IF NOT EXISTS `charities` (
   `FundraisingEfficiency` int(11) NOT NULL,
   `CharitableCommitment` int(11) NOT NULL,
   `DonorDependency` int(11) NOT NULL,
+  `Description` text NOT NULL,
+  `Image` text NOT NULL,
   PRIMARY KEY (`charityNum`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
