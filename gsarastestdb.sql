@@ -41,11 +41,11 @@ CREATE TABLE IF NOT EXISTS `charities` (
 -- Dumping data for table `charities`
 --
 
-INSERT INTO `charities` (`charityNum`, `CharityName`, `PrivateSupport`, `TotalRevenue`, `FundraisingEfficiency`, `CharitableCommitment`, `DonorDependency`) VALUES
-(1, 'Charity 1', 6500420, 10000000, 90, 50, 100),
-(2, 'Charity 2', 4000000, 5000000, 10, 5, 0),
-(3, 'Charity 3', 250000, 1000000, 75, 50, 90),
-(4, 'Charity 4', 750000, 2000000, 90, 20, 86);
+INSERT INTO `charities` (`charityNum`, `CharityName`, `PrivateSupport`, `TotalRevenue`, `FundraisingEfficiency`, `CharitableCommitment`, `DonorDependency`,`Description`, `Image`) VALUES
+(1, 'American Red Cross', 1079, 3504, 82, 90, 86, "The American Red Cross exists to provide compassionate care to those in need. Our network of generous donors, volunteers and employees share a mission of preventing and relieving suffering, here at home and around the world, through five key service areas: Disaster Relief, Supporting Anerica's Military Family, Lifesaving Blood, Health and Safety Services, and International Services.", 'AmericanRedCross.jpg'),
+(2, 'American Cancer Society', 871, 935, 77, 73, 100, "For over 100 years, the American Cancer Society (ACS) has worked relentlessly to save lives and create a world with less cancer. Together with millions of our supporters worldwide, we help people stay well and get well, find cures, and fight back against cancer.", 'AmericanCancerSociety.png'),
+(3, 'Salvation Army', 2880, 4316, 90, 82, 56,"The Salvation Army is serving more people in the United States than ever before. We are already seeing large increases in the number of Americans seeking the basic necessities of life - food, shelter, and warmth. Approximately 30 million people received help from the Salvation Army last year.", 'SalvationArmy.png'),
+(4, 'United Way', 3870, 4266, 91, 86, 100,"There are thousands of nonprofits and foundations working to target the problems that affect our region. United Way was built on the idea that if we are to make meaningful, lasting change, we have to make it easier for these efforts to come together. To make the greatest impact possible, United Way aligns a network of more than 200 independent health and human service agencies under the same set of community goals.",'UnitedWay.png');
 
 -- --------------------------------------------------------
 
