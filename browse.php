@@ -97,7 +97,7 @@
             <?php require_once('header.php');?>
 			<div class="browseContent">
 				<div class="filters">
-					<p>Search for a Charity Here:<input ng-model="search1" type="text"></p>
+					<p>Search for a Charity Here:<input type="text" id='resultSearch'></p>
                     <select class="sort-options">
                         <option value="">Default</option>
                         <option value="title">Name</option>
@@ -114,27 +114,31 @@
 				<div class="resultList">
 					<div class="result cancer" data-name="CancerSociety" data-popularity="3">
 						<a href="#"><img src="images/AmericanCancerSociety.png" style="height: 75px; width: 75px;" /></a>
-						<p class="charityDescription1"></p>
+						<h3 class = "charityHead">American Cancer Society</h3>
+                        <p class="charityDescription1"></p>
                             <p> This is the charity information for charity 1</p>
-						<a href="#">Go!</a>
+						<a href="charity.php">Go!</a>
 					</div>
 					<div class="result blood" data-name="RedCross" data-popularity="5">
 						<a href="#"><img src="images/AmericanRedCross.jpg" style="height:75px; width:75px;" /></a>
+                        <h3 class = "charityHead">American Red Cross</h3>
 						<p class="charityDescription2"></p>
                             <p>This is the charity information for charity 2</p>
-						<a href="#">Go!</a>
+						<a href="charity.php">Go!</a>
 					</div>
 					<div class="result clothes" data-name="SalvationArmy" data-popularity="1">
 						<a href="#"><img src="images/SalvationArmy.png" style="height:75px; width:75px;" /></a>
+                        <h3 class = "charityHead">Salvation Army</h3>
 						<p class="charityDescription3"></p>
                             <p> This is the charity information for charity 3</p>
-						<a href="#">Go!</a>
+						<a href="charity.php">Go!</a>
 					</div>
                     <div class="result" data-name="UnitedWay" data-popularity="2">
 						<a href="#"><img src="images/UnitedWay.png" style="height:75px; width:75px;" /></a>
+                        <h3 class = "charityHead">United Way</h3>
 						<p class="charityDescription4"></p>
                             <p> This is the charity information for charity 4</p>
-						<a href="#">Go!</a>
+						<a href="charity.php">Go!</a>
                     </div>
 					<!--<button id="moreResults">More -></button> -->
 				</div>
@@ -152,6 +156,7 @@
                     galleryJS.SetGrid();
                     galleryJS.SetFilter();
                     galleryJS.SetSort();
+                    galleryJS.SetSearch();
                 }, //end of init : function()
                 
                 SetGrid : function(){
@@ -212,7 +217,21 @@
                      $('.resultList').shuffle('sort', opts);
 
                     });
-                } //end of setsort function
+                }, //end of setsort function
+                
+                SetSearch : function(){
+                    $('#resultSearch').on('keyup change', function(){
+                        var val = this.value.toLowerCase();
+                        $('.resultList').shuffle('shuffle', function($el, shuffle){
+                            if(shuffle.group !== 'all' && $.inArray(shuffle.group, $el.data('group')) === -1){
+                                return false;
+                            } //end of if
+                            var text = $.trim($el.find('.charityHead').text() ).toLowerCase();
+                            return text.indexOf(val) !== -1;
+                        });
+                    });
+            
+                }//end of set search
             }//end of var galleryJS
                 
             $(function(){
