@@ -14,15 +14,15 @@
 				<h3>Top Charities</h3>
                 <div class="images">
 				    <div class="charity1">
-                        <a href="charity.php"><img src= "images/AmericanRedCross.jpg" style="height: 100px; width: 100px;"> Link to charity</a>
+                        <a href="charity.php?charity=AmericanRedCross"><img src= "images/AmericanRedCross.jpg" style="height: 100px; width: 100px;"> Link to charity</a>
                     </div>
                 
 				    <div class="charity2">
-                        <a href="charity.php"><img src= "images/AmericanCancerSociety.png" style="height: 100px; width: 100px;"> Link to charity</a>
+                        <a href="charity.php?charity=AmericanCancerSociety"><img src= "images/AmericanCancerSociety.png" style="height: 100px; width: 100px;"> Link to charity</a>
                     </div>
                 
 				    <div class="charity3">
-                        <a href="charity.php"><img src= "images/SalvationArmy.png" style="height: 100px; width: 100px;"> Link to charity</a>
+                        <a href="charity.php?charity=SalvationArmy"><img src= "images/SalvationArmy.png" style="height: 100px; width: 100px;"> Link to charity</a>
                     </div>
                 </div>
 				<div class="infographics">

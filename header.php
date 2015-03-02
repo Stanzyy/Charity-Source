@@ -17,7 +17,7 @@
         </div>
         <nav class="headerNav">
             <ul>
-                <li><a href="#">Browse</a></li>
+                <li><a href="browse.php">Browse</a></li>
                 <li><a href="about.php">About</a></li>
                 <li><a href="contact.php">Contact</a></li>
                 <li><input class="inputBox" type="search" placeholder="Search..." /></li>
