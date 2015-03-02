@@ -1,3 +1,21 @@
+<?php
+    $link = mysqli_connect("127.0.0.1","root","","gsarastestdb")or die("Error" . mysqli_error($link));
+    $CharityQueryName = $_GET['charity'];
+    $query = "SELECT * FROM `charities` WHERE `QueryName` ='" . $CharityQueryName."'";
+    $result = mysqli_query($link, $query);
+    while($row = mysqli_fetch_array($result))
+    {
+        $charityName =$row["CharityName"];
+        $privateSupport =$row["PrivateSupport"];
+        $totalRevenue =$row["TotalRevenue"];
+        $fundraisingEfficiency =$row["FundraisingEfficiency"];
+        $charitableCommitment =$row["CharitableCommitment"];
+        $donorDependency =$row["DonorDependency"];
+        $description =$row["Description"];
+        $image =$row["Image"];
+    }
+?>
+
 <!Doctype html>
 <html lang='en'>
     <head>
@@ -6,23 +24,15 @@
         <link rel="stylesheet" type="text/css" href="css/egetchellcss.css">
         <link rel="stylesheet" type="text/css" href="css/gsarascss.css">
     </head>
-
     <body class='charityBody'>
         <div class="wrapper">
             <?php require_once('header.php');?>
             <div class="charityContent">
-                <h2 class='charityh2'>Charity X</h2>
+                <h2 class='charityh2'><?php echo $charityName ?></h2>
                 <img style='float:left; height: 90px; width: 200px; margin-top: 5px;' 
-                     src="images/catsleeping.jpg" alt="Charity's Logo"/>
+                     src="images/<?php echo $image ?>" alt="Charity's Logo"/>
                 <div class="aboutCharity">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                        sed do eiusmod tempor incididunt ut labore et dolore 
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                        exercitation ullamco laboris nisi ut aliquip ex ea commodo 
-                        consequat. Duis aute irure dolor in reprehenderit in 
-                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                        Excepteur sint occaecat cupidatat non proident, sunt in 
-                        culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p><?php echo $description ?></p>
                     <!--    <a href="#">Donate Now!</a>  -->
                     <button>Donate Now!</button>
                 </div>
@@ -58,7 +68,7 @@
 
 								// SQL query
 								$strSQL = "SELECT * FROM charities";
-
+                                
 								// Execute the query (the recordset $rs contains the result)
 								$rs = mysql_query($strSQL);
 								// Loop the recordset $rs
