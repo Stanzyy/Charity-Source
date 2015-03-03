@@ -7,7 +7,8 @@ var headerJS = {
     },
     
     //Function that when called will make an ajax call to log the user out.
-    //On successful logout, the page that the user is currently on will be refreshed.
+    //On successful logout, the user will be alerted that they have been logged
+    //out and will be returned to the home page.
     signOut: function(){
         $.ajax({
             type: "GET",
@@ -16,8 +17,8 @@ var headerJS = {
                 action: "signOut"
             },
             success: function(returnedData){
-                alert(returnedData);
-                location.reload();
+                alert("You have been logged out.");
+                window.location.replace("http://localhost/charity-source");
             },
             error: function(returnedData){
                 alert("There was an error with your request, please try again.");

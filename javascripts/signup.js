@@ -53,7 +53,7 @@ var signinJS = {
             },
             success: function(returnedData){
                 alert(returnedData);
-                location.reload();
+                window.location.replace("http://localhost/charity-source");
             },
             error: function(returnedData){
                 alert("There was an error with your request, please try again.");

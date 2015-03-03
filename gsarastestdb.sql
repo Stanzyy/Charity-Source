@@ -69,3 +69,10 @@ CREATE TABLE IF NOT EXISTS `Login` (
 -- Dumping data for table `Login`
 --
 
+CREATE TABLE IF NOT EXISTS `donations`(
+  `count` mediumint(6) NOT NULL AUTO_INCREMENT,
+  `loginNum` int(11) NOT NULL,
+  `DonatedTo` text NOT NULL,
+  `AmountDonated` int(11) NOT NULL,
+  PRIMARY KEY (`count`)
+)ENGINE=MyISAM DEFAULT CHARSET=utf8;

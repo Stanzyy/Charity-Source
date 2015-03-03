@@ -11,7 +11,7 @@
                     $_SESSION["userName"] = null;
                     echo "<a href='signup.php'>Log In</a> | <a href='signup.php'>Sign Up</a>";
                 }else{
-                    echo "<a href='userPage.php'>Hi " . $_SESSION['userName'] . "</a> | <p id='logout'>Log Out</p>";
+                    echo "<a href='userPage.php?username=".$_SESSION['userName']."'>Hi ".$_SESSION['firstName'] . "</a> | <p id='logout'>Log Out</p>";
                 }                
             ?>
         </div>
