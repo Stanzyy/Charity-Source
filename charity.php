@@ -95,15 +95,19 @@
                     </a>
 					
                     <a href="#" class="aboutStatsSingle">
-                        <h3>Compared to Other Charities</h3>
-						<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit </p>
+                        <h3><?php echo $charityName ?> Statistics</h3>
+				<p> Total Revenue: <?php echo $totalRevenue ?></p>
+				<p> Fundraising Efficiency: <?php echo $fundraisingEfficiency ?>%</p>
+				<p> Charitiable Commitment: <?php echo $charitableCommitment ?>%</p>
+				<p> Donor Dependency: <?php echo $donorDependency ?>%</p>				
                     </a>
 					
                     <a href="#" class="aboutStatsSingle">
-                        <h3>Future Goals</h3>
-                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit </p>
-                    </a>                   
-
+                        <h3>Current and Future Goals</h3>
+                        	<p> 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit </p>
+				<p> 2. Sed do eiusmod tempor incididunt ut labore et dolore magna </p>
+				<p> 3. Ut enim ad minim veniam, quis nostrud exercitation </p>
+                    </a>
                 </div>
                 <button class="summaryButton">View Full Summary</button>
             </div>
