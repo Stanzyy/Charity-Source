@@ -13,6 +13,9 @@
         $donorDependency =$row["DonorDependency"];
         $description =$row["Description"];
         $image =$row["Image"];
+		$otherSupport =$totalRevenue - $privateSupport;
+		$privatePercent =$english_format_number = number_format(($privateSupport/$totalRevenue) * 100, 2, '.', '');
+		$otherPercent =$english_format_number = number_format(100 - $privatePercent, 2, '.', '');		
     }
 ?>
 
@@ -49,53 +52,53 @@
                 </div>
 
                 <div class="AboutCharityStatsAll">
-
                     <a href="#" class="aboutStatsSingle">
                         <h3>How Contributions Help</h3>
-                        <script type="text/javascript" src="javascripts/charityCharts.js"></script>
-                        <script type="text/javascript" src="javascripts/canvasjs.min.js"></script> 
-                        <div id="chartContainer" style="height: 200px; width: 100%;"></div>
-                    </a> 
-
+			<script>						
+				window.onload = function () {
+					var chart = new CanvasJS.Chart("chartContainer",
+					{
+						title:{
+							text: "Financial Percentages",
+							text: "Total Revenue = <?php echo $totalRevenue ?>" 
+						},
+								animationEnabled: true,
+						legend:{
+							verticalAlign: "center",
+							horizontalAlign: "left",
+							fontSize: 15,
+							fontFamily: "Helvetica"        
+						},
+						theme: "theme2",
+						data: [
+						{        
+							type: "pie",       
+							indexLabelFontFamily: "Garamond",       
+							indexLabelFontSize: 15,
+							
+							startAngle:-20,      
+							showInLegend: true,
+							toolTipContent:"{legendText} {y}%",
+							dataPoints: [
+								{  y: "<?php echo $privatePercent ?>", legendText:"Private Support", label: "<?php echo $privateSupport ?>" },
+								{  y: "<?php echo $otherPercent ?>", legendText:"Other Support", label: "<?php echo $otherSupport ?>" }
+							]
+						}
+						]
+					});
+					chart.render();
+				}
+				</script>	
+					
+				<script type="text/javascript" src="javascripts/canvasjs.min.js"></script> 
+	        		<div id="chartContainer" style="height: 200px; width: 100%;"></div>
+                    </a>
+					
                     <a href="#" class="aboutStatsSingle">
                         <h3>Compared to Other Charities</h3>
-                        
-                        
-						<!-- content in "dbName" just a test to pull data from database -->
-						<div id="dbName">						            
-							<!-- http://html.net/tutorials/php/lesson20.php> -->                 
-							<?php
-								// Connect to database server
-								mysql_connect("localhost", "egetchell", "paco");
-
-								// Check connection
-								if (mysqli_connect_errno())
-								{
-									echo "Failed to connect to MySQL: " . mysqli_connect_error();
-								}
-
-								// Select database
-								mysql_select_db("charity") or die(mysql_error());
-
-								// SQL query
-								$strSQL = "SELECT * FROM charities";
-                                
-								// Execute the query (the recordset $rs contains the result)
-								$rs = mysql_query($strSQL);
-								// Loop the recordset $rs
-								// Each row will be made into an array ($row) using mysql_fetch_array
-								while($row = mysql_fetch_array($rs)) {
-									// Write the value of the column FirstName (which is now in the array $row)
-									echo $row['CharityName'] . "<br />";
-								}
-								// Close the database connection
-								mysql_close();
-							?>
-						</div>                
-
-                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit </p>
+						<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit </p>
                     </a>
-
+					
                     <a href="#" class="aboutStatsSingle">
                         <h3>Future Goals</h3>
                         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit </p>
