@@ -40,7 +40,7 @@ is controlled as well as the speed of the change. */
 /* The paragraphs in the boxes are set to white so that they cannot be 
 seen until the cursor hovers over them  */
 .aboutStatsSingle p{
-    color: white;
+    color: black;
     font: Helvetica, Arial, sans-serif;
 }
 
