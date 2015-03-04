@@ -29,7 +29,7 @@ is controlled as well as the speed of the change. */
     border: 1px solid grey; 
     margin-left: 5px;
     width: 32.5%;
-    height: 200px;
+    height: 300px;
     float: left;
     color: black;
     background: linear-gradient(white, white 50%, skyblue 50%, cornflowerblue);
