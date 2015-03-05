@@ -76,3 +76,9 @@ CREATE TABLE IF NOT EXISTS `donations`(
   `AmountDonated` int(11) NOT NULL,
   PRIMARY KEY (`count`)
 )ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+INSERT INTO `donations` (`count`, `loginNum`, `DonatedTo`, `AmountDonated`) VALUES
+(1, 1, 'American Cancer Society', 100),
+(2, 2, 'Salvation Army', 50),
+(3, 3, 'United Way', 20),
+(4, 4, 'United Way', 88);
