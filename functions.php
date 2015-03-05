@@ -61,7 +61,37 @@
             $_SESSION["lastName"]   = $row["LastName"];
         }
         $_SESSION["loggedIn"] = true;
+        session_write_close();
         echo "Logged In";
+    }
+
+    function editProfile(){
+        session_start();
+        //Get what we need for updating the information
+        $userId = $_GET['userId'];
+        $userName = $_GET['userName'];
+        $firstName = $_GET['firstName'];
+        $lastName = $_GET['lastName'];
+        $password = $_GET['password'];
+        $passwordCheck = $_GET['passwordCheck'];
+
+        //House Cleaning
+        if($passwordCheck == ""){
+            $password = $_SESSION["password"];
+        }
+
+        //Connect to and update the database
+        $link = mysqli_connect("127.0.0.1","root","","gsarastestdb") or die("Error " . mysqli_error($link));
+        $query = "UPDATE `login` SET `loginNum`= '".$userId."',`Email`= '".$userName."',`Password`='".$password."',`FirstName`='".$firstName."',`LastName`='".$lastName."' WHERE `loginNum`= '".$userId."'";
+        $result = mysqli_query($link, $query);
+
+        //update the session
+        $_SESSION["userName"]   = $userName;
+        $_SESSION["password"]   = $password;
+        $_SESSION["firstName"]  = $firstName;
+        $_SESSION["lastName"]   = $lastName;
+        session_write_close();
+        echo "Success";
     }
 
     function signOut(){

@@ -22,10 +22,44 @@
         <link rel="stylesheet" type="text/css" href="css/gsarascss.css">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style type="text/css">
+            #editLink, #saveLink, #cancelLink{
+                cursor: pointer;
+            }
+
+            .displayHolder, .editHolder, .display, .editHolder{
+              display: inline-block;
+            }
+        </style>
     </head>
     <body>
         <div class ="wrapper">
             <?php require_once('header.php');?>
+            <div class="profile">
+                <div class="viewProfileInfo">
+                    <?php
+                        session_start();
+                        echo "<div class='profileItemHolder'><p class='displayHolder'>User Name:</p><p class='display' id='userNameDisplay'>".$_SESSION["userName"]."</p></div>".
+                             "<div class='profileItemHolder'><p class='displayHolder'>First Name:</p><p class='display' id='firstNameDisplay'>".$_SESSION["firstName"]."</p></div>".
+                             "<div class='profileItemHolder'><p class='displayHolder'>Last Name:</p><p class='display' id='lastNameDisplay'>".$_SESSION["lastName"]."</p></div>";
+                        session_write_close();
+                    ?>
+                    <p id="editLink">Edit</p>
+                </div>
+                <div hidden class="editProfileInfo">
+                    <?php
+                        session_start();
+                        echo "<div class='profileItemHolder'><p class='editHolder'>User Name:</p><input class='editDisplay' data-uid=".$_SESSION["userNumber"]." id='userName' type='text' value='".$_SESSION["userName"]."' /></div>".
+                             "<div class='profileItemHolder'><p class='editHolder'>First Name:</p><input class='editDisplay' id='firstName' type='text' value='".$_SESSION["firstName"]."' /></div>".
+                             "<div class='profileItemHolder'><p class='editHolder'>Last Name:</p><input class='editDisplay' id='lastName' type='text' value='".$_SESSION["lastName"]."' /></div>".
+                             "<div class='profileItemHolder'><p class='editHolder'>Password:</p><input class='editDisplay' id='password' type='password' placeholder='New Password' /></div>".
+                             "<div class='profileItemHolder'><p class='editHolder'>Confirm Password:</p><input class='editDisplay' id='passwordCheck' type='password' placeholder='Confirm Password Change' /></div>";
+                        session_write_close();
+                    ?>
+                    <p id="saveLink">Save</p>
+                    <p id="cancelLink">Cancel</p>
+                </div>
+            </div>
             <div class='userStatsAll'>
             <?php
                 if(!$hasDonated){
@@ -68,5 +102,59 @@
             </div>
             <?php require_once('footer.php');?>
         </div>
+        <script type="text/javascript">
+            var userPageJS = {
+                init: function(){
+                    $('#editLink').unbind().click(function(){
+                        $('.editProfileInfo, .viewProfileInfo').toggle();
+                    });
+
+                    $('#saveLink').unbind().click(function(){
+                        var userNumber    = $("#userName").data("uid");
+                        var userName      = $("#userName").val();
+                        var firstName     = $("#firstName").val();
+                        var lastName      = $("#lastName").val();
+                        var password      = $("#password").val();
+                        var passwordCheck = $("#passwordCheck").val();
+
+                        if(passwordCheck.length > 0){
+                          //Do something to confirm password change.
+                        }
+
+                        $.ajax({
+                            url: "functions.php",
+                            type: "GET",
+                            data: {
+                                action: "editProfile",
+                                userId: userNumber,
+                                userName: userName,
+                                firstName: firstName,
+                                lastName: lastName,
+                                password: password,
+                                passwordCheck: passwordCheck
+                            },
+                            success: function(returnedData){
+                              $("#uname").empty().append(firstName);
+                              $("#userNameDisplay").empty().append(userName);
+                              $("#firstNameDisplay").empty().append(firstName);
+                              $("#lastNameDisplay").empty().append(lastName);
+                              $('.editProfileInfo, .viewProfileInfo').toggle();
+                            },
+                            error: function(returnedData){
+                              alert(returnedData);
+                            }
+                        });
+                    });
+
+                    $("#cancelLink").unbind().click(function(){
+                      $('.editProfileInfo, .viewProfileInfo').toggle();
+                    });
+                }
+            }
+
+            $(function(){
+                userPageJS.init();
+            });
+        </script>
     </body>
 </html>
