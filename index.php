@@ -25,6 +25,7 @@
                         <a href="charity.php?charity=SalvationArmy"><img src= "images/SalvationArmy.png" style="height: 100px; width: 100px;"> Link to charity</a>
                     </div>
                 </div>
+                <div class="boxes">
 				<div class="infographics">
                     <p>These are the graphs for charity X</p>
                     
@@ -65,18 +66,18 @@
 				                 {  y: 0.98, legendText:"Others" , label: "Others"}
 			
                                ]
-		                   }
-		                   ]
-	                     });
-	                   chart.render();
-                    }
-                </script>
+                            }
+                            ]
+                           });
+                            chart.render();
+                        }
+                    </script>
                 
-                </div>
-				<div class="charityGoals">
+                    </div>
 					<div class="slides">
                         <p>These are the goals for X charity</p>
                     </div>
+                </div>
                     <div class="button">    
 					    <!-- Form below is for paypal button -->
                         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
@@ -87,7 +88,6 @@
                             <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
                         </form>
                     </div>    
-				</div>
 			</div>
 			<?php require_once('footer.php');?>
 		</div>
