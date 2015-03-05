@@ -36,7 +36,7 @@
             <div class="charityContent">
                 <h2 class='charityh2'><?php echo $charityName ?></h2>
                 <img style='float:left; height: 90px; width: 200px; margin-top: 5px;' 
-                     src="images/<?php echo $image ?>" alt="Charity's Logo"/>
+                     src="images/2<?php echo $image ?>" alt="Charity's Logo"/>
                 <div class="aboutCharity">
                     <p><?php echo $description ?></p>
                     <!-- Form below is for paypal button -->
