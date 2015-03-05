@@ -6,13 +6,14 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>Contact Charity Source</title>
+        <title>Contact | Charity Source</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <link rel="stylesheet" type="text/css" href="css/nick.css">
         <link rel="stylesheet" type="text/css" href="css/gsarascss.css">
-        
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon">        
     </head>
     <body>
         <div class = "wrapper">

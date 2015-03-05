@@ -79,6 +79,6 @@ CREATE TABLE IF NOT EXISTS `donations`(
 
 INSERT INTO `donations` (`count`, `loginNum`, `DonatedTo`, `AmountDonated`) VALUES
 (1, 1, 'American Cancer Society', 100),
-(2, 2, 'Salvation Army', 50),
-(3, 3, 'United Way', 20),
-(4, 4, 'United Way', 88);
+(2, 1, 'Salvation Army', 50),
+(3, 1, 'United Way', 20),
+(4, 1, 'United Way', 88);

@@ -17,7 +17,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>User Page</title>
+        <title>Profile | Charity Source</title>
         <link rel="stylesheet" type="text/css" href="css/egetchellcss.css">
         <link rel="stylesheet" type="text/css" href="css/gsarascss.css">
         <meta charset="UTF-8">
@@ -31,6 +31,8 @@
               display: inline-block;
             }
         </style>
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     </head>
     <body>
         <div class ="wrapper">

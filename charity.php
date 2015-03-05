@@ -24,9 +24,11 @@
 <html lang='en'>
     <head>
         <meta charset='utf-8' />
-        <title>Charity Source | Charity X</title>
+        <title><?php echo $charityName ?> | Charity Source</title>
         <link rel="stylesheet" type="text/css" href="css/egetchellcss.css">
         <link rel="stylesheet" type="text/css" href="css/gsarascss.css">
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     </head>
     <body class='charityBody'>
         <div class="wrapper">

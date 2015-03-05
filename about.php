@@ -4,7 +4,9 @@
 		<meta charset='utf-8' />
         <link rel="stylesheet" type="text/css" href="css/nick.css">
 		<link rel="stylesheet" type="text/css" href="css/gsarascss.css">
-        <title>Charity Source | About</title>
+        <title>About | Charity Source</title>
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -30,20 +32,20 @@
 				<h3>Meet the Team</h3>
                 <!-- images of each team member -->
 				<div class="person">
-					<img src="images/greg.jpg" />
+					<img src="images/greg.png" />
 					<p>Gregory Saras</p>
 				</div>
 				<div class="person">
-					<img src="images/eric.jpg" />
+					<img src="images/eric.png" />
 					<p>Eric Getchell</p>
 				</div>
 				<div class="person">
-					<img src="images/josh.jpg" />
+					<img src="images/josh.png" />
 					<p>Josh Blanchette</p>
 				</div>
 				<div class="person">
                     <!-- div renamed to personBelow because this one pic needs to be below all others so special css for it -->
-					<img src="images/nick.jpg" />
+					<img src="images/nick.png" />
 					<p>Nicolas Stanzione</p>
 				</div>
 			</div>

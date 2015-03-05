@@ -2,8 +2,8 @@
     float: left
 }
 .person img { /* position the three pics that are in a row */
-    width:  14em;
-    height: 16em;
+    width:  200px;
+    height: 300px;
     padding-right: 1em;
     display: inline-block;
 }

@@ -2,9 +2,12 @@
 <html lang='en'>
 	<head>
 		<meta charset='utf-8' />
-		<title>Charity Source | Browse</title>
+		<title>Browse | Charity Source</title>
         <link rel="stylesheet" type="text/css" href="css/gsarascss.css">
         <link rel="stylesheet" type="text/css" href="css/joshbrowse.css">
+        <title>Browse | Charity Source</title>
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 	</head>
     <!--
         #username and password in a var#
@@ -113,28 +116,28 @@
 				</div>
 				<div class="resultList">
 					<div class="result cancer" data-name="CancerSociety" data-popularity="3">
-						<a href="charity.php?charity=AmericanCancerSociety"><img src="images/AmericanCancerSociety.png" style="height: 75px; width: 75px;" /></a>
+						<a href="charity.php?charity=AmericanCancerSociety"><img src="images/AmericanCancerSociety.png" style="height: 100px; width: 100px;" /></a>
 						<h3 class = "charityHead">American Cancer Society</h3>
                         <p class="charityDescription1"></p>
                             <p> This is the charity information for charity 1</p>
 						<a href="charity.php?charity=AmericanCancerSociety">Go!</a>
 					</div>
 					<div class="result blood" data-name="RedCross" data-popularity="5">
-						<a href="charity.php?charity=AmericanRedCross"><img src="images/AmericanRedCross.jpg" style="height:75px; width:75px;" /></a>
+						<a href="charity.php?charity=AmericanRedCross"><img src="images/AmericanRedCross.png" style="height: 100px; width: 100px;" /></a>
                         <h3 class = "charityHead">American Red Cross</h3>
 						<p class="charityDescription2"></p>
                             <p>This is the charity information for charity 2</p>
 						<a href="charity.php?charity=AmericanRedCross">Go!</a>
 					</div>
 					<div class="result clothes" data-name="SalvationArmy" data-popularity="1">
-						<a href="charity.php?charity=SalvationArmy"><img src="images/SalvationArmy.png" style="height:75px; width:75px;" /></a>
+						<a href="charity.php?charity=SalvationArmy"><img src="images/SalvationArmy.png" style="height: 100px; width: 100px;" /></a>
                         <h3 class = "charityHead">Salvation Army</h3>
 						<p class="charityDescription3"></p>
                             <p> This is the charity information for charity 3</p>
 						<a href="charity.php?charity=SalvationArmy">Go!</a>
 					</div>
                     <div class="result" data-name="UnitedWay" data-popularity="2">
-						<a href="charity.php?charity=UnitedWay"><img src="images/UnitedWay.png" style="height:75px; width:75px;" /></a>
+						<a href="charity.php?charity=UnitedWay"><img src="images/UnitedWay.png" style="height: 100px; width: 100px;" /></a>
                         <h3 class = "charityHead">United Way</h3>
 						<p class="charityDescription4"></p>
                             <p> This is the charity information for charity 4</p>

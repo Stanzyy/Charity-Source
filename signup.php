@@ -4,6 +4,8 @@
         <meta charset="utf-8" />
         <title>Sign Up | Charity Source</title>
         <link rel="stylesheet" type="text/css" href="css/gsarascss.css" />
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     </head>
     <body>
         <div class="wrapper">
