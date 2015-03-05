@@ -13,7 +13,15 @@ and open the template in the editor.
         <link rel="stylesheet" type="text/css" href="css/nick.css">
         <link rel="stylesheet" type="text/css" href="css/gsarascss.css">
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-        <link rel="icon" href="images/favicon.ico" type="image/x-icon">        
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon">     
+        <style>
+            #submitButton{
+                border: none;
+                width: 7em;
+	            height: 2em;
+                cursor: pointer;
+            }
+        </style>
     </head>
     <body>
         <div class = "wrapper">

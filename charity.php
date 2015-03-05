@@ -112,7 +112,7 @@
 				<p> 3. Ut enim ad minim veniam, quis nostrud exercitation </p>
                     </a>
                 </div>
-                <button class="summaryButton">View Full Summary</button>
+                <!--<button class="summaryButton">View Full Summary</button>-->
             </div>
             <?php require_once('footer.php');?>
         </div>

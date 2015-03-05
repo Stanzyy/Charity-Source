@@ -25,6 +25,7 @@
         <style type="text/css">
             #editLink, #saveLink, #cancelLink{
                 cursor: pointer;
+                text-decoration: underline;
             }
 
             .displayHolder, .editHolder, .display, .editHolder{

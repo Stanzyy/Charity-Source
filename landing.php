@@ -22,7 +22,6 @@ and open the template in the editor.
     </head>
     <body>
         <div class ="wrapper">
-            <?php require_once('header.php');?>
             <div class ="headerImage">
                 <!-- Insert some nice charity image like a big version on the logo -->
                 <img src="images/logo.png" alt="Charity Source Logo" id ="landingLogo">
@@ -43,6 +42,5 @@ and open the template in the editor.
                 <form><input type="button" value="Check us out" id="goToHomeButton" onClick="window.location.href='index.php'"></form>
             </div>
         </div>
-        <?php require_once('footer.php');?>
     </body>
 </html>

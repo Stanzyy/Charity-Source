@@ -5,9 +5,24 @@
 		<title>Browse | Charity Source</title>
         <link rel="stylesheet" type="text/css" href="css/gsarascss.css">
         <link rel="stylesheet" type="text/css" href="css/joshbrowse.css">
-        <title>Browse | Charity Source</title>
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
         <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+        <style>
+            .filterButton{
+                border: none;
+                height: 3em;
+                width: 5em;
+                cursor: pointer;
+            }
+            
+            .filterOn{
+                background-color: #5A5D71;
+            }
+            
+            .sortText{
+                display: inline-block;
+            }
+        </style>
 	</head>
     <!--
         #username and password in a var#
@@ -100,19 +115,17 @@
             <?php require_once('header.php');?>
 			<div class="browseContent">
 				<div class="filters">
-					<p>Search for a Charity Here:<input type="text" id='resultSearch'></p>
+					<input placeholder="Search Charities..." type="text" id='resultSearch'>
+                    <p class="sortText">Sort by:</p>
                     <select class="sort-options">
-                        <option value="">Default</option>
                         <option value="title">Name</option>
                         <option value="popularity">Most Popular</option>
                     </select>
-					<h3>Available Charities</h3>
-					
-						<button id="blood">Filter for Blood</button>
-                        <button id="cancer">Filter for Cancer</button>
-						<button id="clothes">Filter for Clothes</button>
-                        <button id="all">Filter for All</button>
-					
+					<h3>Filters</h3>
+                        <button class="filterOn filterButton" id="all">All</button>
+						<button class="filterButton" id="blood">Blood</button>
+                        <button class="filterButton" id="cancer">Cancer</button>
+						<button class="filterButton" id="clothes">Clothing</button>					
 				</div>
 				<div class="resultList">
 					<div class="result cancer" data-name="CancerSociety" data-popularity="3">
@@ -136,7 +149,7 @@
                             <p> This is the charity information for charity 3</p>
 						<a href="charity.php?charity=SalvationArmy">Go!</a>
 					</div>
-                    <div class="result" data-name="UnitedWay" data-popularity="2">
+                    <div class="result cancer" data-name="UnitedWay" data-popularity="2">
 						<a href="charity.php?charity=UnitedWay"><img src="images/UnitedWay.png" style="height: 100px; width: 100px;" /></a>
                         <h3 class = "charityHead">United Way</h3>
 						<p class="charityDescription4"></p>
@@ -173,24 +186,36 @@
                 
                 SetFilter: function(){
                     $('#all').unbind().click(function(){
+                        $(".filterOn").removeClass("filterOn");
+                        $(this).addClass("filterOn");
+                        $('#resultSearch').val("");
                         $('.resultList').shuffle('shuffle', function($el, shuffle){
                             return $el;
                         });
                     });
                     
                     $('#blood').unbind().click(function(){
+                        $(".filterOn").removeClass("filterOn");
+                        $(this).addClass("filterOn");
+                        $('#resultSearch').val("");
                         $('.resultList').shuffle('shuffle', function($el, shuffle){
                             return $el.hasClass('blood');                      
                         });
                     });
                     
                     $('#cancer').unbind().click(function(){
+                        $(".filterOn").removeClass("filterOn");
+                        $(this).addClass("filterOn");
+                        $('#resultSearch').val("");
                         $('.resultList').shuffle('shuffle', function($el, shuffle){
                             return $el.hasClass('cancer');                      
                         });
                     });
                 
                     $('#clothes').unbind().click(function(){
+                        $(".filterOn").removeClass("filterOn");
+                        $(this).addClass("filterOn");
+                        $('#resultSearch').val("");
                         $('.resultList').shuffle('shuffle', function($el, shuffle){
                             return $el.hasClass('clothes');                      
                         });
@@ -224,9 +249,11 @@
                 
                 SetSearch : function(){
                     $('#resultSearch').on('keyup change', function(){
+                        $(".filterOn").removeClass("filterOn");
+                        $("#all").addClass("filterOn");
                         var val = this.value.toLowerCase();
                         $('.resultList').shuffle('shuffle', function($el, shuffle){
-                            if(shuffle.group !== 'all' && $.inArray(shuffle.group, $el.data('group')) === -1){
+                            if(shuffle.group !== 'all' && $.inArray(shuffle.group, $el.data('groups')) === -1){
                                 return false;
                             } //end of if
                             var text = $.trim($el.find('.charityHead').text() ).toLowerCase();
