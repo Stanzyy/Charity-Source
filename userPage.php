@@ -144,7 +144,7 @@
                               $('.editProfileInfo, .viewProfileInfo').toggle();
                             },
                             error: function(returnedData){
-                              alert(returnedData);
+                              alert("There was an error with your request.");
                             }
                         });
                     });

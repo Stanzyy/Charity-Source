@@ -52,7 +52,7 @@ var signinJS = {
                 pword: pword
             },
             success: function(returnedData){
-                alert(returnedData);
+                //alert(returnedData);
                 window.location.replace("http://localhost/charity-source");
             },
             error: function(returnedData){
@@ -135,7 +135,7 @@ var signinJS = {
                 pwordCheck: pwordCheck
             },
             success: function(returnedData){
-                alert(returnedData);
+                //alert(returnedData);
                 //Trigger the pop up by simulating a link click.
                 $("#popup")[0].click();
             },
