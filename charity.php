@@ -1,3 +1,5 @@
+<!-- list of php commands below.  Declaring variables, then generating data on the fly -->
+
 <?php
     $link = mysqli_connect("127.0.0.1","root","","gsarastestdb")or die("Error" . mysqli_error($link));
     $CharityQueryName = $_GET['charity'];
@@ -32,7 +34,7 @@
     </head>
     <body class='charityBody'>
         <div class="wrapper">
-            <?php require_once('header.php');?>
+            <?php require_once('header.php');?> //includes generic header
             <div class="charityContent">
                 <h2 class='charityh2'><?php echo $charityName ?></h2>
                 <img style='float:left; height: 90px; width: 200px; margin-top: 5px;' 
@@ -48,7 +50,7 @@
                     </form>
                     <?php 
                         if (isset($_POST['submit'])){
-                            echo "<script type='text/javascript'>alert('1');</script>";
+                            //echo "<script type='text/javascript'>alert('1');</script>";  //Test code
                         }
                     ?>
 
@@ -57,6 +59,7 @@
                 <div class="AboutCharityStatsAll">
                     <a href="#" class="aboutStatsSingle">
                         <h3>How Contributions Help</h3>
+            <!-- Script below generates the pie chart, pulling data from the database to populate it -->
 			<script>						
 				window.onload = function () {
 					var chart = new CanvasJS.Chart("chartContainer",
@@ -91,10 +94,10 @@
 					});
 					chart.render();
 				}
-				</script>	
+				</script>	<!-- End of shuffleJS -->
 					
 				<script type="text/javascript" src="javascripts/canvasjs.min.js"></script> 
-	        		<div id="chartContainer" style="height: 200px; width: 100%;"></div>
+	                   <div id="chartContainer" style="height: 200px; width: 100%;"></div>
                     </a>
 					
                     <a href="#" class="aboutStatsSingle">
@@ -112,9 +115,10 @@
 				<p> 3. Ut enim ad minim veniam, quis nostrud exercitation </p>
                     </a>
                 </div>
+                <!-- Decided not to include this feature below. -->
                 <!--<button class="summaryButton">View Full Summary</button>-->
             </div>
-            <?php require_once('footer.php');?>
+            <?php require_once('footer.php');?> <!-- Includes generic footer -->
         </div>
     </body>
 </html>
