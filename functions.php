@@ -24,6 +24,7 @@
             $_SESSION["password"]   = $row["Password"];
             $_SESSION["firstName"]  = $row["FirstName"];
             $_SESSION["lastName"]   = $row["LastName"];
+            $_SESSION["amountDonated"]   = $row["amountDonated"];
         }
 
         //Set logged in to be true
