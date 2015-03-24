@@ -3,6 +3,7 @@
 	<head>
 		<meta charset='utf-8' />
 		<title>Home | Charity Source</title>
+        <!-- Imports stylesheets and icons -->
         <link rel="stylesheet" type="text/css" href="css/gsarascss.css">
         <link rel="stylesheet" type="text/css" href="css/joshindex.css">
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
@@ -10,8 +11,10 @@
 	</head>
 	<body>
 		<div class="wrapper">
+            <!-- Imports generic header. -->
             <?php require_once('header.php');?>
 			<div class="homePageContent">
+                <!-- Below lists the top three charities.  We will eventually sort them based on real popularity, but for now its hardcoded -->
 				<h3>Top Charities</h3>
                 <div class="images">
 				    <div class="charity1">
@@ -26,6 +29,7 @@
                         <a href="charity.php?charity=SalvationArmy"><img src= "images/SalvationArmy.png" style="height: 100px; width: 100px;"> Link to charity</a>
                     </div>
                 </div>
+                <!-- Below are graphs and charts for the top charity in our database.  More of this in the future. -->
                 <div class="boxes">
 				<div class="infographics">
                     <p>These are the graphs for charity X</p>
@@ -44,10 +48,13 @@
                         </form>
                     </div>    
 			</div>
+            <!-- Import generic footer. -->
 			<?php require_once('footer.php');?>
 		</div>
+        <!-- Import JS library -->
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.4.1/canvas.min.js"></script>
         <script type="text/javascript">
+                        //Broken JS for graphs on the most popular charity.  In the making.
                         window.onload = function () 
                         {
 	                       var chart = new CanvasJS.Chart("chartContainer",
@@ -89,6 +96,6 @@
                            });
                             chart.render();
                         }
-                    </script>
+            </script>
 	</body>
 </html>
