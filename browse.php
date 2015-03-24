@@ -3,11 +3,14 @@
 	<head>
 		<meta charset='utf-8' />
 		<title>Browse | Charity Source</title>
+        <!-- Imported stylesheets and images below. -->
         <link rel="stylesheet" type="text/css" href="css/gsarascss.css">
         <link rel="stylesheet" type="text/css" href="css/joshbrowse.css">
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
         <link rel="icon" href="images/favicon.ico" type="image/x-icon">
         <style>
+            <!-- Inline CSS below controls positioning the sort text, changes background of filters,
+                 and controls the position and size of the filter buttons.  -->
             .filterButton{
                 border: none;
                 height: 3em;
@@ -24,6 +27,7 @@
             }
         </style>
 	</head>
+    <!-- Below is code provided by Jesse.  We used it at first, then made our own sql code in the future. -->
     <!--
         #username and password in a var#
         ################################
@@ -112,27 +116,33 @@
     
 	<body> 
 		<div class="wrapper">
+            <!-- Imports generic header. -->
             <?php require_once('header.php');?>
 			<div class="browseContent">
 				<div class="filters">
+                    <!-- Textbox to search for charities. -->
 					<input placeholder="Search Charities..." type="text" id='resultSearch'>
+                    <!-- Below sets values for the dopdown, to sort by either Name or Most Popular. -->
                     <p class="sortText">Sort by:</p>
                     <select class="sort-options">
                         <option value="title">Name</option>
                         <option value="popularity">Most Popular</option>
                     </select>
+                    <!-- Filter buttons below that consist of the filters available. -->
 					<h3>Filters</h3>
                         <button class="filterOn filterButton" id="all">All</button>
 						<button class="filterButton" id="blood">Blood</button>
                         <button class="filterButton" id="cancer">Cancer</button>
 						<button class="filterButton" id="clothes">Clothing</button>					
 				</div>
+                <!-- The next couple chunks of code are all the charities available to search for, along with basic information about each charity. -->
 				<div class="resultList">
 					<div class="result cancer" data-name="CancerSociety" data-popularity="3">
 						<a href="charity.php?charity=AmericanCancerSociety"><img src="images/AmericanCancerSociety.png" style="height: 100px; width: 100px;" /></a>
 						<h3 class = "charityHead">American Cancer Society</h3>
                         <p class="charityDescription1"></p>
                             <p> This is the charity information for charity 1</p>
+                        <!-- These href's generate data on the fly, and construct one charity.php for the charity choosen.  Consistent thoughout each charity. -->
 						<a href="charity.php?charity=AmericanCancerSociety">Go!</a>
 					</div>
 					<div class="result blood" data-name="RedCross" data-popularity="5">
@@ -159,22 +169,29 @@
 					<!--<button id="moreResults">More -></button> -->
 				</div>
 			</div>
+            <!-- Imports generic footer. -->
 			<?php require_once('footer.php');?>
 		</div>
+        <!-- Import some JS libraries. -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="javascripts/modernizr.js"></script>
         <script src="javascripts/jquery.shuffle.js"></script>
         <script>
+            //The script below constructs shuffleJS.  It allows the fluid motions for charities when they are being searched for.
+            
             var galleryJS = 
             {
                 Init : function()
                 {
+                    //decleration of functions that are coded below.
+                    
                     galleryJS.SetGrid();
                     galleryJS.SetFilter();
                     galleryJS.SetSort();
                     galleryJS.SetSearch();
                 }, //end of init : function()
                 
+                //SetGrid function designs the invisible grid and places the charities accordingly.
                 SetGrid : function(){
                     var $grid = $('.resultList'),
                         $sizer = $grid.find('.shuffle__sizer');
@@ -184,6 +201,7 @@
                     });
                 },
                 
+                //SetFilter function applies all available filters, and when a filter is selected, the charities are shuffled accordingly.
                 SetFilter: function(){
                     $('#all').unbind().click(function(){
                         $(".filterOn").removeClass("filterOn");
@@ -222,6 +240,7 @@
                     });
                 }, //end of setFilter function
                 
+                //SetSort function applies all available filters in the DROPDOWN, and when a filter is selected, the charities are shuffled accordingly.
                 SetSort : function(){
                     $('.sort-options').on('change', function() {
                         var sort = this.value,
@@ -247,6 +266,7 @@
                     });
                 }, //end of setsort function
                 
+                //SetSearch function applies all available filters in the SEARCH BOX, and when a filter is selected, the charities are shuffled accordingly.
                 SetSearch : function(){
                     $('#resultSearch').on('keyup change', function(){
                         $(".filterOn").removeClass("filterOn");
