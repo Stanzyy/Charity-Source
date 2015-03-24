@@ -128,7 +128,7 @@
         session_start();
         if(!isset($_SESSION["loggedIn"]) || !$_SESSION["loggedIn"]){
             //not logged in
-            $query = "SELECT * FROM `login` WHERE `Email` = '"."anon@gmail.com"."'";
+            $query = "SELECT * FROM `login` WHERE `Email` = 'anon@gmail.com'";
         }else{
             //logged in
             $query = "SELECT * FROM `login` WHERE `Email` = '".$_SESSION["userName"]."'";
@@ -140,13 +140,14 @@
                     $user = $row["Email"];
         }
         $amount = $amount + 10;
-        $sql = "UPDATE login SET amountDonated ='$amount' WHERE username=$user";
+        $sql = "UPDATE login SET amountDonated ='".$amount."' WHERE Email='".$user."'";
 
-        if ($conn->query($sql) === TRUE) {
+        if ($link->query($sql) === TRUE) {
             echo "Record updated successfully";
         } else {
-            echo "Error updating record: " . $conn->error;
+            echo "Error updating record: " . $link->error;
         }
             
-        $link->close(); 
+        $link->close();
+        
     }
