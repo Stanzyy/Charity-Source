@@ -24,6 +24,7 @@
             $_SESSION["password"]   = $row["Password"];
             $_SESSION["firstName"]  = $row["FirstName"];
             $_SESSION["lastName"]   = $row["LastName"];
+            $_SESSION["amountDonated"]   = $row["amountDonated"];
         }
 
         //Set logged in to be true
@@ -121,3 +122,32 @@
     	mail($ToEmail, $EmailSubject, $MESSAGE_BODY, $mailheader) or die ("Failure"); 	
         echo "Success!";
 	}
+    function trackDonation(){
+        $link = mysqli_connect("127.0.0.1","root","","gsarastestdb") or die("Error " . mysqli_error($link));
+        
+        session_start();
+        if(!isset($_SESSION["loggedIn"]) || !$_SESSION["loggedIn"]){
+            //not logged in
+            $query = "SELECT * FROM `login` WHERE `Email` = 'anon@gmail.com'";
+        }else{
+            //logged in
+            $query = "SELECT * FROM `login` WHERE `Email` = '".$_SESSION["userName"]."'";
+        }   
+        session_write_close();
+        $result = mysqli_query($link, $query);
+        while($row = mysqli_fetch_array($result)){
+                    $amount = $row["amountDonated"];
+                    $user = $row["Email"];
+        }
+        $amount = $amount + 10;
+        $sql = "UPDATE login SET amountDonated ='".$amount."' WHERE Email='".$user."'";
+
+        if ($link->query($sql) === TRUE) {
+            echo "Record updated successfully";
+        } else {
+            echo "Error updating record: " . $link->error;
+        }
+            
+        $link->close();
+        
+    }
