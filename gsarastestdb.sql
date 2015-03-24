@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 23, 2015 at 06:47 PM
+-- Generation Time: Mar 24, 2015 at 07:41 PM
 -- Server version: 5.6.20
 -- PHP Version: 5.5.15
 
@@ -83,15 +83,16 @@ CREATE TABLE IF NOT EXISTS `login` (
   `Email` text NOT NULL,
   `Password` text NOT NULL,
   `FirstName` text NOT NULL,
-  `LastName` text NOT NULL
+  `LastName` text NOT NULL,
+  `amountDonated` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
 -- Dumping data for table `login`
 --
 
-INSERT INTO `login` (`loginNum`, `Email`, `Password`, `FirstName`, `LastName`) VALUES
-(1, 'anon@gmail.com', 'anon', 'anon', 'anon');
+INSERT INTO `login` (`loginNum`, `Email`, `Password`, `FirstName`, `LastName`, `amountDonated`) VALUES
+(1, 'anon@gmail.com', 'anon', 'anon', 'anon', 0);
 
 --
 -- Indexes for dumped tables
