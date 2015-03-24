@@ -16,7 +16,7 @@ var trackDonate = {
             },
             success: function(returnedData){
                 //alert(returnedData);
-                window.location.replace("http://localhost/charity-source");
+                //window.location.replace("http://localhost/charity-source");
             },
             error: function(returnedData){
                 alert("There was an error with your request, please try again.");
@@ -26,3 +26,7 @@ var trackDonate = {
         
         
 }
+
+$(function(){
+    trackDonate.init();
+});
