@@ -11,7 +11,6 @@
     }else{
         $hasDonated = true;
     }
-    session_write_close();
 ?>
 
 <!DOCTYPE html>
@@ -161,3 +160,4 @@
         </script>
     </body>
 </html>
+<?php session_write_close();?>

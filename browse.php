@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!Doctype html>
 <html lang='en'>
 	<head>
@@ -293,3 +294,4 @@
         </script>
 	</body>
 </html>
+<?php session_write_close(); ?>
