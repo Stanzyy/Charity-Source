@@ -123,8 +123,9 @@
         echo "Success!";
 	}
     function trackDonation(){
+        //connect to database
         $link = mysqli_connect("127.0.0.1","root","","gsarastestdb") or die("Error " . mysqli_error($link));
-        
+        //open the current session on the site
         session_start();
         if(!isset($_SESSION["loggedIn"]) || !$_SESSION["loggedIn"]){
             //not logged in
@@ -133,15 +134,15 @@
             //logged in
             $query = "SELECT * FROM `login` WHERE `Email` = '".$_SESSION["userName"]."'";
         }   
-        session_write_close();
-        $result = mysqli_query($link, $query);
-        while($row = mysqli_fetch_array($result)){
+        session_write_close(); //close the session
+        $result = mysqli_query($link, $query); //get the results of the query from the database
+        while($row = mysqli_fetch_array($result)){ //grab the user email and the amount they have donated
                     $amount = $row["amountDonated"];
                     $user = $row["Email"];
         }
-        $amount = $amount + 10;
+        $amount = $amount + 10; //increment donation amount
         $sql = "UPDATE login SET amountDonated ='".$amount."' WHERE Email='".$user."'";
-
+        // update the database with the new amount donated
         if ($link->query($sql) === TRUE) {
             echo "Record updated successfully";
         } else {

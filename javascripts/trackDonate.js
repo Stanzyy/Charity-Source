@@ -2,13 +2,13 @@ var trackDonate = {
     init: function(){
         //Handler for clicking paypal button.
         $("#paypalButton").click(function(){
-            trackDonate.track();
+            trackDonate.track(); //call track function below
         });
     },
     
     track: function(){
-        alert("button was clicked");
-        $.ajax({
+        //alert("button was clicked");
+        $.ajax({ //ajax call to update database with new donation
             type: "GET",
             url: "functions.php",
             data: {
@@ -16,7 +16,6 @@ var trackDonate = {
             },
             success: function(returnedData){
                 alert(returnedData);
-                //window.location.replace("http://localhost/charity-source");
             },
             error: function(returnedData){
                 alert("There was an error with your request, please try again.");
@@ -27,6 +26,6 @@ var trackDonate = {
         
 }
 
-$(function(){
+$(function(){ //initialize trackDonate variable
     trackDonate.init();
 });
