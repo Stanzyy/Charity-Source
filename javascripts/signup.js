@@ -1,44 +1,30 @@
 var signinJS = {
     //Set up any event handlers that are needed for the signin/signu page.
     init: function(){
-        //Handler for clicking signin.
-        $("#signInButton").click(function(){
+        $("#signinForm").submit(function(e){
+            e.preventDefault();
+            e.stopPropagation();
+
             signinJS.signin();
         });
         
         //Handler for clicking signup.
-        $("#signUpButton").click(function(){
+        $("#signupForm").submit(function(e){
+            e.preventDefault();
+            e.stopPropagation();
+
             signinJS.signup();
         });
     },
                 
     //Signin Function
     signin: function(){
-        
         //Make sure the error notification is NOT showing.
         $("#signinErrorContainer").css("visibility", "hidden");
         
         //Get the users information
         var userName = $("#userName").val();
         var pword = $("#existingPassword").val();
-        
-        //Validate, check that fields are not blank and that they did (hopefully)
-        //enter a real email address. If either of these fail, we focus on the earliest
-        //input box where we found an error and display the error message. Then terminate
-        //the rest of the function, no reason to go on.
-        if(userName === "" || userName.indexOf('@') == -1){
-            $("#userName").focus();    
-            $("#signInError").empty().append("Please Enter Your Email");
-            $("#signinErrorContainer").css("visibility", "visible");
-            return;
-        }
-        
-        if(pword === ""){
-            $("#existingPassword").focus();
-            $("#signInError").empty().append("Please Enter Your Password");
-            $("#signinErrorContainer").css("visibility", "visible");
-            return;
-        }
         
         //If all is well with the inputs, we make an ajax request to log the user in.
         //On success we reload the page. May be changed to bring to profile or back 
@@ -78,40 +64,6 @@ var signinJS = {
         //If any of these fail, we focus on the earliest input box where we found an
         //error and display the error message. Then terminate the rest of the function,
         //no reason to go on.
-        if(firstName === ""){
-            $("#firstName").focus();
-            $("#signupError").empty().append("Please Enter Your First Name.");
-            $("#signupErrorConatiner").css("visibility", "visible");
-            return;
-        }
-                        
-        if(lastName === ""){
-            $("#lastName").focus();
-            $("#signupError").empty().append("Please Enter Your Last Name.");
-            $("#signupErrorConatiner").css("visibility", "visible");
-            return;
-        }
-                        
-        if(userName === "" || userName.indexOf('@') == -1){
-            $("#newUser").focus();
-            $("#signupError").empty().append("Please Enter a valid Email.");
-            $("#signupErrorConatiner").css("visibility", "visible");
-            return;
-        }
-                        
-        if(pword === ""){
-            $("#newPassword").focus();
-            $("#signupError").empty().append("Please Enter a Password.");
-            $("#signupErrorConatiner").css("visibility", "visible");
-            return;
-        }
-                        
-        if(pwordCheck === ""){
-            $("#newPasswordCheck").focus();
-            $("#signupError").empty().append("Please re-enter your Password.");
-            $("#signupErrorConatiner").css("visibility", "visible");
-            return;
-        }
                         
         if(pword !== pwordCheck){
             $("#newPassword").focus();

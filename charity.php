@@ -1,5 +1,5 @@
 <!-- list of php commands below.  Declaring variables, then generating data on the fly -->
-
+<?php session_start();?>
 <?php
     $link = mysqli_connect("127.0.0.1","root","","gsarastestdb")or die("Error" . mysqli_error($link));
     $CharityQueryName = $_GET['charity'];
@@ -118,3 +118,4 @@
         <script src="javascripts/trackDonate.js"></script> 
     </body>
 </html>
+<?php session_write_close();?>

@@ -40,11 +40,9 @@
             <div class="profile">
                 <div class="viewProfileInfo">
                     <?php
-                        session_start();
                         echo "<div class='profileItemHolder'><p class='displayHolder'>User Name:</p><p class='display' id='userNameDisplay'>".$_SESSION["userName"]."</p></div>".
                              "<div class='profileItemHolder'><p class='displayHolder'>First Name:</p><p class='display' id='firstNameDisplay'>".$_SESSION["firstName"]."</p></div>".
                              "<div class='profileItemHolder'><p class='displayHolder'>Last Name:</p><p class='display' id='lastNameDisplay'>".$_SESSION["lastName"]."</p></div>";
-                        session_write_close();
                     ?>
                     <p id="editLink">Edit</p>
                 </div>

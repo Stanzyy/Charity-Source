@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -31,12 +32,14 @@ and open the template in the editor.
                     <h1> Contact Us </h1>
                 </div>
                 <div class = "contactFormDiv"> <!-- creates the input fields for the user to contact us -->
-                    <div class="inputField"><span class="inputTitle">Name: </span><input id="name" type="text"></div>
-                        <div class="inputField"><span class="inputTitle">Email: </span><input id="email" type="email"></div>
-                        <div class="inputField"><span class="inputTitle">Subject: </span><input id="subject" type="text"></div>
-                        <div class="inputField"><span class="inputTitle">Message: </span><textarea id="message" cols="40" rows="5"></textarea>
-                        </div>
-                        <div class="inputField buttonHolder"><button id="submitButton">Submit</button></div>
+	                <form id="emailSubmitForm">
+	                    <div class="inputField"><span class="inputTitle">Name: </span><input required id="name" type="text"></div>
+	                        <div class="inputField"><span class="inputTitle">Email: </span><input required id="email" type="email"></div>
+	                        <div class="inputField"><span class="inputTitle">Subject: </span><input required id="subject" type="text"></div>
+	                        <div class="inputField"><span class="inputTitle">Message: </span><textarea required id="message" cols="40" rows="5"></textarea>
+	                        </div>
+	                        <div class="inputField buttonHolder"><button id="submitButton">Submit</button></div>
+	                </form>
                 </div>
             </div>
             <?php require_once('footer.php');?>
@@ -44,9 +47,10 @@ and open the template in the editor.
         <script type="text/javascript"> //script to email from form
 			var contactJS = {
 				init : function(){
-					$("#submitButton").unbind().click(function(){
+					$("#emailSubmitForm").submit(function(e){
+						e.preventDefault();
+            			e.stopPropagation();
 						contactJS.submitForm(); // call submitForm function when submit button is pressed
-                        console.log("init called")
 					});
 				},
 
@@ -92,4 +96,4 @@ and open the template in the editor.
 		</script>
     </body>
 </html>
-
+<?php session_write_close(); ?>
