@@ -59,11 +59,7 @@ var signinJS = {
         var pword = $("#newPassword").val();
         var pwordCheck = $("#newPasswordCheck").val();
 
-        //Validate, check that fields are not blank, that they did (hopefully)
-        //enter a real email address, and that their password and password check match. 
-        //If any of these fail, we focus on the earliest input box where we found an
-        //error and display the error message. Then terminate the rest of the function,
-        //no reason to go on.
+        //Make sure the two passwords are the same
                         
         if(pword !== pwordCheck){
             $("#newPassword").focus();
