@@ -1,3 +1,4 @@
+<!-- Connect to the database -->
 <?php
     session_start();
     $link = mysqli_connect("127.0.0.1","root","","gsarastestdb")or die("Error" . mysqli_error($link));
@@ -17,6 +18,7 @@
 <html lang="en">
     <head>
         <title>Profile | Charity Source</title>
+        <!-- Links to style sheets -->
         <link rel="stylesheet" type="text/css" href="css/egetchellcss.css">
         <link rel="stylesheet" type="text/css" href="css/gsarascss.css">
         <meta charset="UTF-8">
@@ -28,16 +30,19 @@
             }
 
             .displayHolder, .editHolder, .display, .editHolder{
-              display: inline-block;
+                display: inline-block;
             }
         </style>
+        <!-- Links to favicon -->
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
         <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     </head>
     <body>
         <div class ="wrapper">
+            <!-- Include the header to this page -->
             <?php require_once('header.php');?>
             <div class="profile">
+                <!-- Displays user information -->
                 <div class="viewProfileInfo">
                     <?php
                         echo "<div class='profileItemHolder'><p class='displayHolder'>User Name:</p><p class='display' id='userNameDisplay'>".$_SESSION["userName"]."</p></div>".
@@ -46,6 +51,7 @@
                     ?>
                     <p id="editLink">Edit</p>
                 </div>
+                <!-- Add the ability to edit user profile -->
                 <div hidden class="editProfileInfo">
                     <?php
                         session_start();
@@ -59,7 +65,8 @@
                     <p id="saveLink">Save</p>
                     <p id="cancelLink">Cancel</p>
                 </div>
-            </div>
+            </div> <!-- End of profile div -->
+            <!-- As the users donate, their donation statistics will be viewable -->
             <div class='userStatsAll'>
             <?php
                 if(!$hasDonated){
@@ -77,7 +84,7 @@
                           </div>";
                 };
             ?>
-            </div>
+            </div> <!-- End userStatsAll div -->
             <div class='charityStatsAll'>
             <?php
                 if(!$hasDonated){
@@ -99,9 +106,11 @@
                           </a>";
                 };
             ?>
-            </div>
+            </div> <!-- End charityStatsAll div -->
+            <!-- Includes the footer for the page -->
             <?php require_once('footer.php');?>
-        </div>
+        </div> <!-- end of wrapper div -->
+        <!-- JavaScript for creating and setting the user's information -->
         <script type="text/javascript">
             var userPageJS = {
                 init: function(){
