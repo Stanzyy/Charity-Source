@@ -134,7 +134,9 @@
                         <button class="filterOn filterButton" id="all">All</button>
 						<button class="filterButton" id="blood">Blood</button>
                         <button class="filterButton" id="cancer">Cancer</button>
-						<button class="filterButton" id="clothes">Clothing</button>					
+						<button class="filterButton" id="clothes">Clothing</button>
+                        <button class="filterButton" id="community">Community</button>
+                        <button class="filterButton" id="food">Food</button>
 				</div>
                 <!-- The next couple chunks of code are all the charities available to search for, along with basic information about each charity. -->
 				<div class="resultList">
@@ -146,7 +148,7 @@
                         <!-- These href's generate data on the fly, and construct one charity.php for the charity choosen.  Consistent thoughout each charity. -->
 						<a href="charity.php?charity=AmericanCancerSociety">Go!</a>
 					</div>
-					<div class="result blood" data-name="RedCross" data-popularity="5">
+					<div class="result blood" data-name="AmericanRedCross" data-popularity="5">
 						<a href="charity.php?charity=AmericanRedCross"><img src="images/AmericanRedCross.png" style="height: 100px; width: 100px;" /></a>
                         <h3 class = "charityHead">American Red Cross</h3>
 						<p class="charityDescription2"></p>
@@ -160,13 +162,67 @@
                             <p> This is the charity information for charity 3</p>
 						<a href="charity.php?charity=SalvationArmy">Go!</a>
 					</div>
-                    <div class="result cancer" data-name="UnitedWay" data-popularity="2">
+                    <div class="result community" data-name="UnitedWay" data-popularity="2">
 						<a href="charity.php?charity=UnitedWay"><img src="images/UnitedWay.png" style="height: 100px; width: 100px;" /></a>
                         <h3 class = "charityHead">United Way</h3>
 						<p class="charityDescription4"></p>
                             <p> This is the charity information for charity 4</p>
 						<a href="charity.php?charity=UnitedWay">Go!</a>
                     </div>
+                    
+                    <div class="result food" data-name="FeedingAmerica" data-popularity="4">
+						<a href="charity.php?charity=FeedingAmerica"><img src="images/2FeedingAmerica.png" style="height: 100px; width: 100px;" /></a>
+                        <h3 class = "charityHead">Feeding America</h3>
+						<p class="charityDescription5"></p>
+                            <p> This is the charity information for charity 5</p>
+						<a href="charity.php?charity=FeedingAmerica">Go!</a>
+                    </div>
+                    
+                    <div class="result community" data-name="TaskForceforGlobalHealth" data-popularity="4">
+						<a href="charity.php?charity=TaskForceforGlobalHealth"><img src="images/2TaskForceforGlobalHealth.png" style="height: 100px; width: 100px;" /></a>
+                        <h3 class = "charityHead">Task Force for Global Health</h3>
+						<p class="charityDescription6"></p>
+                            <p> This is the charity information for charity 6</p>
+						<a href="charity.php?charity=TaskForceforglobalHealth">Go!</a>
+                    </div>
+
+                    <div class="result food" data-name="FoodforthePoor" data-popularity="4">
+						<a href="charity.php?charity=FoodforthePoor"><img src="images/2FoodforthePoor.png" style="height: 100px; width: 100px;" /></a>
+                        <h3 class = "charityHead">Food for the Poor</h3>
+						<p class="charityDescription7"></p>
+                            <p> This is the charity information for charity 7</p>
+						<a href="charity.php?charity=FoodforthePoor">Go!</a>
+                    </div>
+                    
+                    <div class="result community" data-name="GoodwillIndustriesInternational" data-popularity="4">
+						<a href="charity.php?charity=GoodwillIndustriesInternational"><img src="images/2GoodwillIndustriesInternational.png" style="height: 100px; width: 100px;" /></a>
+                        <h3 class = "charityHead">Goodwill Industries International</h3>
+						<p class="charityDescription8"></p>
+                            <p> This is the charity information for charity 8</p>
+						<a href="charity.php?charity=GoodwillIndustriesInternational">Go!</a>
+                    </div>
+                    
+                    <div class="result community" data-name="YMCAoftheUSA" data-popularity="4">
+						<a href="charity.php?charity=FoodforthePoor"><img src="images/2YMCAoftheUSA.png" style="height: 100px; width: 100px;" /></a>
+                        <h3 class = "charityHead">YMCA of the USA</h3>
+						<p class="charityDescription9"></p>
+                            <p> This is the charity information for charity 9</p>
+						<a href="charity.php?charity=YMCAoftheUSA">Go!</a>
+                    </div>
+                    
+                    <div class="result community" data-name="WorldVision" data-popularity="4">
+						<a href="charity.php?charity=WorldVision"><img src="images/2WorldVision.png" style="height: 100px; width: 100px;" /></a>
+                        <h3 class = "charityHead">World Vision</h3>
+						<p class="charityDescription10"></p>
+                            <p> This is the charity information for charity 10</p>
+						<a href="charity.php?charity=WorldVision">Go!</a>
+                    </div>
+                    
+                    
+                    <!-- ADD MORE CHARITIES BELOW!!!! -->
+                    
+                    
+                    
 					<!--<button id="moreResults">More -></button> -->
 				</div>
 			</div>
@@ -219,6 +275,24 @@
                         $('#resultSearch').val("");
                         $('.resultList').shuffle('shuffle', function($el, shuffle){
                             return $el.hasClass('blood');                      
+                        });
+                    });
+                    
+                    $('#food').unbind().click(function(){
+                        $(".filterOn").removeClass("filterOn");
+                        $(this).addClass("filterOn");
+                        $('#resultSearch').val("");
+                        $('.resultList').shuffle('shuffle', function($el, shuffle){
+                            return $el.hasClass('food');                      
+                        });
+                    });
+                    
+                    $('#community').unbind().click(function(){
+                        $(".filterOn").removeClass("filterOn");
+                        $(this).addClass("filterOn");
+                        $('#resultSearch').val("");
+                        $('.resultList').shuffle('shuffle', function($el, shuffle){
+                            return $el.hasClass('community');                      
                         });
                     });
                     
