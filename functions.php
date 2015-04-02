@@ -207,8 +207,6 @@
                 //logged in
                 $query = "SELECT * FROM `login` WHERE `Email` = '".$_SESSION["userName"]."'";
             }   
-
-            session_write_close(); //close the session
             
             $result = mysqli_query($link, $query); //get the results of the query from the database
             while($row = mysqli_fetch_array($result)){ //grab the user email and the amount they have donated
@@ -224,6 +222,20 @@
                 echo "Error updating record: " . $link->error;
             }
             
+            $query = "SELECT * FROM `charities` WHERE `QueryName` ='" . $charity ."'";
+            $result = mysqli_query($link, $query);
+            if ($result && mysql_num_rows($result) > 0) {
+                echo 'Charity Found'; 
+            } else {
+                echo 'Charity NOT Found';
+            }
+            while($row = mysqli_fetch_array($result))
+            {   //variable names for information in charitydb
+                //associative array?
+                $charityName =$row["CharityName"];
+        		
+            }
+            session_write_close(); //close the session
             $link->close();
         }
         //Something went wrong, log the error and return that there was an error

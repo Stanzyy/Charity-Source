@@ -12,7 +12,8 @@ var trackDonate = {
             type: "GET",
             url: "functions.php",
             data: {
-                action: "trackDonation"
+                action: "trackDonation",
+                charity: document.title.toString()
             },
             success: function(returnedData){
                 alert(returnedData);
