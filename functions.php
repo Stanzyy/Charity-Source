@@ -210,8 +210,10 @@
             
             $result = mysqli_query($link, $query); //get the results of the query from the database
             while($row = mysqli_fetch_array($result)){ //grab the user email and the amount they have donated
-                        $amount = $row["amountDonated"];
-                        $user = $row["Email"];
+                $amount = $row["amountDonated"];
+                $user = $row["Email"];
+                $loginNum = $row["loginNum"];
+                        
             }
             $amount = $amount + 10; //increment donation amount
             $sql = "UPDATE login SET amountDonated ='".$amount."' WHERE Email='".$user."'";
@@ -221,20 +223,37 @@
             } else {
                 echo "Error updating record: " . $link->error;
             }
-            
-            $query = "SELECT * FROM `charities` WHERE `QueryName` ='" . $charity ."'";
+            $title = $_GET['charity'];
+            $charity = explode("|", $title);
+            $query = "SELECT * FROM `charities` WHERE `CharityName` ='" . $charity[0] ."'";
             $result = mysqli_query($link, $query);
-            if ($result && mysql_num_rows($result) > 0) {
+            if ($result && $result->num_rows > 0) {
                 echo 'Charity Found'; 
+                while($row = mysqli_fetch_array($result))
+                {   //variable names for information in charitydb
+                    //associative array?
+                    $charityName =$row["CharityName"];
+                    $totalDonated = $row["TotalDonated"];
+
+                }
+                $totalDonated = $totalDonated + 10; //increment donation amount
+                $sql = "UPDATE charities SET TotalDonated ='".$totalDonated."' WHERE CharityName='".$charityName."'";
+                if ($link->query($sql) === TRUE) {
+                    echo "Record updated successfully";
+                } else {
+                    echo "Error updating record: " . $link->error;
+                }
+                $ten = 10;
+                $sql = "INSERT INTO `gsarastestdb`.`donations` (`loginNum`, `DonatedTo`, `AmountDonated`) VALUES ('".$loginNum."', '".$charityName."', '".$ten."')";
+                if ($link->query($sql) === TRUE) {
+                    echo "Record updated successfully";
+                } else {
+                    echo "Error updating record: " . $link->error;
+                }
             } else {
                 echo 'Charity NOT Found';
             }
-            while($row = mysqli_fetch_array($result))
-            {   //variable names for information in charitydb
-                //associative array?
-                $charityName =$row["CharityName"];
-        		
-            }
+            
             session_write_close(); //close the session
             $link->close();
         }
