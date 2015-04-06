@@ -1,6 +1,10 @@
 <header>
     <div class="headerImage">
         <a href="index.php"><img src="images/logo.png" style="height: 100px; width: 300px;" /></a>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     </div><!--Comment to remove white space allowing for use of 100% of the width
  --><div class="rightSide">    
         <div class="headerLogin">

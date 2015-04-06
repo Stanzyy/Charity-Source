@@ -4,12 +4,26 @@
 	<head>
 		<meta charset='utf-8' />
 		<title>Home | Charity Source</title>
+        
         <!-- Imports stylesheets and icons -->
         <link rel="stylesheet" type="text/css" href="css/gsarascss.css">
         <link rel="stylesheet" type="text/css" href="css/joshindex.css">
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-        <link rel="icon" href="images/favicon.ico" type="image/x-icon"> 
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+        
+        <!-- ajax needed for carousel -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        
+        <!-- Centers the top charities' pictures in the carousel and set their sizes  -->
+        <style>
+          .carousel-inner > .item > img,
+          .carousel-inner > .item > a > img {
+              width: 20%;
+              margin: auto;
+          }
+        </style>
 	</head>
+    
 	<body>
 		<div class="wrapper">
             <!-- Imports generic header. -->
@@ -17,6 +31,45 @@
 			<div class="homePageContent">
                 <!-- Below lists the top three charities.  We will eventually sort them based on real popularity, but for now its hardcoded -->
 				<h3>Top Charities</h3>
+                
+                <!-- Bootstrap carousel -->
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>                    
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                      <a href="charity.php?charity=AmericanRedCross"><img src= "images/AmericanRedCross.png" >
+                    </div>
+
+                    <div class="item">
+                      <a href="charity.php?charity=AmericanCancerSociety"><img src= "images/AmericanCancerSociety.png" >
+                    </div>
+
+                    <div class="item">
+                      <a href="charity.php?charity=SalvationArmy"><img src= "images/SalvationArmy.png">
+                    </div>
+
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                
+                <!-- Old top charities listing  -->                         
+                <!--         
                 <div class="images">
 				    <div class="charity1">
                         <a href="charity.php?charity=AmericanRedCross"><img src= "images/AmericanRedCross.png" style="height: 100px; width: 100px;"> Link to charity</a>
@@ -29,7 +82,9 @@
 				    <div class="charity3">
                         <a href="charity.php?charity=SalvationArmy"><img src= "images/SalvationArmy.png" style="height: 100px; width: 100px;"> Link to charity</a>
                     </div>
-                </div>
+                </div>                
+                -->  
+                        
                 <!-- Below are graphs and charts for the top charity in our database.  More of this in the future. -->
                 <div class="boxes">
 				<div class="infographics">

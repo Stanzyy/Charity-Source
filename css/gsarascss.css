@@ -1,3 +1,6 @@
+/* Add scroll bar to all pages */
+html {overflow-y: scroll;}
+
 /*Header Styling*/
 header{
     width: 100%;
