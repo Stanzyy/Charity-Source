@@ -119,7 +119,15 @@
             echo "</ol>";
     -->
     
-    
+    <?php
+        $link = mysqli_connect("127.0.0.1","root","","gsarastestdb")or die("Error" . mysqli_error($link));
+        $query = "SELECT * FROM `charities` WHERE `QueryName` ='americanredcross'";
+        $result = mysqli_query($link, $query);
+        while($row = mysqli_fetch_array($result))
+        {   //variable names for information in charitydb
+            $americanredcrosstotal = $row["TotalDonated"];
+        }
+    ?>
 	<body> 
 		<div class="wrapper">
             <!-- Imports generic header. -->
@@ -152,7 +160,7 @@
                         <!-- These href's generate data on the fly, and construct one charity.php for the charity choosen.  Consistent thoughout each charity. -->
 						<a href="charity.php?charity=AmericanCancerSociety">Go!</a>
 					</div>
-					<div class="result blood" data-name="AmericanRedCross" data-popularity="<?php $americanredcrosstotal ?>">
+					<div class="result blood" data-name="AmericanRedCross" data-popularity="<?php $americanredcrosstotal; ?>">
 						<a href="charity.php?charity=AmericanRedCross"><img src="images/AmericanRedCross.png" style="height: 100px; width: 100px;" /></a>
                         <h3 class = "charityHead">American Red Cross</h3>
 						<a href="charity.php?charity=AmericanRedCross">Go!</a>
@@ -174,7 +182,7 @@
 						<a href="charity.php?charity=FeedingAmerica">Go!</a>
                     </div>
                     
-                    <div class="result community" data-name="TaskForceforGlobalHealth" data-popularity="4">
+                    <div class="result community" data-name="TaskForceforGlobalHealth" data-popularity="20">
 						<a href="charity.php?charity=TaskForceforGlobalHealth"><img src="images/2TaskForceforGlobalHealth.png" style="height: 100px; width: 100px;" /></a>
                         <h3 class = "charityHead">Task Force for Global Health</h3>
 						<a href="charity.php?charity=TaskForceforglobalHealth">Go!</a>
@@ -216,7 +224,7 @@
 						<a href="charity.php?charity=CompassionInternational">Go!</a>
                     </div>
                     
-                    <div class="result community" data-name="AmeriCaresFoundation" data-popularity="4">
+                    <div class="result community" data-name="AmeriCaresFoundation" data-popularity="30">
 						<a href="charity.php?charity=AmeriCaresFoundation"><img src="images/2AmeriCaresFoundation.png" style="height: 100px; width: 100px;" /></a>
                         <h3 class = "charityHead">AmeriCares Foundation</h3>
 						<a href="charity.php?charity=AmeriCaresFoundation">Go!</a>
@@ -380,6 +388,7 @@
                             };//end of opts
                         } else if(sort === 'popularity'){
                             opts = {
+                                reverse: true,
                                 by: function($el){
                                     return $el.data('popularity')
                                 }
@@ -416,15 +425,7 @@
                 
             }) //end of function() function
         </script>
-        <?php
-            $link = mysqli_connect("127.0.0.1","root","","gsarastestdb")or die("Error" . mysqli_error($link));
-            $query = "SELECT * FROM `charities` WHERE `QueryName` ='americanredcross'";
-            $result = mysqli_query($link, $query);
-            while($row = mysqli_fetch_array($result))
-            {   //variable names for information in charitydb
-                $americanredcrosstotal = $row["TotalDonated"];
-            }
-        ?>
+        
 	</body>
 </html>
 <?php session_write_close(); ?>
