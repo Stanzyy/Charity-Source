@@ -28,7 +28,9 @@
             }
             
             .result{
-                width: 20em;
+                width: 24em;
+                height: 17em;
+                padding: 1em;
             }
         </style>
 	</head>
@@ -116,7 +118,6 @@
             }
             echo "</ol>";
     -->
-
     
     
 	<body> 
@@ -151,7 +152,7 @@
                         <!-- These href's generate data on the fly, and construct one charity.php for the charity choosen.  Consistent thoughout each charity. -->
 						<a href="charity.php?charity=AmericanCancerSociety">Go!</a>
 					</div>
-					<div class="result blood" data-name="AmericanRedCross" data-popularity="5">
+					<div class="result blood" data-name="AmericanRedCross" data-popularity="<?php $americanredcrosstotal ?>">
 						<a href="charity.php?charity=AmericanRedCross"><img src="images/AmericanRedCross.png" style="height: 100px; width: 100px;" /></a>
                         <h3 class = "charityHead">American Red Cross</h3>
 						<a href="charity.php?charity=AmericanRedCross">Go!</a>
@@ -251,6 +252,17 @@
 						<a href="charity.php?charity=FeedtheChildren">Go!</a>
                     </div>
                     
+                    <div class="result children community" data-name="BoyScoutsofAmerica" data-popularity="4">
+						<a href="charity.php?charity=BoyScoutsofAmerica"><img src="images/2BoyScoutsofAmerica.png" style="height: 100px; width: 100px;" /></a>
+                        <h3 class = "charityHead">Boy Scouts of America</h3>
+						<a href="charity.php?charity=BoyScoutsofAmerica">Go!</a>
+                    </div>
+                    
+                    <div class="result children community" data-name="StepUpforStudents" data-popularity="4">
+						<a href="charity.php?charity=StepUpforStudents"><img src="images/2StepUpforStudents.png" style="height: 100px; width: 100px;" /></a>
+                        <h3 class = "charityHead">Step Up for Students</h3>
+						<a href="charity.php?charity=StepUpforStudents">Go!</a>
+                    </div>
                     
 					<!--<button id="moreResults">More -></button> -->
 				</div>
@@ -403,8 +415,16 @@
                 galleryJS.Init();
                 
             }) //end of function() function
-            
         </script>
+        <?php
+            $link = mysqli_connect("127.0.0.1","root","","gsarastestdb")or die("Error" . mysqli_error($link));
+            $query = "SELECT * FROM `charities` WHERE `QueryName` ='americanredcross'";
+            $result = mysqli_query($link, $query);
+            while($row = mysqli_fetch_array($result))
+            {   //variable names for information in charitydb
+                $americanredcrosstotal = $row["TotalDonated"];
+            }
+        ?>
 	</body>
 </html>
 <?php session_write_close(); ?>
