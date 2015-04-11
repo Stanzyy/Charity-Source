@@ -5,13 +5,16 @@
 		<meta charset='utf-8' />
 		<title>Browse | Charity Source</title>
         <!-- Imported stylesheets and images below. -->
-        <link rel="stylesheet" type="text/css" href="css/gsarascss.css">
+ <!--       <link rel="stylesheet" type="text/css" href="css/gsarascss.css">
         <link rel="stylesheet" type="text/css" href="css/joshbrowse.css">
+-->        
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
         <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-        <style>
-            <!-- Inline CSS below controls positioning the sort text, changes background of filters,
-                 and controls the position and size of the filter buttons.  -->
+        
+        <!-- Inline CSS below controls positioning the sort text, changes background of filters,
+             and controls the position and size of the filter buttons.  -->
+<!--    <style>
+            
             .filterButton{
                 border: none;
                 height: 3em;
@@ -28,11 +31,11 @@
             }
             
             .result{
-                width: 24em;
-                height: 17em;
-                padding: 1em;
+                width: 20em;
             }
         </style>
+    -->
+        
 	</head>
     <!-- Below is code provided by Jesse.  We used it at first, then made our own sql code in the future. -->
     <!--
@@ -118,21 +121,14 @@
             }
             echo "</ol>";
     -->
+
     
-    <?php
-        $link = mysqli_connect("127.0.0.1","root","","gsarastestdb")or die("Error" . mysqli_error($link));
-        $query = "SELECT * FROM `charities` WHERE `QueryName` ='americanredcross'";
-        $result = mysqli_query($link, $query);
-        while($row = mysqli_fetch_array($result))
-        {   //variable names for information in charitydb
-            $americanredcrosstotal = $row["TotalDonated"];
-        }
-    ?>
+    
 	<body> 
 		<div class="wrapper">
             <!-- Imports generic header. -->
             <?php require_once('header.php');?>
-			<div class="browseContent">
+			<div class="browseContent container">
 				<div class="filters">
                     <!-- Textbox to search for charities. -->
 					<input placeholder="Search Charities..." type="text" id='resultSearch'>
@@ -153,124 +149,113 @@
                         <button class="filterButton" id="food">Food</button>
 				</div>
                 <!-- The next couple chunks of code are all the charities available to search for, along with basic information about each charity. -->
-				<div class="resultList">
-					<div class="result cancer food" data-name="CancerSociety" data-popularity="3">
+				<div class="resultList row" >
+					<div class="result cancer food col-sm-4" data-name="CancerSociety" data-popularity="3">
 						<a href="charity.php?charity=AmericanCancerSociety"><img src="images/AmericanCancerSociety.png" style="height: 100px; width: 100px;" /></a>
 						<h3 class = "charityHead">American Cancer Society</h3>
                         <!-- These href's generate data on the fly, and construct one charity.php for the charity choosen.  Consistent thoughout each charity. -->
 						<a href="charity.php?charity=AmericanCancerSociety">Go!</a>
 					</div>
-					<div class="result blood" data-name="AmericanRedCross" data-popularity="<?php $americanredcrosstotal; ?>">
+					<div class="result blood col-sm-4" data-name="AmericanRedCross" data-popularity="5">
 						<a href="charity.php?charity=AmericanRedCross"><img src="images/AmericanRedCross.png" style="height: 100px; width: 100px;" /></a>
                         <h3 class = "charityHead">American Red Cross</h3>
 						<a href="charity.php?charity=AmericanRedCross">Go!</a>
 					</div>
-					<div class="result clothes" data-name="SalvationArmy" data-popularity="1">
+					<div class="result clothes col-sm-4" data-name="SalvationArmy" data-popularity="1">
 						<a href="charity.php?charity=SalvationArmy"><img src="images/SalvationArmy.png" style="height: 100px; width: 100px;" /></a>
                         <h3 class = "charityHead">Salvation Army</h3>
 						<a href="charity.php?charity=SalvationArmy">Go!</a>
 					</div>
-                    <div class="result community" data-name="UnitedWay" data-popularity="2">
+                    <div class="result community col-sm-4" data-name="UnitedWay" data-popularity="2">
 						<a href="charity.php?charity=UnitedWay"><img src="images/UnitedWay.png" style="height: 100px; width: 100px;" /></a>
                         <h3 class = "charityHead">United Way</h3>
 						<a href="charity.php?charity=UnitedWay">Go!</a>
                     </div>
                     
-                    <div class="result food" data-name="FeedingAmerica" data-popularity="4">
+                    <div class="result food col-sm-4" data-name="FeedingAmerica" data-popularity="4">
 						<a href="charity.php?charity=FeedingAmerica"><img src="images/2FeedingAmerica.png" style="height: 100px; width: 100px;" /></a>
                         <h3 class = "charityHead">Feeding America</h3>
 						<a href="charity.php?charity=FeedingAmerica">Go!</a>
                     </div>
                     
-                    <div class="result community" data-name="TaskForceforGlobalHealth" data-popularity="20">
+                    <div class="result community col-sm-4" data-name="TaskForceforGlobalHealth" data-popularity="4">
 						<a href="charity.php?charity=TaskForceforGlobalHealth"><img src="images/2TaskForceforGlobalHealth.png" style="height: 100px; width: 100px;" /></a>
                         <h3 class = "charityHead">Task Force for Global Health</h3>
 						<a href="charity.php?charity=TaskForceforglobalHealth">Go!</a>
                     </div>
 
-                    <div class="result food" data-name="FoodforthePoor" data-popularity="4">
+                    <div class="result food col-sm-4" data-name="FoodforthePoor" data-popularity="4">
 						<a href="charity.php?charity=FoodforthePoor"><img src="images/2FoodforthePoor.png" style="height: 100px; width: 100px;" /></a>
                         <h3 class = "charityHead">Food for the Poor</h3>
 						<a href="charity.php?charity=FoodforthePoor">Go!</a>
                     </div>
                     
-                    <div class="result community" data-name="GoodwillIndustriesInternational" data-popularity="4">
+                    <div class="result community col-sm-4" data-name="GoodwillIndustriesInternational" data-popularity="4">
 						<a href="charity.php?charity=GoodwillIndustriesInternational"><img src="images/2GoodwillIndustriesInternational.png" style="height: 100px; width: 100px;" /></a>
                         <h3 class = "charityHead">Goodwill Industries International</h3>
 						<a href="charity.php?charity=GoodwillIndustriesInternational">Go!</a>
                     </div>
                     
-                    <div class="result community children" data-name="YMCAoftheUSA" data-popularity="4">
+                    <div class="result community children col-sm-4" data-name="YMCAoftheUSA" data-popularity="4">
 						<a href="charity.php?charity=FoodforthePoor"><img src="images/2YMCAoftheUSA.png" style="height: 100px; width: 100px;" /></a>
                         <h3 class = "charityHead">YMCA of the USA</h3>
 						<a href="charity.php?charity=YMCAoftheUSA">Go!</a>
                     </div>
                     
-                    <div class="result community" data-name="WorldVision" data-popularity="4">
+                    <div class="result community col-sm-4" data-name="WorldVision" data-popularity="4">
 						<a href="charity.php?charity=WorldVision"><img src="images/2WorldVision.png" style="height: 100px; width: 100px;" /></a>
                         <h3 class = "charityHead">World Vision</h3>
 						<a href="charity.php?charity=WorldVision">Go!</a>
                     </div>
                     
-                    <div class="result community children" data-name="BoysandGirlsClubofAmerica" data-popularity="4">
+                    <div class="result community children col-sm-4" data-name="BoysandGirlsClubofAmerica" data-popularity="4">
 						<a href="charity.php?charity=BoysandGirlsClubofAmerica"><img src="images/2BoysandGirlsClubofAmerica.png" style="height: 100px; width: 100px;" /></a>
                         <h3 class = "charityHead">Boys and Girls Club of America</h3>
 						<a href="charity.php?charity=BoysandGirlsClubofAmerica">Go!</a>
                     </div>
                     
-                    <div class="result community" data-name="CompassionInternational" data-popularity="4">
+                    <div class="result community col-sm-4" data-name="CompassionInternational" data-popularity="4">
 						<a href="charity.php?charity=CompassionInternational"><img src="images/2CompassionInternational.png" style="height: 100px; width: 100px;" /></a>
                         <h3 class = "charityHead">Compassion International</h3>
 						<a href="charity.php?charity=CompassionInternational">Go!</a>
                     </div>
                     
-                    <div class="result community" data-name="AmeriCaresFoundation" data-popularity="30">
+                    <div class="result community col-sm-4" data-name="AmeriCaresFoundation" data-popularity="4">
 						<a href="charity.php?charity=AmeriCaresFoundation"><img src="images/2AmeriCaresFoundation.png" style="height: 100px; width: 100px;" /></a>
                         <h3 class = "charityHead">AmeriCares Foundation</h3>
 						<a href="charity.php?charity=AmeriCaresFoundation">Go!</a>
                     </div>
                     
-                    <div class="result children" data-name="HabitatforHumanityInternational" data-popularity="4">
+                    <div class="result children col-sm-4" data-name="HabitatforHumanityInternational" data-popularity="4">
 						<a href="charity.php?charity=HabitatforHumanityInternational"><img src="images/2HabitatforHumanityInternational.png" style="height: 100px; width: 100px;" /></a>
                         <h3 class = "charityHead">Habitat for Humanity International</h3>
 						<a href="charity.php?charity=HabitatforHumanityInternational">Go!</a>
                     </div>
                     
-                    <div class="result community children" data-name="UNICEF" data-popularity="4">
+                    <div class="result community children col-sm-4" data-name="UNICEF" data-popularity="4">
 						<a href="charity.php?charity=UNICEF"><img src="images/2UNICEF.png" style="height: 100px; width: 100px;" /></a>
                         <h3 class = "charityHead">UNICEF</h3>
 						<a href="charity.php?charity=UNICEF">Go!</a>
                     </div>
                     
-                    <div class="result blood" data-name="AmericanHeartAssociation" data-popularity="4">
+                    <div class="result blood col-sm-4" data-name="AmericanHeartAssociation" data-popularity="4">
 						<a href="charity.php?charity=AmericanHeartAssociation"><img src="images/2AmericanHeartAssociation.png" style="height: 100px; width: 100px;" /></a>
                         <h3 class = "charityHead">American Heart Association</h3>
 						<a href="charity.php?charity=AmericanHeartAssociation">Go!</a>
                     </div>
                     
-                    <div class="result community food clothing" data-name="DirectRelief" data-popularity="4">
+                    <div class="result community food clothing col-sm-4" data-name="DirectRelief" data-popularity="4">
 						<a href="charity.php?charity=DirectRelief"><img src="images/2DirectRelief.png" style="height: 100px; width: 100px;" /></a>
                         <h3 class = "charityHead">Direct Relief</h3>
 						<a href="charity.php?charity=DirectRelief">Go!</a>
                     </div>
                     
-                    <div class="result children food" data-name="FeedtheChildren" data-popularity="4">
+                    <div class="result children food col-sm-4" data-name="FeedtheChildren" data-popularity="4">
 						<a href="charity.php?charity=FeedtheChildren"><img src="images/2FeedtheChildren.png" style="height: 100px; width: 100px;" /></a>
                         <h3 class = "charityHead">Feed the Children</h3>
 						<a href="charity.php?charity=FeedtheChildren">Go!</a>
                     </div>
                     
-                    <div class="result children community" data-name="BoyScoutsofAmerica" data-popularity="4">
-						<a href="charity.php?charity=BoyScoutsofAmerica"><img src="images/2BoyScoutsofAmerica.png" style="height: 100px; width: 100px;" /></a>
-                        <h3 class = "charityHead">Boy Scouts of America</h3>
-						<a href="charity.php?charity=BoyScoutsofAmerica">Go!</a>
-                    </div>
-                    
-                    <div class="result children community" data-name="StepUpforStudents" data-popularity="4">
-						<a href="charity.php?charity=StepUpforStudents"><img src="images/2StepUpforStudents.png" style="height: 100px; width: 100px;" /></a>
-                        <h3 class = "charityHead">Step Up for Students</h3>
-						<a href="charity.php?charity=StepUpforStudents">Go!</a>
-                    </div>
                     
 					<!--<button id="moreResults">More -></button> -->
 				</div>
@@ -388,7 +373,6 @@
                             };//end of opts
                         } else if(sort === 'popularity'){
                             opts = {
-                                reverse: true,
                                 by: function($el){
                                     return $el.data('popularity')
                                 }
@@ -424,8 +408,8 @@
                 galleryJS.Init();
                 
             }) //end of function() function
+            
         </script>
-        
 	</body>
 </html>
 <?php session_write_close(); ?>

@@ -1,0 +1,70 @@
+ body {
+     padding-top: 70px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */   
+     background-color: #FEFEFE;
+ /*    min-height: 2000px;  */
+ }
+
+footer {
+    background-color: #424749;
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    height:30px;
+    width:100%;
+    color: white;
+    padding-top: 5px;
+    text-align: center;
+    
+}
+
+.navbar-fixed-top .nav {
+    padding: 35px 0;
+}
+
+@media(min-width:768px) {
+    body {
+        padding-top: 100px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+    }
+
+    .navbar-fixed-top .navbar-brand {
+        padding: 15px 0;
+    }
+}
+
+.navbar-default {
+    background-color: #2290F5;
+    border-color: #030033;
+    border-bottom-width: medium;
+  /*  height: 15%; */
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #FEFEFE; /*Change active text color here*/
+    font-size: 200%;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+.browseContent{
+    padding: 2em;
+}
+
+.filters{
+    padding-bottom: 10px;
+}
+
+.carousel-inner img {
+  margin: 0 auto;
+}
+
+.homePageContent{
+    padding: 2em;
+    text-align: center;   
+}
+
+/* Add scroll bar to all pages */
+html {overflow-y: scroll;}
+
+
+.aboutContent {
+    padding: 1em;
+}
