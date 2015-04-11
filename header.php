@@ -17,7 +17,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-                <a class="navbar-brand" href="index.php"><img class="logo" src="images/logo.png" style="height: 100px; max-width: 100%;" /></a>
+                <a class="navbar-brand" href="index.php"><img id="logo" src="images/logo.png" style="height: 100px; max-width: 100%;" /></a>
                 
        <!-- Changes size of logo dynamically, not working quite right yet -->         
       <!--          <a class="navbar-brand" href="index.php"><img class="logo" src="images/logo.png" style="max-width: 100%; height: auto;" /></a>

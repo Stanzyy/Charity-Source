@@ -11,18 +11,6 @@
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     -->
         <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-        
-        <!-- jquery needed for carousel -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-        
-        <!-- Centers the top charities' pictures in the carousel and set their sizes  -->
-        <style>
-          .carousel-inner > .item > img,
-          .carousel-inner > .item > a > img {
-              width: 20%;
-              margin: auto;
-          }
-        </style>
 	</head>
     
 	<body>
