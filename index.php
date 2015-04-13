@@ -6,31 +6,21 @@
 		<title>Home | Charity Source</title>
         
         <!-- Imports stylesheets and icons -->
-        <link rel="stylesheet" type="text/css" href="css/gsarascss.css">
+   <!--     <link rel="stylesheet" type="text/css" href="css/gsarascss.css">
         <link rel="stylesheet" type="text/css" href="css/joshindex.css">
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    -->
         <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-        
-        <!-- ajax needed for carousel -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        
-        <!-- Centers the top charities' pictures in the carousel and set their sizes  -->
-        <style>
-          .carousel-inner > .item > img,
-          .carousel-inner > .item > a > img {
-              width: 20%;
-              margin: auto;
-          }
-        </style>
 	</head>
     
 	<body>
 		<div class="wrapper">
             <!-- Imports generic header. -->
             <?php require_once('header.php');?>
-			<div class="homePageContent">
+			<div class="homePageContent container">
                 <!-- Below lists the top three charities.  We will eventually sort them based on real popularity, but for now its hardcoded -->
-				<h3>Top Charities</h3>
+				                
+                <h3>Top Charities</h3>
                 
                 <!-- Bootstrap carousel -->
                 <div id="myCarousel" class="carousel slide" data-ride="carousel">
