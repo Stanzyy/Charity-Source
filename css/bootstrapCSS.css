@@ -129,3 +129,7 @@ html {overflow-y: scroll;}
     width: 20%;
     margin: auto;
 }
+
+.teamMembers {
+ padding-bottom: 2em;   
+}

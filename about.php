@@ -31,6 +31,7 @@
                     </p>
                 </div>
 				<h3>Meet the Team</h3>
+                <div class="teamMembers row">
                 <!-- images of each team member -->
 				<div class="person col-sm-3 col-md-3">
 					<img src="images/greg.png" />
@@ -49,6 +50,7 @@
 					<img src="images/nick.png" />
 					<p>Nicolas Stanzione</p>
 				</div>
+                </div>
 			</div>
             <?php require_once('footer.php');?> 
 		</div>
