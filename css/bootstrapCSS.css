@@ -33,8 +33,7 @@ footer {
 
 .navbar-default {
     background-color: #2290F5;
-    border-color: #030033;
-    border-bottom-width: medium;
+    border-color: #2290F5;
   /*  height: 15%; */
 }
 
@@ -132,4 +131,37 @@ html {overflow-y: scroll;}
 
 .teamMembers {
  padding-bottom: 2em;   
+}
+
+.carousel-control.right{
+    background-image: none;   
+}
+
+.carousel-control.left{
+    background-image: none;   
+}
+
+.carouselWidth{
+    width: 100%;
+    background-color: #424749;
+    margin-top: 1.5em;
+    height: 250px;
+}
+
+.item {
+    margin-top: 10px;
+    background-color: #FEFEFE;
+}
+
+#myCarousel{
+  width: 80%;
+  margin: 0px auto;
+}
+
+#resultSearch {
+ width: 30%;   
+}
+
+.inline{
+    display: inline-block;
 }

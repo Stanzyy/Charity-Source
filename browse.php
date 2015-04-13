@@ -133,17 +133,16 @@
 		<div class="wrapper">
             <!-- Imports generic header. -->
             <?php require_once('header.php');?>
-			<div class="browseContent container">
-                
+                            <div class="carouselWidth">
                 <!-- Bootstrap carousel -->
                 <div id="myCarousel" class="carousel slide" data-ride="carousel">
                 <!-- Indicators -->
-                    <ol class="carousel-indicators">
+                 <!--   <ol class="carousel-indicators">
                         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                         <li data-target="#myCarousel" data-slide-to="1"></li>
                         <li data-target="#myCarousel" data-slide-to="2"></li>                    
                     </ol>
-
+-->
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner" role="listbox">
                     <div class="item active">
@@ -168,34 +167,39 @@
                     <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
                     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
-                    </a>
+                    </a> 
                 </div>
+                </div>
+			<div class="browseContent container">
                 
+
 				<div class="filters">
                     <!-- Textbox to search for charities. -->
                     <div class="search row">
-					   <input placeholder="Search Charities..." type="text" id='resultSearch' class= 'col-sm-4'>
+                        
+					   <input placeholder="Search Charities..." type="text" id='resultSearch' class= 'col-sm-4 form-control'>
                     
                         <!-- Below sets values for the dopdown, to sort by either Name or Most Popular. -->
-                        <p class="sortText col-sm-4">Sort by:
-                            <select class="sort-options">
-                                <option value="title">Name</option>
-                                <option value="popularity">Most Popular</option>
+                        <p class="sortText">
+                            
+                            <select class="sort-options form-control">
+                                <option value="title">By Name</option>
+                                <option value="popularity">By Popularity</option>
                             </select>
                         </p>
                     </div>
                     <!-- Filter buttons below that consist of the filters available. -->
-		<!--			<h3>Filters</h3>
-                        <button class="filterOn filterButton" id="all">All</button>
-						<button class="filterButton" id="blood">Blood</button>
-                        <button class="filterButton" id="cancer">Cancer</button>
-                        <button class="filterButton" id="children">Children</button>
-						<button class="filterButton" id="clothes">Clothing</button>
-                        <button class="filterButton" id="community">Community</button>
-                        <button class="filterButton" id="food">Food</button>
+					<h3 class="inline">Show results for </h3>
+                        <button class="filterOn filterButton btn inline" id="all">All</button>
+						<button class="filterButton btn inline" id="blood">Blood</button>
+                        <button class="filterButton btn inline" id="cancer">Cancer</button>
+                        <button class="filterButton btn inline" id="children">Children</button>
+						<button class="filterButton btn inline" id="clothes">Clothing</button>
+                        <button class="filterButton btn inline" id="community">Community</button>
+                        <button class="filterButton btn inline" id="food">Food</button>
                     
-            -->          
-                    <!-- Sidebar -->
+                      <!-- Sidebar -->
+           <!--         
                     <div id="sidebar-wrapper">
                         <ul class="sidebar-nav">
                             <li class="sidebar-brand"><p>Refine Search</p></li>
@@ -207,7 +211,10 @@
                             <li><button class="filterButton" id="community">Community</button></li>
                             <li><button class="filterButton" id="food">Food</button></li>
                         </ul>
-                    </div>              
+                    </div> 
+                    
+                    
+                    -->             
 				</div>
                 
                 <!-- The next couple chunks of code are all the charities available to search for, along with basic information about each charity. -->
