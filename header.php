@@ -38,7 +38,7 @@
                             echo "<li> <a href='signup.php' style='color:white'>Log In</a></li>
                             <li><a href='signup.php' style='color:white'>Sign Up</a></li>";
                         }else{
-                            echo "<li><a href='userPage.php?username=".$_SESSION['userName']."'><span id='uname' style='color:white'>Hi ".$_SESSION['firstName'] . "</span></a></li>  <li><a id='logout' style='color:white'>Log Out</a></li>";
+                            echo "<li><a href='userPage.php?username=".$_SESSION['userName']."'><span id='uname' style='color:white'>Hi ".$_SESSION['firstName'] . "</span></a></li>  <li style='cursor:pointer;'><a id='logout' style='color:white'>Log Out</a></li>";
                         }            
                     ?>
                     </div></li>
