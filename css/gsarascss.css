@@ -5,7 +5,6 @@ html {overflow-y: scroll;}
 header{
     width: 100%;
     margin-bottom: 2em;
-    border-bottom: 1px solid black;
 }
             
 header a{
@@ -52,10 +51,6 @@ header p{
 .wrapper{
     width: 1000px;
     margin: 0px auto;
-}
-            
-.content{
-    height: 30em;
 }
 
 /*Form headings*/
@@ -179,3 +174,9 @@ footer p{
 }
 
 .close:hover { background: #00d9ff; }
+
+
+
+.bstrp-modal{
+    display: none;
+}

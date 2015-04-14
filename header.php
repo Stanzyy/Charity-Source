@@ -27,7 +27,7 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav navbar-right">                     
-                <li><a href="browse.php">Browse</a></li>
+                <li><a href="index.php">Browse</a></li>
                 <li><a href="about.php">About</a></li>
                 <li><a href="contact.php">Contact</a></li>
                 <li><div class="headerLogin">

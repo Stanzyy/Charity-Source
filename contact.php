@@ -22,6 +22,20 @@ and open the template in the editor.
 	            height: 2em;
                 cursor: pointer;
             }
+
+            #message{
+            	height: 9.3em;
+            	resize: none;
+            }
+
+            .contact-form-control{
+            	margin-top: 1em;
+            }
+
+            .contact-button{
+            	margin-left: 15px;
+            	margin-top: 1em;
+            }
         </style>
     </head>
     <body>
@@ -33,12 +47,15 @@ and open the template in the editor.
                 </div>
                 <div class = "contactFormDiv"> <!-- creates the input fields for the user to contact us -->
 	                <form id="emailSubmitForm">
-	                    <div class="inputField"><span class="inputTitle">Name: </span><input required id="name" type="text"></div>
-	                        <div class="inputField"><span class="inputTitle">Email: </span><input required id="email" type="email"></div>
-	                        <div class="inputField"><span class="inputTitle">Subject: </span><input required id="subject" type="text"></div>
-	                        <div class="inputField"><span class="inputTitle">Message: </span><textarea required id="message" cols="40" rows="5"></textarea>
-	                        </div>
-	                        <div class="inputField buttonHolder"><button id="submitButton">Submit</button></div>
+	                	<div class="control-group inline col-lg-6 col-height">
+		                    <input class="form-control" required id="name" type="text" placeholder="Name">
+		                    <input class="form-control contact-form-control" required id="email" type="email" placeholder="Email">
+		                    <input class="form-control contact-form-control" required id="subject" type="text" Placeholder="Subject">
+	                    </div>
+	                    <div class="control-group inline col-lg-6 col-height">
+	                    	<textarea class="form-control" required id="message" placeholder="Message"></textarea>
+	                    </div>
+	                    <button class="contact-button btn">Submit</button>
 	                </form>
                 </div>
             </div>

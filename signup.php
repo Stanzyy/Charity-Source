@@ -8,29 +8,7 @@
         <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     </head>
     <body>
-        <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-      Launch demo modal
-    </button>
-
-    <!-- Modal -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-          </div>
-          <div class="modal-body">
-            ...
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
-        </div>
-      </div>
-    </div>
+     
         <div class="wrapper">
             <div class="content">
                 <!--Include the header-->
@@ -41,9 +19,9 @@
                         <span id="signinErrorContainer"><p id="signInError">Error Space</p></span>
                     </div>
                     <form id="signinForm">
-                        <div class="inputField"><input required class="inputBox" id="userName" type="email" placeholder="Email"></div>
-    					<div class="inputField"><input required class="inputBox" id="existingPassword" type="password" placeholder="Password"></div>
-                        <div class="inputField buttonHolder"><button class="submitButton" id="signInButton" type="submit">Submit</button></div>
+                        <div class="inputField"><input required class="form-control" id="userName" type="email" placeholder="Email"></div>
+    					<div class="inputField"><input required class="form-control" id="existingPassword" type="password" placeholder="Password"></div>
+                        <div class="inputField buttonHolder"><button class="btn" id="signInButton" type="submit">Submit</button></div>
                     </form>
                 </div><!--Comment to remove the blank space between the divs. This allows for the use of 100% width instead of 99%
              --><div id="rightForm">
@@ -52,12 +30,12 @@
                         <span id="signupErrorConatiner"><p id="signupError">Error Space</p></span>
                     </div>
                     <form id="signupForm">
-                        <div class="inputField"><input required class="inputBox" id="firstName" type="test" placeholder="First Name"></div>
-                        <div class="inputField"><input required class="inputBox" id="lastName" type="text" placeholder="Last Name"></div>
-                        <div class="inputField"><input required class="inputBox" id="newUser" type="email" placeholder="Email"></div>
-                        <div class="inputField"><input required class="inputBox" id="newPassword" type="password" placeholder="Password"></div>
-                        <div class="inputField"><input required class="inputBox" id="newPasswordCheck" type="password" placeholder="Confirm Password"></div>
-                        <div class="inputField buttonHolder"><button class="submitButton" id="signUpButton" type="submit">Submit</button></div>
+                        <div class="inputField"><input required class="form-control" id="firstName" type="test" placeholder="First Name"></div>
+                        <div class="inputField"><input required class="form-control" id="lastName" type="text" placeholder="Last Name"></div>
+                        <div class="inputField"><input required class="form-control" id="newUser" type="email" placeholder="Email"></div>
+                        <div class="inputField"><input required class="form-control" id="newPassword" type="password" placeholder="Password"></div>
+                        <div class="inputField"><input required class="form-control" id="newPasswordCheck" type="password" placeholder="Confirm Password"></div>
+                        <div class="inputField buttonHolder"><button class="btn" id="signUpButton" type="submit">Submit</button></div>
                     </form>
                 </div>                
             </div>
@@ -74,10 +52,33 @@
 		        <h2>Thank you for signing up</h2>
 		        <p>Your profile is now ready for use.</p>
                 <p>Continue to profile?</p>
-		        <a href="index.php">No Thanks</a>
-                <a href="userPage.php">Sure!</a>
+		        
 	        </div>
         </div>
+           <!-- Button trigger modal -->
+    
+    <button type="button" id="bstrp-modal" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" style="display:none">
+      Welcome Modal
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Thank you for signing up!</h4>
+          </div>
+          <div class="modal-body">
+            <p>Would you like to view your profile?</p>
+          </div>
+          <div class="modal-footer">
+            <a href="index.php">No Thanks</a>
+            <a href="userPage.php">Sure!</a>
+          </div>
+        </div>
+      </div>
+    </div>
         <!--Script includes-->
         <script src="javascripts/signup.js"></script>
     </body>

@@ -85,7 +85,7 @@ var signinJS = {
             success: function(returnedData){
                 //alert(returnedData);
                 //Trigger the pop up by simulating a link click.
-                $("#popup")[0].click();
+                $("#bstrp-modal")[0].click();
             },
             error: function(returnedData){
                 alert("There was an error with your request, please try again.");
