@@ -54,13 +54,11 @@
                 <!-- Add the ability to edit user profile -->
                 <div hidden class="editProfileInfo">
                     <?php
-                        session_start();
-                        echo "<div class='profileItemHolder'><p class='editHolder'>User Name:</p><input class='editDisplay' data-uid=".$_SESSION["userNumber"]." id='userName' type='text' value='".$_SESSION["userName"]."' /></div>".
-                             "<div class='profileItemHolder'><p class='editHolder'>First Name:</p><input class='editDisplay' id='firstName' type='text' value='".$_SESSION["firstName"]."' /></div>".
-                             "<div class='profileItemHolder'><p class='editHolder'>Last Name:</p><input class='editDisplay' id='lastName' type='text' value='".$_SESSION["lastName"]."' /></div>".
-                             "<div class='profileItemHolder'><p class='editHolder'>Password:</p><input class='editDisplay' id='password' type='password' placeholder='New Password' /></div>".
-                             "<div class='profileItemHolder'><p class='editHolder'>Confirm Password:</p><input class='editDisplay' id='passwordCheck' type='password' placeholder='Confirm Password Change' /></div>";
-                        session_write_close();
+                        echo "<div class='profileItemHolder'><p class='editHolder'>User Name:</p><input class='editDisplay form-control' data-uid=".$_SESSION["userNumber"]." id='userName' type='text' value='".$_SESSION["userName"]."' /></div>".
+                             "<div class='profileItemHolder'><p class='editHolder'>First Name:</p><input class='editDisplay form-control' id='firstName' type='text' value='".$_SESSION["firstName"]."' /></div>".
+                             "<div class='profileItemHolder'><p class='editHolder'>Last Name:</p><input class='editDisplay form-control' id='lastName' type='text' value='".$_SESSION["lastName"]."' /></div>".
+                             "<div class='profileItemHolder'><p class='editHolder'>Password:</p><input class='editDisplay form-control' id='password' type='password' placeholder='New Password' /></div>".
+                             "<div class='profileItemHolder'><p class='editHolder'>Confirm Password:</p><input class='editDisplay form-control' id='passwordCheck' type='password' placeholder='Confirm Password Change' /></div>";
                     ?>
                     <p id="saveLink">Save</p>
                     <p id="cancelLink">Cancel</p>
@@ -71,7 +69,7 @@
             <?php
                 if(!$hasDonated){
                     echo "<h3>Make a donation to see how you compare to other users.
-                          <a href='browse.php'>View Charities</a></p>";
+                          <a href='index.php'>View Charities</a></p>";
                 }else{
                     echo "<div class='userStatsSingle'>
                             <h4>How Much You Have Donated</h4>
@@ -89,7 +87,7 @@
             <?php
                 if(!$hasDonated){
                     echo "<h3>As you donate more, we will be able to suggest charities to donate to.
-                          <a href='browse.php'>View Charities</a></p>";
+                          <a href='index.php'>View Charities</a></p>";
                 }else{
                     echo "<h3 id='h3charity'>Charities Similar to Those You Have Donated To</h3>
                           <a href='#' class='charityStatsSingle'>

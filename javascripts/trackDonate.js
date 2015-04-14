@@ -16,7 +16,7 @@ var trackDonate = {
                 charity: document.title.toString()
             },
             success: function(returnedData){
-                alert(returnedData);
+                
             },
             error: function(returnedData){
                 alert("There was an error with your request, please try again.");
