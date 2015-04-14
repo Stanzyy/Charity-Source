@@ -25,6 +25,12 @@
 
             //Populate session variables with the user information for potential later retrieval
             //No sense in not getting them and having to go across the wire later on for the same info
+
+            if(mysqli_num_rows($result) == 0){
+                echo "error";
+                return;
+            }
+
             while($row = mysqli_fetch_array($result)){
                 $_SESSION["userNumber"] = $row["loginNum"];
                 $_SESSION["userName"]   = $row["Email"];

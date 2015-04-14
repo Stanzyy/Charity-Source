@@ -16,7 +16,7 @@
                 <div id="leftForm">
                     <div class="formHead">
                         <h3>Sign In</h3>
-                        <span id="signinErrorContainer"><p id="signInError">Error Space</p></span>
+                        <span id="signinErrorContainer"><p id="signInError" style="color:red;">Invalid Username/Password</p></span>
                     </div>
                     <form id="signinForm">
                         <div class="inputField"><input required class="form-control" id="userName" type="email" placeholder="Email"></div>

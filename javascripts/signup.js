@@ -38,8 +38,13 @@ var signinJS = {
                 pword: pword
             },
             success: function(returnedData){
-                //alert(returnedData);
-                window.location.replace("http://localhost/charity-source");
+                if(returnedData === "error"){
+                    alert("Invalid Username/Password");
+                    $("#userName, #existingPassword").val("");
+                    $("#userName").focus();
+                }else{
+                    window.location.replace("http://localhost/charity-source");
+                }
             },
             error: function(returnedData){
                 alert("There was an error with your request, please try again.");
