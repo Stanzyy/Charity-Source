@@ -28,7 +28,8 @@
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav navbar-right">                     
                 <li><a href="index.php">Browse</a></li>
-                <li><a href="about.php">About</a></li>
+                <li><a href="home.php">About</a></li>
+                <li><a href="about.php">The Team</a></li>
                 <li><a href="contact.php">Contact</a></li>
                 <li><div class="headerLogin">
                     <?php
