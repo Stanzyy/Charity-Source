@@ -71,7 +71,7 @@
 
 I know a couple of programming languages; Java being my strong point. I also am taking a C++ class here at UML. I really look forward to learning and expanding my little knowledge that I have of HTML and CSS.
 
-In my spare time, I love to play video games, snowmobile and spend time with family. We usually rent a cabin up in Pittsburgh, New Hampshire every winter and enjoy the snow for a while. In the summer I like to go boating and lounge in the sun. This usually only happens on the weekend because of my internship during that time, but that's okay.</p>
+In my spare time, I love to play video games, snowmobile and spend time with family. We usually rent a cabin up in Pittsburgh, New Hampshire every winter and enjoy the snow for a while. In the summer I like to go boating and lounge in the sun.</p>
 					</div>
 					<div class="sponsorItem">
 						<h2 class="title">Eric Getchell</h2>
