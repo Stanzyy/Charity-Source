@@ -67,9 +67,11 @@
 					<div class="sponsorItem">
 						<h2 class="title">Josh Blanchette</h2>
 						<img src="images/josh.png" class="sponsorImg" />
-						<p class="sponsorText">Nouria Energy Corporation is a fuel distributor supplying gasoline and diesel to over 125 service stations. We operate 83 convenience stores with fuel; 
-						some locations also consist of quick serve restaurants such as Dunkin Donuts, McDonald’s and Subway. We also take pride in our Lil Mart brand locations in 
-						Maine. Our corporate headquarters are situated in Worcester, Massachusetts with an international support center in Lebanon.</p>
+						<p class="sponsorText">Hello everyone, my name is Joshua Blanchette, and I am a CS transfer student here at Umass Lowell. Before I attended Umass Lowell, I went to Middlesex Community College, where I got my Associates Degree in Computer Science.
+
+I know a couple of programming languages; Java being my strong point. I also am taking a C++ class here at UML. I really look forward to learning and expanding my little knowledge that I have of HTML and CSS.
+
+In my spare time, I love to play video games, snowmobile and spend time with family. We usually rent a cabin up in Pittsburgh, New Hampshire every winter and enjoy the snow for a while. In the summer I like to go boating and lounge in the sun. This usually only happens on the weekend because of my internship during that time, but that's okay.</p>
 					</div>
 					<div class="sponsorItem">
 						<h2 class="title">Eric Getchell</h2>
