@@ -73,7 +73,7 @@
                                     {
                                         title:{
                                             text: "Financial Percentages",
-                                            text: "Total Revenue = <?php echo $totalRevenue ?> million" 
+                                            text: "Total Revenue = <?php echo $totalRevenue ?>" 
                                         },
                                                 animationEnabled: true,
                                         legend:{
@@ -113,7 +113,7 @@
                             <!-- Simply echo the php variables and the 
                                     appropriate charity variables will be displayed -->
                             <h3><?php echo $charityName ?> Statistics</h3>
-                            <p> Total Revenue: <?php echo $totalRevenue ?></p>
+                            <p> Total Revenue: <?php echo $totalRevenue ?> million</p>
                             <p> Fundraising Efficiency: <?php echo $fundraisingEfficiency ?>%</p>
                             <p> Charitiable Commitment: <?php echo $charitableCommitment ?>%</p>
                             <p> Donor Dependency: <?php echo $donorDependency ?>%</p>				
