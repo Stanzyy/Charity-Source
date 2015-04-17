@@ -53,7 +53,7 @@ and open the template in the editor.
 		                    <input class="form-control contact-form-control" required id="subject" type="text" Placeholder="Subject">
 	                    </div>
 	                    <div class="control-group inline col-lg-6 col-height">
-	                    	<textarea class="form-control" required id="message" placeholder="Message"></textarea>
+	                    	<textarea class="form-control" required id="message" placeholder="Spill the Beans..."></textarea>
 	                    </div>
 	                    <button class="contact-button btn">Submit</button>
 	                </form>
