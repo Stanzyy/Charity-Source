@@ -73,7 +73,7 @@
                                     {
                                         title:{
                                             text: "Financial Percentages",
-                                            text: "Total Revenue = <?php echo $totalRevenue ?>" 
+                                            text: "Total Revenue = <?php echo $totalRevenue ?> million" 
                                         },
                                                 animationEnabled: true,
                                         legend:{
