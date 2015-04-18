@@ -76,9 +76,14 @@ In my spare time, I love to play video games, snowmobile and spend time with fam
 					<div class="sponsorItem">
 						<h2 class="title">Eric Getchell</h2>
 						<img src="images/eric.jpg" class="sponsorImg" />
-						<p class="sponsorText">Nouria Energy Corporation is a fuel distributor supplying gasoline and diesel to over 125 service stations. We operate 83 convenience stores with fuel; 
-						some locations also consist of quick serve restaurants such as Dunkin Donuts, McDonald’s and Subway. We also take pride in our Lil Mart brand locations in 
-						Maine. Our corporate headquarters are situated in Worcester, Massachusetts with an international support center in Lebanon.</p>
+						<p class="sponsorText">Hey there, my name is Eric Getchell. I am a senior at the University of 
+                            Massachusetts - Lowell studying Criminal Justice with a minor in Computer Science. 
+                            I am graduating in May and will be working as a Software Security Engineer at MorphoTrust USA. 
+                            During my free time, I love playing music. I know how to play six instruments, but only 
+                            really focus on the piano and the guitar. I have been playing the piano since I was 
+                            five and the guitar since I was ten. I also love to play video games, my favorite games being 
+                            Dark Souls, Half-Life, and The Elder Scrolls. 
+                        </p>
 					</div>
 					<div class="sponsorItem lastItem">
 						<h2 class="title">Gregory Saras</h2>
