@@ -214,6 +214,27 @@
         Commitment Modal
         </button>
 
+        <!-- Dependency Modal -->
+        <div class="modal fade" id="dependencyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">About Dependency</h4>
+              </div>
+              <div class="modal-body">
+                <p>This is the description about Dependency</p>
+              </div>
+              <div class="modal-footer">
+                <p class="gotIt">Got it</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button type="button" id="Dependency" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#dependencyModal" style="display:none">
+        Commitment Modal
+        </button>
+
         </div><!--/.wrapper -->
 
 		<!-- Link for tracking donations to the charity -->
