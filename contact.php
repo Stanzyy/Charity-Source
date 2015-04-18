@@ -36,6 +36,10 @@ and open the template in the editor.
             	margin-left: 15px;
             	margin-top: 1em;
             }
+
+            .successDiv{
+            	display: none;
+            }
         </style>
     </head>
     <body>
@@ -58,9 +62,13 @@ and open the template in the editor.
 	                    <button class="contact-button btn">Submit</button>
 	                </form>
                 </div>
+                <div class="successDiv">
+                	<p>Thank you for hitting us up. TTYL</p>
+                </div>
             </div>
             <?php require_once('footer.php');?>
         </div>
+        
         <script type="text/javascript"> //script to email from form
 			var contactJS = {
 				init : function(){
@@ -92,7 +100,7 @@ and open the template in the editor.
 								message : message
 							},
 							success: function(returnedData){ // alert on success or failure
-								alert(returnedData);
+								contactJS.notify();
 							},
 							error: function(returnedData){
 								alert(returnedData);
@@ -103,6 +111,11 @@ and open the template in the editor.
 
 				messageHandler : function(){
 					//do for each and find first blank, then shove span after input field
+				},
+
+				notify: function(){
+					$('.contactFormDiv').slideToggle();
+					$(".successDiv").slideToggle();
 				}
 			}
 
