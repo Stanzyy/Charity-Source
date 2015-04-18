@@ -119,19 +119,11 @@
                             <!-- Simply echo the php variables and the 
                                     appropriate charity variables will be displayed -->
                             <h3><?php echo $charityName ?> Statistics</h3>
-<<<<<<< HEAD
                             <p> Total Revenue: <?php echo $totalRevenue ?> million <span class="moreInfo" id="aboutRevenue">?</span></p>
                             <p> Fundraising Efficiency: <?php echo $fundraisingEfficiency ?>% <span class="moreInfo" id="aboutEfficiency">?</span></p>
                             <p> Charitiable Commitment: <?php echo $charitableCommitment ?>% <span class="moreInfo" id="aboutCommitment">?</span></p>
                             <p> Donor Dependency: <?php echo $donorDependency ?>% <span class="moreInfo" id="aboutDependency">?</span></p>				
                         </div>
-=======
-                            <p> Total Revenue: <?php echo $totalRevenue ?> million</p>
-                            <p> Fundraising Efficiency: <?php echo $fundraisingEfficiency ?>%</p>
-                            <p> Charitiable Commitment: <?php echo $charitableCommitment ?>%</p>
-                            <p> Donor Dependency: <?php echo $donorDependency ?>%</p>				
-                        </div> <!--/.aboutStatsSingle -->
->>>>>>> origin/gh-pages
 
                         <!-- Dummy future goals. Later, goals will be added to the database and will be
                                 pulled and displayed in the same manner as the variables
@@ -157,8 +149,8 @@
                 <!--<button class="summaryButton">View Full Summary</button>-->                
             </div> <!--/.charityContent -->
             <?php require_once('footer.php');?> <!-- Includes generic footer -->
-<<<<<<< HEAD
         </div>
+
         <!-- Revenue Modal -->
         <div class="modal fade" id="revenueModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
           <div class="modal-dialog">
@@ -222,9 +214,8 @@
         Commitment Modal
         </button>
 
-=======
         </div><!--/.wrapper -->
->>>>>>> origin/gh-pages
+
 		<!-- Link for tracking donations to the charity -->
         <script src="javascripts/trackDonate.js"></script>
         <script type="text/javascript">
