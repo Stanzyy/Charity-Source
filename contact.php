@@ -43,7 +43,14 @@ and open the template in the editor.
         </style>
     </head>
     <body>
-        <div class = "wrapper">
+        <div class="contactBanner">
+                <h1>Spill The Beans.</h1>
+                <p>We are not very understanding or patient people so if you have something on your mind we'd rather not hear from you.</p>
+                <div class="contactInfo">
+                    <p><span>555 555 0940</span> <em>or</em> <a class="link_mail" href="mailto:info@marblemedia.co.uk?subject=Hi Charity Source! - contact via website (contact)"> Email Us</a></p>
+                </div>
+            </div>
+        <div class = "wrapper">            
             <div class = "contactContent">
                 <?php require_once('header.php');?> <!-- add the header to the page -->
                 <div class = "contactTitle">

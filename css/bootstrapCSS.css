@@ -163,7 +163,6 @@ html {overflow-y: scroll;}
     background-color: #424749;
     padding-top: 2em;
     padding-bottom: 1.5em;
-    height: auto;
 }
 
 .charityImg{
@@ -200,4 +199,13 @@ html {overflow-y: scroll;}
 .paypal{
     text-align: center;
     padding-bottom: 5em;
+}
+
+.contactBanner {
+    color: #FEFEFE;
+    width: 100%;
+    background-color: #424749;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    text-align: center;
 }
