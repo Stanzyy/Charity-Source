@@ -37,6 +37,17 @@
         <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 		<!-- jQuery link -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <style type="text/css">
+            .moreInfo{
+                text-decoration: underline;
+                color: blue;
+                cursor: pointer;
+            }
+
+            .gotIt{
+                cursor: pointer;
+            }
+        </style>
     </head>
     <body class='charityBody'>
         <div class="wrapper">
@@ -113,10 +124,10 @@
                             <!-- Simply echo the php variables and the 
                                     appropriate charity variables will be displayed -->
                             <h3><?php echo $charityName ?> Statistics</h3>
-                            <p> Total Revenue: <?php echo $totalRevenue ?> million</p>
-                            <p> Fundraising Efficiency: <?php echo $fundraisingEfficiency ?>%</p>
-                            <p> Charitiable Commitment: <?php echo $charitableCommitment ?>%</p>
-                            <p> Donor Dependency: <?php echo $donorDependency ?>%</p>				
+                            <p> Total Revenue: <?php echo $totalRevenue ?> million <span class="moreInfo" id="aboutRevenue">?</span></p>
+                            <p> Fundraising Efficiency: <?php echo $fundraisingEfficiency ?>% <span class="moreInfo" id="aboutEfficiency">?</span></p>
+                            <p> Charitiable Commitment: <?php echo $charitableCommitment ?>% <span class="moreInfo" id="aboutCommitment">?</span></p>
+                            <p> Donor Dependency: <?php echo $donorDependency ?>% <span class="moreInfo" id="aboutDependency">?</span></p>				
                         </div>
 
                         <!-- Dummy future goals. Later, goals will be added to the database and will be
@@ -136,7 +147,91 @@
             </div>
             <?php require_once('footer.php');?> <!-- Includes generic footer -->
         </div>
+        <!-- Revenue Modal -->
+        <div class="modal fade" id="revenueModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">About Revenue</h4>
+              </div>
+              <div class="modal-body">
+                <p>This is the description about Revenue</p>
+              </div>
+              <div class="modal-footer">
+                <p class="gotIt">Got it</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button type="button" id="Revenue" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#revenueModal" style="display:none">
+        Revenue Modal
+        </button>
+
+        <!-- Efficiency Modal -->
+        <div class="modal fade" id="efficiencyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">About Efficiency</h4>
+              </div>
+              <div class="modal-body">
+                <p>This is the description about Efficiency</p>
+              </div>
+              <div class="modal-footer">
+                <p class="gotIt">Got it</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button type="button" id="Efficiency" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#efficiencyModal" style="display:none">
+        Efficiency Modal
+        </button>
+
+        <!-- Commitment Modal -->
+        <div class="modal fade" id="commitmentModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">About Commitment</h4>
+              </div>
+              <div class="modal-body">
+                <p>This is the description about Commitment</p>
+              </div>
+              <div class="modal-footer">
+                <p class="gotIt">Got it</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button type="button" id="Commitment" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#commitmentModal" style="display:none">
+        Commitment Modal
+        </button>
+
 		<!-- Link for tracking donations to the charity -->
         <script src="javascripts/trackDonate.js"></script>
+        <script type="text/javascript">
+            var charityPageJS = {
+                init: function(){
+                    $(".moreInfo").click(function(){
+                        var btn = $(this).attr("id");
+                        $(this).addClass("clicked");
+                        $("#" + btn.replace("about",''))[0].click();
+                    });
+
+                    $(".gotIt").click(function(){
+                        var btn = $(".clicked").attr("id");
+                        $(".clicked").removeClass("clicked");
+                        $("#" + btn.replace("about",''))[0].click();
+                    });
+                }
+            }
+
+            $(function(){
+                charityPageJS.init();
+            })
+        </script>
     </body> <!-- End of charityBody div -->
 </html>
