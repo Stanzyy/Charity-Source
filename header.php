@@ -24,7 +24,7 @@
                 
                 -->
                 
-            </div>
+            </div> <!--/.navbar-header -->
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav navbar-right">                     
                 <li><a href="index.php">Browse</a></li>
@@ -36,19 +36,16 @@
                         if(!isset($_SESSION["loggedIn"]) || !$_SESSION["loggedIn"]){
                             $_SESSION["loggedIn"] = false;
                             $_SESSION["userName"] = null;
-                            echo "<li> <a href='signup.php' style='color:white'>Log In</a></li>
-                            <li><a href='signup.php' style='color:white'>Sign Up</a></li>";
+                            echo "<li> <a href='signup.php' style='color:white; background-color:red;'>Log In/Sign Up</a></li>"; 
                         }else{
-                            echo "<li><a href='userPage.php?username=".$_SESSION['userName']."'><span id='uname' style='color:white'>Hi ".$_SESSION['firstName'] . "</span></a></li>  <li style='cursor:pointer;'><a id='logout' style='color:white'>Log Out</a></li>";
+                            echo "<li><a href='userPage.php?username=".$_SESSION['userName']."'><span id='uname' style='color:white'>Hi ".$_SESSION['firstName'] . "</span></a></li>  <li style='cursor:pointer;'><a id='logout' style='color:white; background-color:red;'>Log Out</a></li>";
                         }            
                     ?>
-                    </div></li>
-                  
-                  
-                  
-              </ul>
+                    </div>
+                  </li>
+                </ul>
             </div><!--/.nav-collapse -->
-          </div>
+          </div><!--/.container -->
         </nav>
     
             <!-- Old navbar -->
@@ -61,5 +58,5 @@
             </ul>
         </nav> 
 -->
-    </div>
+    </div><!--/.rightSide -->
 </header>

@@ -17,13 +17,14 @@
                     <div class="formHead">
                         <h3>Sign In</h3>
                         <span id="signinErrorContainer"><p id="signInError" style="color:red;">Invalid Username/Password</p></span>
-                    </div>
+                    </div> <!--/.formHead -->
                     <form id="signinForm">
                         <div class="inputField"><input required class="form-control" id="userName" type="email" placeholder="Email"></div>
     					<div class="inputField"><input required class="form-control" id="existingPassword" type="password" placeholder="Password"></div>
                         <div class="inputField buttonHolder"><button class="btn" id="signInButton" type="submit">Submit</button></div>
-                    </form>
-                </div><!--Comment to remove the blank space between the divs. This allows for the use of 100% width instead of 99%
+                    </form> <!--/#signinForm -->
+                </div><!--/#leftForm -->
+                <!--Comment to remove the blank space between the divs. This allows for the use of 100% width instead of 99%
              --><div id="rightForm">
                     <div class="formHead">
                         <h3>Sign Up</h3>
@@ -36,12 +37,12 @@
                         <div class="inputField"><input required class="form-control" id="newPassword" type="password" placeholder="Password"></div>
                         <div class="inputField"><input required class="form-control" id="newPasswordCheck" type="password" placeholder="Confirm Password"></div>
                         <div class="inputField buttonHolder"><button class="btn" id="signUpButton" type="submit">Submit</button></div>
-                    </form>
-                </div>                
-            </div>
+                    </form> <!--/#signupForm -->
+                </div><!--/#rightForm -->             
+            </div> <!--/.content -->
             <!--Include the footer-->
             <?php require_once('footer.php');?>
-        </div>
+        </div> <!--/.wrapper -->
         <!--This is a no JS modal popup box from http://www.webdesignerdepot.com/2012/10/creating-a-modal-window-with-html5-and-css3/
             div is hidden on page load, and then is displayed as a modal popup once a user creates an account.
         -->
@@ -54,7 +55,7 @@
                 <p>Continue to profile?</p>
 		        
 	        </div>
-        </div>
+        </div><!--/.modalDialog -->
            <!-- Button trigger modal -->
     
     <button type="button" id="bstrp-modal" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" style="display:none">
@@ -68,17 +69,17 @@
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             <h4 class="modal-title" id="myModalLabel">Thank you for signing up!</h4>
-          </div>
+          </div> <!--/.modal-header -->
           <div class="modal-body">
             <p>Would you like to view your profile?</p>
-          </div>
+          </div> <!--/.modal-body -->
           <div class="modal-footer">
             <a href="index.php">No Thanks</a>
             <a href="userPage.php">Sure!</a>
-          </div>
-        </div>
-      </div>
-    </div>
+          </div> <!--/.modal-footer -->
+        </div> <!--/.modal-content -->
+      </div> <!--/.modal-dialog -->
+    </div> <!--/.modal -->
         <!--Script includes-->
         <script src="javascripts/signup.js"></script>
     </body>

@@ -188,3 +188,16 @@ html {overflow-y: scroll;}
 .inline{
     display: inline-block;
 }
+
+.aboutStatsSingle{
+    padding: 1em;
+}
+
+.padHere{
+ padding-right: 5em;   
+}
+
+.paypal{
+    text-align: center;
+    padding-bottom: 5em;
+}

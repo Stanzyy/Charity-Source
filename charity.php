@@ -56,20 +56,15 @@
              <!--   <h2 class='charityh2'><?php echo $charityName ?></h2> -->
                 <div class="imgWrapper row text-center">
                     <img class="charityImg"src="images/2<?php echo $image ?>" alt="Charity's Logo"/>
-                </div>
+                </div> <!--/.imgWrapper -->
                 <div class="AboutCharityStatsAll container">
                     <div class="row">
-                        <div class="aboutCharity col-xs-6 .col-md-4">
+                        <div class="aboutStatsSingle padHere col-xs-6 .col-md-4">
                             <!-- The description of the charity will be pulled from the database -->
                              <h3>About</h3>
                             <p><?php echo $description ?></p>
                             <!-- Form below is for paypal button -->
-                            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-                                <input type="hidden" name="cmd" value="_s-xclick">
-                                <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----">
-                                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" id="paypalButton" name="submit" alt="PayPal - The safer, easier way to pay online!">
-                                <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-                            </form> <!-- End of PayPal form -->                    
+                                               
                         </div> <!-- End of aboutCharity div -->
                 
                 
@@ -117,18 +112,26 @@
                             <!-- Link to canvasJS which was used to create the pie charts -->	
                             <script type="text/javascript" src="javascripts/canvasjs.min.js"></script> 
                            <div id="chartContainer" style="height: 200px; width: 100%;"></div>
-                        </div>
-					</div>
+                        </div> <!--/.aboutStatsSingle -->
+					</div> <!--./row -->
                     <div class="row">
-                        <div class="aboutStatsSingle col-xs-6 .col-md-4">
+                        <div class="aboutStatsSingle padHere col-xs-6 .col-md-4">
                             <!-- Simply echo the php variables and the 
                                     appropriate charity variables will be displayed -->
                             <h3><?php echo $charityName ?> Statistics</h3>
+<<<<<<< HEAD
                             <p> Total Revenue: <?php echo $totalRevenue ?> million <span class="moreInfo" id="aboutRevenue">?</span></p>
                             <p> Fundraising Efficiency: <?php echo $fundraisingEfficiency ?>% <span class="moreInfo" id="aboutEfficiency">?</span></p>
                             <p> Charitiable Commitment: <?php echo $charitableCommitment ?>% <span class="moreInfo" id="aboutCommitment">?</span></p>
                             <p> Donor Dependency: <?php echo $donorDependency ?>% <span class="moreInfo" id="aboutDependency">?</span></p>				
                         </div>
+=======
+                            <p> Total Revenue: <?php echo $totalRevenue ?> million</p>
+                            <p> Fundraising Efficiency: <?php echo $fundraisingEfficiency ?>%</p>
+                            <p> Charitiable Commitment: <?php echo $charitableCommitment ?>%</p>
+                            <p> Donor Dependency: <?php echo $donorDependency ?>%</p>				
+                        </div> <!--/.aboutStatsSingle -->
+>>>>>>> origin/gh-pages
 
                         <!-- Dummy future goals. Later, goals will be added to the database and will be
                                 pulled and displayed in the same manner as the variables
@@ -138,14 +141,23 @@
                             <p> 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit </p>
                             <p> 2. Sed do eiusmod tempor incididunt ut labore et dolore magna </p>
                             <p> 3. Ut enim ad minim veniam, quis nostrud exercitation </p>
-                        </div>
-                    </div>
-                </div>
+                        </div><!--/.aboutStatsSingle -->
+                    </div> <!--/.row -->
+                </div> <!--/.AboutCharityStatsAll -->
+                <div class="paypal">
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                        <input type="hidden" name="cmd" value="_s-xclick">
+                        <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----">
+                        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" id="paypalButton" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                    </form> <!-- End of PayPal form --> 
+                </div><!--/.paypal -->
                     
                 <!-- Decided not to include this feature below. -->
                 <!--<button class="summaryButton">View Full Summary</button>-->                
-            </div>
+            </div> <!--/.charityContent -->
             <?php require_once('footer.php');?> <!-- Includes generic footer -->
+<<<<<<< HEAD
         </div>
         <!-- Revenue Modal -->
         <div class="modal fade" id="revenueModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -210,6 +222,9 @@
         Commitment Modal
         </button>
 
+=======
+        </div><!--/.wrapper -->
+>>>>>>> origin/gh-pages
 		<!-- Link for tracking donations to the charity -->
         <script src="javascripts/trackDonate.js"></script>
         <script type="text/javascript">

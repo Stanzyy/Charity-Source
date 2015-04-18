@@ -36,7 +36,7 @@
                             <div class="item">
                                 <a href="charity.php?charity=SalvationArmy"><img src= "images/SalvationArmy.png">
                             </div>
-                        </div>
+                        </div> <!--/.carousel-inner -->
 
                         <!-- Left and right controls -->
                         <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
@@ -47,9 +47,9 @@
                             <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                             <span class="sr-only">Next</span>
                         </a> 
-                    </div>
-                </div>
-            </div>
+                    </div> <!--/#myCarousel -->
+                </div> <!--/.carouselWidth -->
+            </div> <!--/.wrapper -->
 			<div class="browseContent container">
 				<div class="filters">
                     <!-- Textbox to search for charities. -->
@@ -197,8 +197,8 @@
                             <h3 class = "charityHead">Feed the Children</h3>
                         </a>
                     </div>
-				</div>
-			</div>
+				</div> <!--/.resultList -->
+			</div> <!--/.browseContent -->
             <!-- Imports generic footer. -->
 			<?php require_once('footer.php');?>
 		</div>
