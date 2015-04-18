@@ -52,22 +52,21 @@
                         favorite charities throughout the United States. The main goal is to remove the ambiguity of what
                         charities do with the donations they receive. It will also be an easy way to donate to a good cause
                         that will leave people feeling comfortable knowing where their contributions are going.</p>
-					</div>
+					</div> <!--/. aboutItem -->
 					<div class="aboutItem">
 						<h2 class="title">What We're About</h2>
 						<p>Our team at Charity Source is dedicated to providing a safe and user friendly environment in which
                         people can donate to good causes and feel great about it!</p>
-					</div>
+					</div> <!--/. aboutItem -->
 					<div class="aboutItem">
 						<h2 class="title">Future Plans</h2>
 						<p>Nouria Energy Corporation is a fuel distributor supplying gasoline and diesel to over 125 service stations. We operate 83 convenience stores with fuel; 
 						some locations also consist of quick serve restaurants such as Dunkin Donuts, McDonald’s and Subway. We also take pride in our Lil Mart brand locations in 
 						Maine. Our corporate headquarters are situated in Worcester, Massachusetts with an international support center in Lebanon.</p>
-					</div>
-				</div>					
-			</div>
+					</div> <!--/. aboutItem -->
+				</div> <!--/. aboutCenter -->				
+			</div> <!--/.wrapper -->
             <?php require_once('footer.php');?> 
-		</div>
 	</body>
 </html>
 <?php session_write_close();?>

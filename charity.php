@@ -45,7 +45,7 @@
              <!--   <h2 class='charityh2'><?php echo $charityName ?></h2> -->
                 <div class="imgWrapper row text-center">
                     <img class="charityImg"src="images/2<?php echo $image ?>" alt="Charity's Logo"/>
-                </div>
+                </div> <!--/.imgWrapper -->
                 <div class="AboutCharityStatsAll container">
                     <div class="row">
                         <div class="aboutStatsSingle padHere col-xs-6 .col-md-4">
@@ -101,8 +101,8 @@
                             <!-- Link to canvasJS which was used to create the pie charts -->	
                             <script type="text/javascript" src="javascripts/canvasjs.min.js"></script> 
                            <div id="chartContainer" style="height: 200px; width: 100%;"></div>
-                        </div>
-					</div>
+                        </div> <!--/.aboutStatsSingle -->
+					</div> <!--./row -->
                     <div class="row">
                         <div class="aboutStatsSingle padHere col-xs-6 .col-md-4">
                             <!-- Simply echo the php variables and the 
@@ -112,7 +112,7 @@
                             <p> Fundraising Efficiency: <?php echo $fundraisingEfficiency ?>%</p>
                             <p> Charitiable Commitment: <?php echo $charitableCommitment ?>%</p>
                             <p> Donor Dependency: <?php echo $donorDependency ?>%</p>				
-                        </div>
+                        </div> <!--/.aboutStatsSingle -->
 
                         <!-- Dummy future goals. Later, goals will be added to the database and will be
                                 pulled and displayed in the same manner as the variables
@@ -122,9 +122,9 @@
                             <p> 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit </p>
                             <p> 2. Sed do eiusmod tempor incididunt ut labore et dolore magna </p>
                             <p> 3. Ut enim ad minim veniam, quis nostrud exercitation </p>
-                        </div>
-                    </div>
-                </div>
+                        </div><!--/.aboutStatsSingle -->
+                    </div> <!--/.row -->
+                </div> <!--/.AboutCharityStatsAll -->
                 <div class="paypal">
                     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
                         <input type="hidden" name="cmd" value="_s-xclick">
@@ -132,13 +132,13 @@
                         <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" id="paypalButton" name="submit" alt="PayPal - The safer, easier way to pay online!">
                         <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
                     </form> <!-- End of PayPal form --> 
-                </div>
+                </div><!--/.paypal -->
                     
                 <!-- Decided not to include this feature below. -->
                 <!--<button class="summaryButton">View Full Summary</button>-->                
-            </div>
+            </div> <!--/.charityContent -->
             <?php require_once('footer.php');?> <!-- Includes generic footer -->
-        </div>
+        </div><!--/.wrapper -->
 		<!-- Link for tracking donations to the charity -->
         <script src="javascripts/trackDonate.js"></script>
     </body> <!-- End of charityBody div -->

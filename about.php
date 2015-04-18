@@ -63,7 +63,7 @@
 						<p class="sponsorText">Nouria Energy Corporation is a fuel distributor supplying gasoline and diesel to over 125 service stations. We operate 83 convenience stores with fuel; 
 						some locations also consist of quick serve restaurants such as Dunkin Donuts, McDonald’s and Subway. We also take pride in our Lil Mart brand locations in 
 						Maine. Our corporate headquarters are situated in Worcester, Massachusetts with an international support center in Lebanon.</p>
-					</div>
+					</div> <!--/.sponsorItem -->
 					<div class="sponsorItem">
 						<h2 class="title">Josh Blanchette</h2>
 						<img src="images/josh.png" class="sponsorImg" />
@@ -72,7 +72,7 @@
 I know a couple of programming languages; Java being my strong point. I also am taking a C++ class here at UML. I really look forward to learning and expanding my little knowledge that I have of HTML and CSS.
 
 In my spare time, I love to play video games, snowmobile and spend time with family. We usually rent a cabin up in Pittsburgh, New Hampshire every winter and enjoy the snow for a while. In the summer I like to go boating and lounge in the sun.</p>
-					</div>
+					</div> <!--/.sponsorItem -->
 					<div class="sponsorItem">
 						<h2 class="title">Eric Getchell</h2>
 						<img src="images/eric.jpg" class="sponsorImg" />
@@ -84,17 +84,17 @@ In my spare time, I love to play video games, snowmobile and spend time with fam
                             five and the guitar since I was ten. I also love to play video games, my favorite games being 
                             Dark Souls, Half-Life, and The Elder Scrolls. 
                         </p>
-					</div>
+					</div> <!--/.sponsorItem -->
 					<div class="sponsorItem lastItem">
 						<h2 class="title">Gregory Saras</h2>
 						<img src="images/greg.png" class="sponsorImg" />
 						<p class="sponsorText">Nouria Energy Corporation is a fuel distributor supplying gasoline and diesel to over 125 service stations. We operate 83 convenience stores with fuel; 
 						some locations also consist of quick serve restaurants such as Dunkin Donuts, McDonald’s and Subway. We also take pride in our Lil Mart brand locations in 
 						Maine. Our corporate headquarters are situated in Worcester, Massachusetts with an international support center in Lebanon.</p>
-					</div>
-				</div>
+					</div> <!--/.sponsorItem -->
+				</div> <!--/.sponsorCenter -->
             <?php require_once('footer.php');?> 
-		</div>
+		</div> <!--./wrapper -->
 	</body>
 </html>
 <?php session_write_close();?>

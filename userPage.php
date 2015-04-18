@@ -50,7 +50,7 @@
                              "<div class='profileItemHolder'><p class='displayHolder'>Last Name:</p><p class='display' id='lastNameDisplay'>".$_SESSION["lastName"]."</p></div>";
                     ?>
                     <p id="editLink">Edit</p>
-                </div>
+                </div> <!--/.viewProfileInfo -->
                 <!-- Add the ability to edit user profile -->
                 <div hidden class="editProfileInfo">
                     <?php
@@ -62,7 +62,7 @@
                     ?>
                     <p id="saveLink">Save</p>
                     <p id="cancelLink">Cancel</p>
-                </div>
+                </div> <!--/.editProfileInfo -->
             </div> <!-- End of profile div -->
             <!-- As the users donate, their donation statistics will be viewable -->
             <div class='userStatsAll'>

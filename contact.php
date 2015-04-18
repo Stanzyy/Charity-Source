@@ -48,26 +48,26 @@ and open the template in the editor.
                 <?php require_once('header.php');?> <!-- add the header to the page -->
                 <div class = "contactTitle">
                     <h1> Contact Us </h1>
-                </div>
+                </div> <!--/.contactTitle -->
                 <div class = "contactFormDiv"> <!-- creates the input fields for the user to contact us -->
 	                <form id="emailSubmitForm">
 	                	<div class="control-group inline col-lg-6 col-height">
 		                    <input class="form-control" required id="name" type="text" placeholder="Name">
 		                    <input class="form-control contact-form-control" required id="email" type="email" placeholder="Email">
 		                    <input class="form-control contact-form-control" required id="subject" type="text" Placeholder="Subject">
-	                    </div>
+	                    </div> <!--/.control-group -->
 	                    <div class="control-group inline col-lg-6 col-height">
 	                    	<textarea class="form-control" required id="message" placeholder="Spill the Beans..."></textarea>
-	                    </div>
+	                    </div> <!--/.control-group -->
 	                    <button class="contact-button btn">Submit</button>
-	                </form>
-                </div>
+	                </form><!--/.emailSubmitForm -->
+                </div> <!--/.contactFormDiv -->
                 <div class="successDiv">
                 	<p>Thank you for hitting us up. TTYL</p>
-                </div>
-            </div>
+                </div> <!--/.successDiv -->
+            </div> <!--/.contactContent -->
             <?php require_once('footer.php');?>
-        </div>
+        </div> <!--/.wrapper -->
         
         <script type="text/javascript"> //script to email from form
 			var contactJS = {
