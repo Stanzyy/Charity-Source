@@ -10,6 +10,22 @@
 -->        
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
         <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+        <style type="text/css">
+        .result{
+            width: 500px;
+            margin-top: 2em;
+            margin-left: 2.5em;
+            margin-bottom: 2em;
+            border: none;
+            cursor: pointer;
+        }
+
+        .result:hover{
+            border: 1px solid #000;
+            border-radius: 5px;
+            box-shadow: 3px 3px 2px #888888;
+        }
+        </style>
     </head>
 	<body> 
 		<div class="wrapper">
@@ -89,112 +105,130 @@
                     -->             
 				</div>
                 <!-- The next couple chunks of code are all the charities available to search for, along with basic information about each charity. -->
-				<div class="resultList row" >
-					<div class="result cancer food col-sm-4" data-name="CancerSociety" data-popularity="3">
-						<a href="charity.php?charity=AmericanCancerSociety"><img src="images/AmericanCancerSociety.png" style="height: 100px; width: 100px;" />
-						  <h3 class = "charityHead">American Cancer Society</h3>
+				<div class="resultList" >
+					<div class="result cancer food" data-name="CancerSociety" data-popularity="3">
+						<a href="charity.php?charity=AmericanCancerSociety">
+						  <h3 class = "charityHead"><img src="images/AmericanCancerSociety.png" style="height: 100px; width: 100px;" />
+                          American Cancer Society</h3>
                         </a>
                         <!-- These href's generate data on the fly, and construct one charity.php for the charity choosen.  Consistent thoughout each charity. -->
 					</div>
                     
-					<div class="result blood col-sm-4" data-name="AmericanRedCross" data-popularity="5">
-						<a href="charity.php?charity=AmericanRedCross"><img src="images/AmericanRedCross.png" style="height: 100px; width: 100px;" />
-                            <h3 class = "charityHead">American Red Cross</h3>
+					<div class="result blood" data-name="AmericanRedCross" data-popularity="5">
+						<a href="charity.php?charity=AmericanRedCross">
+                            <h3 class = "charityHead"><img src="images/AmericanRedCross.png" style="height: 100px; width: 100px;" />
+                            American Red Cross</h3>
                         </a>
 					</div>
                     
-					<div class="result clothes col-sm-4" data-name="SalvationArmy" data-popularity="1">
-						<a href="charity.php?charity=SalvationArmy"><img src="images/SalvationArmy.png" style="height: 100px; width: 100px;" />
-                            <h3 class = "charityHead">Salvation Army</h3>
+					<div class="result clothes" data-name="SalvationArmy" data-popularity="1">
+						<a href="charity.php?charity=SalvationArmy">
+                            <h3 class = "charityHead"><img src="images/SalvationArmy.png" style="height: 100px; width: 100px;" />
+                            Salvation Army</h3>
                         </a>
 					</div>
                     
-                    <div class="result community col-sm-4" data-name="UnitedWay" data-popularity="2">
-						<a href="charity.php?charity=UnitedWay"><img src="images/UnitedWay.png" style="height: 100px; width: 100px;" />
-                            <h3 class = "charityHead">United Way</h3>
+                    <div class="result community" data-name="UnitedWay" data-popularity="2">
+						<a href="charity.php?charity=UnitedWay">
+                            <h3 class = "charityHead"><img src="images/UnitedWay.png" style="height: 100px; width: 100px;" />
+                            United Way</h3>
                         </a>
                     </div>
                     
-                    <div class="result food col-sm-4" data-name="FeedingAmerica" data-popularity="4">
-						<a href="charity.php?charity=FeedingAmerica"><img src="images/2FeedingAmerica.png" style="height: 100px; width: 100px;" />
-                            <h3 class = "charityHead">Feeding America</h3>
+                    <div class="result food" data-name="FeedingAmerica" data-popularity="4">
+						<a href="charity.php?charity=FeedingAmerica">
+                            <h3 class = "charityHead"><img src="images/2FeedingAmerica.png" style="height: 100px; width: 100px;" />
+                            Feeding America</h3>
                         </a>
                     </div>
                     
-                    <div class="result community col-sm-4" data-name="TaskForceforGlobalHealth" data-popularity="4">
-						<a href="charity.php?charity=TaskForceforGlobalHealth"><img src="images/2TaskForceforGlobalHealth.png" style="height: 100px; width: 100px;" />
-                        <h3 class = "charityHead">Task Force for Global Health</h3></a>
+                    <div class="result community" data-name="TaskForceforGlobalHealth" data-popularity="4">
+						<a href="charity.php?charity=TaskForceforGlobalHealth">
+                        <h3 class = "charityHead"><img src="images/2TaskForceforGlobalHealth.png" style="height: 100px; width: 100px;" />
+                        Task Force for Global Health</h3></a>
                     </div>
 
-                    <div class="result food col-sm-4" data-name="FoodforthePoor" data-popularity="4">
-						<a href="charity.php?charity=FoodforthePoor"><img src="images/2FoodforthePoor.png" style="height: 100px; width: 100px;" />
-                            <h3 class = "charityHead">Food for the Poor</h3>
+                    <div class="result food" data-name="FoodforthePoor" data-popularity="4">
+						<a href="charity.php?charity=FoodforthePoor">
+                            <h3 class = "charityHead"><img src="images/2FoodforthePoor.png" style="height: 100px; width: 100px;" />
+                            Food for the Poor</h3>
                         </a>
                     </div>
                     
-                    <div class="result community col-sm-4" data-name="GoodwillIndustriesInternational" data-popularity="4">
-						<a href="charity.php?charity=GoodwillIndustriesInternational"><img src="images/2GoodwillIndustriesInternational.png" style="height: 100px; width: 100px;" />
-                            <h3 class = "charityHead">Goodwill Industries International</h3>
+                    <div class="result community" data-name="GoodwillIndustriesInternational" data-popularity="4">
+						<a href="charity.php?charity=GoodwillIndustriesInternational">
+                            <h3 class = "charityHead"><img src="images/2GoodwillIndustriesInternational.png" style="height: 100px; width: 100px;" />
+                            Goodwill Industries International</h3>
                         </a>
                     </div>
                     
-                    <div class="result community children col-sm-4" data-name="YMCAoftheUSA" data-popularity="4">
-						<a href="charity.php?charity=FoodforthePoor"><img src="images/2YMCAoftheUSA.png" style="height: 100px; width: 100px;" />
-                            <h3 class = "charityHead">YMCA of the USA</h3>
+                    <div class="result community children" data-name="YMCAoftheUSA" data-popularity="4">
+						<a href="charity.php?charity=FoodforthePoor">
+                            <h3 class = "charityHead"><img src="images/2YMCAoftheUSA.png" style="height: 100px; width: 100px;" />
+                            YMCA of the USA</h3>
                         </a>
                     </div>
                     
-                    <div class="result community col-sm-4" data-name="WorldVision" data-popularity="4">
-						<a href="charity.php?charity=WorldVision"><img src="images/2WorldVision.png" style="height: 100px; width: 100px;" />
-                            <h3 class = "charityHead">World Vision</h3>
+                    <div class="result community" data-name="WorldVision" data-popularity="4">
+						<a href="charity.php?charity=WorldVision">
+                            <h3 class = "charityHead"><img src="images/2WorldVision.png" style="height: 100px; width: 100px;" />
+                            World Vision</h3>
                         </a>
                     </div>
                     
-                    <div class="result community children col-sm-4" data-name="BoysandGirlsClubofAmerica" data-popularity="4">
-						<a href="charity.php?charity=BoysandGirlsClubofAmerica"><img src="images/2BoysandGirlsClubofAmerica.png" style="height: 100px; width: 100px;" />
-                            <h3 class = "charityHead">Boys and Girls Club of America</h3>
+                    <div class="result community children" data-name="BoysandGirlsClubofAmerica" data-popularity="4">
+						<a href="charity.php?charity=BoysandGirlsClubofAmerica">
+                            <h3 class = "charityHead"><img src="images/2BoysandGirlsClubofAmerica.png" style="height: 100px; width: 100px;" />
+                            Boys and Girls Club of America</h3>
                         </a>
                     </div>
                     
-                    <div class="result community col-sm-4" data-name="CompassionInternational" data-popularity="4">
-						<a href="charity.php?charity=CompassionInternational"><img src="images/2CompassionInternational.png" style="height: 100px; width: 100px;" />
-                            <h3 class = "charityHead">Compassion International</h3>
+                    <div class="result community" data-name="CompassionInternational" data-popularity="4">
+						<a href="charity.php?charity=CompassionInternational">
+                            <h3 class = "charityHead"><img src="images/2CompassionInternational.png" style="height: 100px; width: 100px;" />
+                            Compassion International</h3>
                         </a>
                     </div>
                     
-                    <div class="result community col-sm-4" data-name="AmeriCaresFoundation" data-popularity="4">
-						<a href="charity.php?charity=AmeriCaresFoundation"><img src="images/2AmeriCaresFoundation.png" style="height: 100px; width: 100px;" />
-                            <h3 class = "charityHead">AmeriCares Foundation</h3>
+                    <div class="result community" data-name="AmeriCaresFoundation" data-popularity="4">
+						<a href="charity.php?charity=AmeriCaresFoundation">
+                            <h3 class = "charityHead"><img src="images/2AmeriCaresFoundation.png" style="height: 100px; width: 100px;" />
+                            AmeriCares Foundation</h3>
                         </a>
                     </div>
                     
-                    <div class="result children col-sm-4" data-name="HabitatforHumanityInternational" data-popularity="4">
-						<a href="charity.php?charity=HabitatforHumanityInternational"><img src="images/2HabitatforHumanityInternational.png" style="height: 100px; width: 100px;" />
-                            <h3 class = "charityHead">Habitat for Humanity International</h3>
+                    <div class="result children" data-name="HabitatforHumanityInternational" data-popularity="4">
+						<a href="charity.php?charity=HabitatforHumanityInternational">
+                            <h3 class = "charityHead"><img src="images/2HabitatforHumanityInternational.png" style="height: 100px; width: 100px;" />
+                            Habitat for Humanity International</h3>
                         </a>
                     </div>
                     
-                    <div class="result community children col-sm-4" data-name="UNICEF" data-popularity="4">
-						<a href="charity.php?charity=UNICEF"><img src="images/2UNICEF.png" style="height: 100px; width: 100px;" />
-                            <h3 class = "charityHead">UNICEF</h3>
+                    <div class="result community children" data-name="UNICEF" data-popularity="4">
+						<a href="charity.php?charity=UNICEF">
+                            <h3 class = "charityHead"><img src="images/2UNICEF.png" style="height: 100px; width: 100px;" />
+                            UNICEF</h3>
                         </a>
                     </div>
                     
-                    <div class="result blood col-sm-4" data-name="AmericanHeartAssociation" data-popularity="4">
-						<a href="charity.php?charity=AmericanHeartAssociation"><img src="images/2AmericanHeartAssociation.png" style="height: 100px; width: 100px;" />
-                            <h3 class = "charityHead">American Heart Association</h3>
+                    <div class="result blood" data-name="AmericanHeartAssociation" data-popularity="4">
+						<a href="charity.php?charity=AmericanHeartAssociation">
+                            <h3 class = "charityHead"><img src="images/2AmericanHeartAssociation.png" style="height: 100px; width: 100px;" />
+                            American Heart Association</h3>
                         </a>
                     </div>
                     
-                    <div class="result community food clothing col-sm-4" data-name="DirectRelief" data-popularity="4">
-						<a href="charity.php?charity=DirectRelief"><img src="images/2DirectRelief.png" style="height: 100px; width: 100px;" />
-                            <h3 class = "charityHead">Direct Relief</h3>
+                    <div class="result community food clothing" data-name="DirectRelief" data-popularity="4">
+						<a href="charity.php?charity=DirectRelief">
+                            <h3 class = "charityHead"><img src="images/2DirectRelief.png" style="height: 100px; width: 100px;" />
+                            Direct Relief</h3>
                         </a>
                     </div>
                     
-                    <div class="result children food col-sm-4" data-name="FeedtheChildren" data-popularity="4">
-						<a href="charity.php?charity=FeedtheChildren"><img src="images/2FeedtheChildren.png" style="height: 100px; width: 100px;" />
-                            <h3 class = "charityHead">Feed the Children</h3>
+                    <div class="result children food" data-name="FeedtheChildren" data-popularity="4">
+						<a href="charity.php?charity=FeedtheChildren">
+                            <h3 class = "charityHead"><img src="images/2FeedtheChildren.png" style="height: 100px; width: 100px;" />
+                            Feed the Children</h3>
                         </a>
                     </div>
 				</div> <!--/.resultList -->
