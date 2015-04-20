@@ -14,7 +14,7 @@
         $fundraisingEfficiency =$row["FundraisingEfficiency"];
         $charitableCommitment =$row["CharitableCommitment"];
         $donorDependency =$row["DonorDependency"];
-        $description =$row["Description"];
+        $description =$row["Description"];  
         $image =$row["Image"];
 		// Three variables below will be added to the database at a later date so that 
 		//		it won't have to do math everytime the user navigates to a new charity page
@@ -79,7 +79,7 @@
                                     {
                                         title:{
                                             text: "Financial Percentages",
-                                            text: "Total Revenue = <?php echo $totalRevenue ?>" 
+                                            text: "Total Revenue = $<?php echo $totalRevenue ?>" 
                                         },
                                                 animationEnabled: true,
                                         legend:{
@@ -99,8 +99,8 @@
                                             showInLegend: true,
                                             toolTipContent:"{legendText} {y}%",
                                             dataPoints: [
-                                                {  y: "<?php echo $privatePercent ?>", legendText:"Private Support", label: "<?php echo $privateSupport ?>" },
-                                                {  y: "<?php echo $otherPercent ?>", legendText:"Other Support", label: "<?php echo $otherSupport ?>" }
+                                                {  y: "<?php echo $privatePercent ?>", legendText:"Private Support", label: "$<?php echo $privateSupport ?>" },
+                                                {  y: "<?php echo $otherPercent ?>", legendText:"Other Support", label: "$<?php echo $otherSupport ?>" }
                                             ]
                                         }
                                         ]
