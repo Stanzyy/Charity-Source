@@ -68,14 +68,14 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="myModalLabel">Thank you for signing up!</h4>
+            <h4 class="modal-title" id="myModalLabel">Thank you for signing up</h4>
           </div> <!--/.modal-header -->
           <div class="modal-body">
             <p>Would you like to view your profile?</p>
           </div> <!--/.modal-body -->
           <div class="modal-footer">
             <a href="index.php">No Thanks</a>
-            <a href="userPage.php">Sure!</a>
+            <a href="userPage.php">Sure</a>
           </div> <!--/.modal-footer -->
         </div> <!--/.modal-content -->
       </div> <!--/.modal-dialog -->
