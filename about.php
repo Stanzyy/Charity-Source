@@ -60,9 +60,7 @@
 					<div class="sponsorItem">
 						<h2 class="title">Nicolas Stanzione</h2>
 						<img src="images/nick.png" class="sponsorImg" />
-						<p class="sponsorText">Nouria Energy Corporation is a fuel distributor supplying gasoline and diesel to over 125 service stations. We operate 83 convenience stores with fuel; 
-						some locations also consist of quick serve restaurants such as Dunkin Donuts, McDonald’s and Subway. We also take pride in our Lil Mart brand locations in 
-						Maine. Our corporate headquarters are situated in Worcester, Massachusetts with an international support center in Lebanon.</p>
+						<p class="sponsorText">Welcome to Charity Source. I'm Nick Stanzione. I am currently a senior in my bachelors studies in Computer Science at the University of Massachusetts Lowell. After I graduate in May 2015 I will be pursuing my Masters in Computer Science at UML in the plus one masters program. I love camping, video games, cats, and football. Our team and I had a lot of fun putting this project together and I hope you enjoy it. Thanks for stopping by. </p>
 					</div> <!--/.sponsorItem -->
 					<div class="sponsorItem">
 						<h2 class="title">Josh Blanchette</h2>
