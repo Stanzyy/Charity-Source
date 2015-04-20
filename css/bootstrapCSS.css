@@ -42,8 +42,7 @@ footer {
 
 .navbar-default .navbar-nav > li > a {
     color: #FEFEFE; /*Change active text color here*/
-    font-size: 200%;
-    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 150%;
 }
 
 .browseContent{
