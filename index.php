@@ -163,7 +163,7 @@
                     </div>
                     
                     <div class="result community children" data-name="YMCAoftheUSA" data-popularity="4">
-						<a href="charity.php?charity=FoodforthePoor">
+						<a href="charity.php?charity=YMCAoftheUSA">
                             <h3 class = "charityHead"><img src="images/2YMCAoftheUSA.png" style="height: 100px; width: 100px;" />
                             YMCA of the USA</h3>
                         </a>
