@@ -10,9 +10,13 @@
     <body>
      
         <div class="wrapper">
+        <!--Include the header-->
+            <?php require_once('header.php');?>
+            <div class="imgWrapper row text-center">
+                <img class="headingImg"src="images/logoLg.png" alt="Charity's Logo"/>
+            </div> <!--/.imgWrapper -->
             <div class="content">
-                <!--Include the header-->
-                <?php require_once('header.php');?>
+                
                 <div id="leftForm">
                     <div class="formHead">
                         <h3>Sign In</h3>

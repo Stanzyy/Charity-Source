@@ -43,20 +43,20 @@ and open the template in the editor.
         </style>
     </head>
     <body>
-        <div class="contactBanner">
-                <h1>Spill The Beans.</h1>
-                <p>We are not very understanding or patient people so if you have something on your mind we'd rather not hear from you.</p>
-                <div class="contactInfo">
-                    <p><span>555 555 0940</span> <em>or</em> <a class="link_mail" href="mailto:info@marblemedia.co.uk?subject=Hi Charity Source! - contact via website (contact)"> Email Us</a></p>
-                </div>
-            </div>
         <div class = "wrapper">            
             <div class = "contactContent">
                 <?php require_once('header.php');?> <!-- add the header to the page -->
+                <div class="imgWrapper row text-center">
+                    <h1>Spill The Beans.</h1>
+                    <p>We are not very understanding or patient people so if you have something onyour ind we'd rather not hear from you.</p>
+                    <div class="contactInfo">
+                        <p><span>555 555 0904</span><em>or</em> <a class="link_email" href="mailto:charitysourcedevs@gmail.com?subject=Hi Charity Source - Contact via website">Email Us</a></p>
+                    </div>
+                </div> <!--/.imgWrapper -->
+                <div class = "contactFormDiv"> <!-- creates the input fields for the user to contact us -->
                 <div class = "contactTitle">
                     <h1> Contact Us </h1>
                 </div> <!--/.contactTitle -->
-                <div class = "contactFormDiv"> <!-- creates the input fields for the user to contact us -->
 	                <form id="emailSubmitForm">
 	                	<div class="control-group inline col-lg-6 col-height">
 		                    <input class="form-control" required id="name" type="text" placeholder="Name">

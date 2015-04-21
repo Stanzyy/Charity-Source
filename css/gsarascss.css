@@ -1,57 +1,6 @@
 /* Add scroll bar to all pages */
 html {overflow-y: scroll;}
 
-/*Header Styling*/
-header{
-    width: 100%;
-    margin-bottom: 2em;
-}
-            
-header a{
-    text-decoration: none;
-}
-
-header p{
-    display: inline-block;
-    cursor: pointer;
-}
-
-.headerImage{
-    width: 30%;
-    display: inline-block;
-}
-            
-.headerNav, .headerLogin{
-    height: 50px;
-}
-            
-.headerNav li{
-    display: inline-block;
-}
-
-.headerNav li:not(:last-child){
-    margin-right: 5em;
-}
-            
-.rightSide{
-    display: inline-block;
-    vertical-align: top;
-    width: 70%;
-}
-            
-.headerLogin{
-    text-align: right;
-}
-            
-.headerNav ul{
-    text-align: right;
-}
-
-/*Styling for the signup/signin page*/
-.wrapper{
-    width: 1000px;
-    margin: 0px auto;
-}
 
 /*Form headings*/
 .formHead h3{
@@ -66,6 +15,11 @@ header p{
 /*Will display error messages if a login or signup failed*/
 #signinErrorContainer, #signupErrorConatiner{
     visibility: hidden;
+}
+
+.content{
+    width: 1160px;
+    margin: 0px auto;
 }
 
 /*signin/signup forms*/
@@ -113,15 +67,6 @@ header p{
 
 
 /*Footer Styling*/
-footer{
-    width: 100%;
-    margin-top: 2em;
-}
-            
-footer p{
-    width: 15%;
-    margin: 0px auto;
-}
 
 /*This is CSS for a no JS modal popup box from http://www.webdesignerdepot.com/2012/10/creating-a-modal-window-with-html5-and-css3/ */
 .modalDialog {

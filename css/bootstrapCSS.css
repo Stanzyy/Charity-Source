@@ -58,6 +58,7 @@ footer {
     padding-bottom: 10px;
 }
 
+
 .carousel-inner img {
   margin: 0 auto;
 }
@@ -151,9 +152,7 @@ html {overflow-y: scroll;}
 .carouselWidth {
     width: 100%;
     background-color: #424749;
-    margin-top: 1.5em;
-    padding-bottom: 1.5em;
-    height: auto;
+    height: 375px;
 }
 
 .width {
@@ -168,6 +167,7 @@ html {overflow-y: scroll;}
     padding-top: 2em;
     padding-bottom: 1.5em;
     margin-left: -8px;
+    height: 375px;
 }
 
 .charityImg{
@@ -182,8 +182,8 @@ html {overflow-y: scroll;}
 }
 
 #myCarousel{
-  width: 80%;
-  margin: 0px auto;
+    width: 1160px;
+    margin: 0px auto;
 }
 
 #resultSearch {
@@ -211,11 +211,17 @@ html {overflow-y: scroll;}
     color: #FEFEFE;
     width: 100%;
     background-color: #424749;
-    padding-top: 1.5em;
-    padding-bottom: 1.5em;
     text-align: center;
+    height: 355px;
 }
 
 .headingImg{
     margin-top: 1.5em;
+}
+
+
+
+.contactFormDiv{
+    width: 1160px;
+    margin: 0px auto;
 }
