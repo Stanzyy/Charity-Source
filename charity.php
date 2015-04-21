@@ -161,7 +161,7 @@
                 <h4 class="modal-title" id="myModalLabel">About Revenue</h4>
               </div>
               <div class="modal-body">
-                <p>This is the description about Revenue</p>
+                <p>Total revenue is the income that a company recieves from its normal business activities, usually from the sales of goods and services to customers.</p>
               </div>
               <div class="modal-footer">
                 <p class="gotIt">Got it</p>
@@ -179,10 +179,10 @@
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">About Efficiency</h4>
+                <h4 class="modal-title" id="myModalLabel">About Fundraising Efficiency</h4>
               </div>
               <div class="modal-body">
-                <p>This is the description about Efficiency</p>
+                <p>The amount spent to raise $1 in charitable contributions. To calculate a charity's fundraising efficiency, we divide its fundraising expenses by the total contributions it receives.  This important statistic shows the amount of contributions left after subtracting the cost of getting them.</p>
               </div>
               <div class="modal-footer">
                 <p class="gotIt">Got it</p>
@@ -200,10 +200,10 @@
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">About Commitment</h4>
+                <h4 class="modal-title" id="myModalLabel">About Charitable Commitment</h4>
               </div>
               <div class="modal-body">
-                <p>This is the description about Commitment</p>
+                <p>This calculates how much of total expense went directly to the charitable purpose (which is also known as program support or program expense) as opposed to management, certain overhead and fundraising.</p>
               </div>
               <div class="modal-footer">
                 <p class="gotIt">Got it</p>
@@ -221,10 +221,10 @@
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">About Dependency</h4>
+                <h4 class="modal-title" id="myModalLabel">About Donar Dependency</h4>
               </div>
               <div class="modal-body">
-                <p>This is the description about Dependency</p>
+                <p>This volatile statistic measures how badly a nonprofit needed your contribution to break even. We subtract the annual surplus or deficit from gifts, then divide this figure by the gifts. The higher the percentage, the more the charity, well, needed the charity. A ratio of 100% means the nonprofit spent all the gifts but didn’t run a deficit. A result above 100% means the nonprofit ran a deficit. </p>
               </div>
               <div class="modal-footer">
                 <p class="gotIt">Got it</p>
