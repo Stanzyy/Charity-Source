@@ -106,7 +106,7 @@
 				</div>
                 <!-- The next couple chunks of code are all the charities available to search for, along with basic information about each charity. -->
 				<div class="resultList" >
-					<div class="result cancer food" data-name="CancerSociety" data-popularity="3">
+					<div class="result cancer" data-name="CancerSociety" data-popularity="3">
 						<a href="charity.php?charity=AmericanCancerSociety">
 						  <h3 class = "charityHead"><img src="images/AmericanCancerSociety.png" style="height: 100px; width: 100px;" />
                           American Cancer Society</h3>
