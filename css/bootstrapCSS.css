@@ -163,10 +163,11 @@ html {overflow-y: scroll;}
 }
 
 .imgWrapper {
-    width: 101%;
+    width: 100%;
     background-color: #424749;
     padding-top: 2em;
     padding-bottom: 1.5em;
+    margin-left: -8px;
 }
 
 .charityImg{
@@ -213,4 +214,8 @@ html {overflow-y: scroll;}
     padding-top: 1.5em;
     padding-bottom: 1.5em;
     text-align: center;
+}
+
+.headingImg{
+    margin-top: 1.5em;
 }

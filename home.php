@@ -11,7 +11,7 @@
         <link rel="icon" href="images/favicon.ico" type="image/x-icon">
         <style type="text/css">
         	.aboutCenter{
-				width: 945px;
+				width: 1160px;
 				margin: 0px auto;
 				text-align: center;
 				height: 20em;
@@ -46,7 +46,7 @@
 		<div class="wrapper container">
 			<?php require_once('header.php');?>
 				<div class="imgWrapper row text-center">
-                    <img class=""src="images/workPicture.png" alt="Charity's Logo"/>
+                    <img class="headingImg"src="images/workPicture.png" alt="Charity's Logo"/>
                 </div> <!--/.imgWrapper -->
 				<div class="aboutCenter" id="aboutCenter">
 					<div class="aboutItem">
