@@ -60,9 +60,10 @@
 					</div> <!--/. aboutItem -->
 					<div class="aboutItem">
 						<h2 class="title">Future Plans</h2>
-						<p>Nouria Energy Corporation is a fuel distributor supplying gasoline and diesel to over 125 service stations. We operate 83 convenience stores with fuel; 
-						some locations also consist of quick serve restaurants such as Dunkin Donuts, McDonald’s and Subway. We also take pride in our Lil Mart brand locations in 
-						Maine. Our corporate headquarters are situated in Worcester, Massachusetts with an international support center in Lebanon.</p>
+						<p>The future for Charity Source includes a lot of new features and partnerships with charities. Our team is in the process
+                        of developing a forum for our users to get in touch with other friendly folks or the charities themselves in order to join in 
+                        their events. Once we partner up with charities they will provide content to their pages to include future goals to show donators
+                        where their money is going.</p>
 					</div> <!--/. aboutItem -->
 				</div> <!--/. aboutCenter -->				
 			</div> <!--/.wrapper -->
