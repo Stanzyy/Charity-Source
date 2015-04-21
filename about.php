@@ -56,6 +56,9 @@
 	<body>
 		<div class="wrapper container">
 			<?php require_once('header.php');?>
+			<div class="imgWrapper row text-center">
+                <img class="headingImg"src="images/logoLg.png" alt="Charity's Logo"/>
+            </div> <!--/.imgWrapper -->
 			<div class="sponsorCenter">
 					<div class="sponsorItem">
 						<h2 class="title">Nicolas Stanzione</h2>
