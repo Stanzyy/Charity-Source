@@ -31,7 +31,6 @@
 				margin-bottom: 4em;
 				vertical-align: top;
 				margin-top: 5.6em;
-				margin-left: 2em;	
 				letter-spacing: 1px;
 				line-height: 1.5em;
 			}

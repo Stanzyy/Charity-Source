@@ -11,7 +11,7 @@
         <link rel="icon" href="images/favicon.ico" type="image/x-icon">
         <style type="text/css">
 			 .sponsorCenter{
-				width: 945px;
+				width: 1160px;
 				margin: 0px auto;
 				text-align: center;
 				height: 20em;
@@ -33,7 +33,7 @@
 			}
 
 			.sponsorText{
-				width: 70%;
+				width: 88%;
 				text-align: left;
 				display: inline-block;
 				vertical-align: top;
