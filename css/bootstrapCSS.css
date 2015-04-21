@@ -7,6 +7,10 @@
  /*    min-height: 2000px;  */
  }
 
+body p{
+    line-height: 1.5em;
+}
+
 footer {
     background-color: #424749;
     position:fixed;
@@ -22,6 +26,7 @@ footer {
 
 .navbar-fixed-top .nav {
     padding: 35px 0;
+    margin-right: 0px;
 }
 
 @media(min-width:768px) {

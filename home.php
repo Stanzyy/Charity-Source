@@ -45,6 +45,9 @@
 	<body>
 		<div class="wrapper container">
 			<?php require_once('header.php');?>
+				<div class="imgWrapper row text-center">
+                    <img class=""src="images/workPicture.png" alt="Charity's Logo"/>
+                </div> <!--/.imgWrapper -->
 				<div class="aboutCenter" id="aboutCenter">
 					<div class="aboutItem">
 						<h2 class="title">About Us</h2>
