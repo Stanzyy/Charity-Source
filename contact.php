@@ -47,10 +47,10 @@ and open the template in the editor.
             <div class = "contactContent">
                 <?php require_once('header.php');?> <!-- add the header to the page -->
                 <div class="imgWrapper row text-center">
-                    <h1>Spill The Beans.</h1>
-                    <p>We are not very understanding or patient people so if you have something onyour ind we'd rather not hear from you.</p>
+                    <h1 style="color: white">Talk To Us.</h1>
+                    <p style="color: white">Our team will be happy to answer any questions or concerns you have. We look forward to your email.</p>
                     <div class="contactInfo">
-                        <p><span>555 555 0904</span><em>or</em> <a class="link_email" href="mailto:charitysourcedevs@gmail.com?subject=Hi Charity Source - Contact via website">Email Us</a></p>
+                        <p style="color: white"><span>555 555 5555</span><em>or</em> <a class="link_email" href="mailto:charitysourcedevs@gmail.com?subject=Hi Charity Source - Contact via website">Email Us</a></p>
                     </div>
                 </div> <!--/.imgWrapper -->
                 <div class = "contactFormDiv"> <!-- creates the input fields for the user to contact us -->
