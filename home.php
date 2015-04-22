@@ -58,7 +58,8 @@
 					<div class="aboutItem">
 						<h2 class="title">What We're About</h2>
 						<p>Our team at Charity Source is dedicated to providing a safe and user friendly environment in which
-                        people can donate to good causes and feel great about it!</p>
+                        people can donate to good causes and feel great about it! We want to inspire users to search for good
+                        causes and give support where they know that every dollar they donate is making a difference.</p>
 					</div> <!--/. aboutItem -->
 					<div class="aboutItem">
 						<h2 class="title">Future Plans</h2>
