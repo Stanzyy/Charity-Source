@@ -15,7 +15,7 @@
             <div class="imgWrapper row text-center">
                 <img class="headingImg"src="images/logoLg.png" alt="Charity's Logo"/>
             </div> <!--/.imgWrapper -->
-            <div class="content">
+            <div class="content" style="height: 400px; margin-top: 5em;">
                 
                 <div id="leftForm">
                     <div class="formHead">
