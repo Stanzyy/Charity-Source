@@ -44,7 +44,7 @@
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner" role="listbox">
                             <div class="item active">
-                                <a href="charity.php?charity=UnitedWay"><img src= "images/UnitedWay.png" >
+                                <a href="charity.php?charity=AmericanRedCross"><img src= "images/AmericaRedCross.png" >
                             </div>
                             <div class="item">
                                 <a href="charity.php?charity=AmericanCancerSociety"><img src= "images/AmericanCancerSociety.png" >
@@ -130,7 +130,7 @@
                     
                     <div class="result community" data-name="UnitedWay" data-popularity="2">
 						<a href="charity.php?charity=UnitedWay">
-                            <h3 class = "charityHead"><img src="images/UnitedWay.png" style="height: 100px; width: 100px;" />
+                            <h3 class = "charityHead"><img src="images/2UnitedWay.png" style="height: 100px; width: 100px;" />
                             United Way</h3>
                         </a>
                     </div>
