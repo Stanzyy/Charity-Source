@@ -89,9 +89,7 @@ In my spare time, I love to play video games, snowmobile and spend time with fam
 					<div class="sponsorItem lastItem">
 						<h2 class="title">Gregory Saras</h2>
 						<img src="images/greg.png" class="sponsorImg" />
-						<p class="sponsorText">Nouria Energy Corporation is a fuel distributor supplying gasoline and diesel to over 125 service stations. We operate 83 convenience stores with fuel; 
-						some locations also consist of quick serve restaurants such as Dunkin Donuts, McDonald’s and Subway. We also take pride in our Lil Mart brand locations in 
-						Maine. Our corporate headquarters are situated in Worcester, Massachusetts with an international support center in Lebanon.</p>
+						<p class="sponsorText">Hi, my name is Gregory Saras and I am a developer here at Charity Source. I enjoy developing on ASP.NET which is where most of my experience lies. I also have spent a lot of time with HTML5, CSS3, and JavaScript/jQuery. In my free time you will find me trophy hunting in PlayStation games. Word from the wise never try to perfect Advanced Warfare, its miserable.</p>
 					</div> <!--/.sponsorItem -->
 				</div> <!--/.sponsorCenter -->
             <?php require_once('footer.php');?> 
