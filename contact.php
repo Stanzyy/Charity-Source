@@ -53,7 +53,7 @@ and open the template in the editor.
                         <p style="color: white"><span>555 555 5555</span><em>or</em> <a class="link_email" href="mailto:charitysourcedevs@gmail.com?subject=Hi Charity Source - Contact via website">Email Us</a></p>
                     </div>
                 </div> <!--/.imgWrapper -->
-                <div class = "contactFormDiv"> <!-- creates the input fields for the user to contact us -->
+                <div class = "contactFormDiv" style="height: 300px;"> <!-- creates the input fields for the user to contact us -->
                 <div class = "contactTitle">
                     <h1> Contact Us </h1>
                 </div> <!--/.contactTitle -->
