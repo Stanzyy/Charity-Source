@@ -44,7 +44,7 @@
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner" role="listbox">
                             <div class="item active">
-                                <a href="charity.php?charity=AmericanRedCross"><img src= "images/AmericaRedCross.png" >
+                                <a href="charity.php?charity=AmericanRedCross"><img src= "images/AmericanRedCross.png" >
                             </div>
                             <div class="item">
                                 <a href="charity.php?charity=AmericanCancerSociety"><img src= "images/AmericanCancerSociety.png" >
