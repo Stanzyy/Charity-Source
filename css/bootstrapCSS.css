@@ -225,3 +225,7 @@ html {overflow-y: scroll;}
     width: 1160px;
     margin: 0px auto;
 }
+
+.loginLink, uname, logout { 
+    color: white;     
+}

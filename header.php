@@ -36,9 +36,9 @@
                         if(!isset($_SESSION["loggedIn"]) || !$_SESSION["loggedIn"]){
                             $_SESSION["loggedIn"] = false;
                             $_SESSION["userName"] = null;
-                            echo "<li> <a href='signup.php' style='color:white; background-color:red;'>Log In/Sign Up</a></li>"; 
+                            echo "<li> <a href='signup.php' class='loginLink' style='background-color:red;'>Log In/Sign Up</a></li>"; 
                         }else{
-                            echo "<li><a href='userPage.php?username=".$_SESSION['userName']."'><span id='uname' style='color:white'>Hi ".$_SESSION['firstName'] . "</span></a></li>  <li style='cursor:pointer;'><a id='logout' style='color:white; background-color:red;'>Log Out</a></li>";
+                            echo "<li><a href='userPage.php?username=".$_SESSION['userName']."'><span id='uname'>Hi ".$_SESSION['firstName'] . "</span></a></li>  <li style='cursor:pointer;'><a id='logout' style='background-color:red;'>Log Out</a></li>";
                         }            
                     ?>
                     </div>
