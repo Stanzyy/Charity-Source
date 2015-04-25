@@ -133,7 +133,7 @@ html {overflow-y: scroll;}
 /* Centers the top charities' pictures in the carousel and set their sizes  */
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
-    width: 20%;
+    width: 25%;
     margin: auto;
 }
 
@@ -152,7 +152,9 @@ html {overflow-y: scroll;}
 .carouselWidth {
     width: 100%;
     background-color: #424749;
-    height: 375px;
+    height: 355px;
+    margin-top: 1.5em;
+    padding-top: 1.5em;
 }
 
 .width {
@@ -218,8 +220,6 @@ html {overflow-y: scroll;}
 .headingImg{
     margin-top: 1.5em;
 }
-
-
 
 .contactFormDiv{
     width: 1160px;
