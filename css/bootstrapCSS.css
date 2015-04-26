@@ -19,8 +19,7 @@ footer {
     width:100%;
     color: white;
     padding-top: 5px;
-    text-align: center;
-    
+    text-align: center;    
 }
 
 .navbar-fixed-top .nav {
@@ -530,102 +529,4 @@ html {overflow-y: scroll;}
 
 .displayHolder, .editHolder, .display, .editHolder{
     display: inline-block;
-}
-
-/*CSS from the Getch*/
-.charityContent {
-    color: black;    
-    text-align: center;
-    background-color: lightgray;
-    padding: 5px;
-    margin-top: 10px;
-}
-
-/* gets rid of links being underlined */
-a {
-    text-decoration: none;
-}
-
-.charityh2 {
-    padding: 1em 8px;
-    color: cornflowerblue;
-    background-color: white;
-    margin: 0 auto; 
-    text-align: center 
-}
-
-/* This code is what creates the four box table on the charity page. Padding is for the 
-words in the boxes. The border is create to visually separate the boxes. Height and 
-width controls the shape of the boxes. This is also where the change of the background color
-is controlled as well as the speed of the change. */
-.aboutStatsSingle {
-    box-sizing: border-box; 
-    padding: 2em;
-    border: 1px solid grey; 
-    margin-left: 5px;
-    width: 32.5%;
-    height: 300px;
-    float: left;
-    color: black;
-    background: linear-gradient(white, white 50%, skyblue 50%, cornflowerblue);
-    background-size: 200%;
-    transition: 0.2s;    
-}
-
-/* The paragraphs in the boxes are set to white so that they cannot be 
-seen until the cursor hovers over them  */
-.aboutStatsSingle p{
-    color: black;
-    font: Helvetica, Arial, sans-serif;
-}
-
-/* When the cursor hovers over the box, the grey background will move up  */
-.aboutStatsSingle:hover {
-    background-position: 50% 100%;
-}
-
-.summaryButton {
-    margin: 5px 5px;
-}
-.charityStatsSingle, .userStatsSingle {
-    box-sizing: border-box; 
-    margin-left: 5px;
-    height: 200px; 
-}
-
-a {
-    text-decoration: none;
-}
-
-/* This code is what creates the four box table on the home page. Padding is for the 
-words in the boxes. The border is create to visually separate the boxes. Height and 
-width controls the shape of the boxes. This is also where the change of the background color
-is controlled as well as the speed of the change. */
-.charityStatsSingle, .userStatsSingle {
-    box-sizing: border-box; 
-    padding-left: 1em;
-    border: 1px solid grey; 
-    margin-left: 5px;
-    margin-bottom: 20px;
-    margin-top: 10px;
-    width: 32.5%;
-    height: 200px;
-    float: left;
-    color: black;
-    background: linear-gradient(white, white 50%, skyblue 50%, cornflowerblue);
-    background-size: 200%;
-    transition: 0.2s;    
-}
-
-/* The paragraphs in the boxes are set to white so that they cannot be 
-seen until the cursor hovers over them and changes the background color 
-from white to grey */
-.charityStatsSingle p{
-    color: white;
-    font: Helvetica, Arial, sans-serif;
-}
-
-/* When the cursor hovers over the box, the grey background will move up  */
-.charityStatsSingle:hover {
-    background-position: 50% 100%;
 }
