@@ -1,1 +1,0 @@
-<p class="fromAnotherFile">This is a paragraph</p>
