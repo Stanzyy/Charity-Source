@@ -4,29 +4,10 @@
 	<head>
 		<meta charset='utf-8' />
 		<title>Browse | Charity Source</title>
-        <!-- Imported stylesheets and images below. -->
- <!--       <link rel="stylesheet" type="text/css" href="css/gsarascss.css">
-        <link rel="stylesheet" type="text/css" href="css/joshbrowse.css">
--->        
+        <!-- Imported stylesheets and images below. -->      
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
         <link rel="icon" href="images/favicon.ico" type="image/x-icon">
         <?php require_once("css.php");?>
-        <style type="text/css">
-        .result{
-            width: 500px;
-            margin-top: 2em;
-            margin-left: 2.5em;
-            margin-bottom: 2em;
-            border: none;
-            cursor: pointer;
-        }
-
-        .result:hover{
-            border: 1px solid #000;
-            border-radius: 5px;
-            box-shadow: 3px 3px 2px #888888;
-        }
-        </style>
     </head>
 	<body> 
 		<div class="wrapper">
@@ -35,13 +16,6 @@
                 <div class="carouselWidth">
                     <!-- Bootstrap carousel -->
                     <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                    <!-- Indicators -->
-                     <!--   <ol class="carousel-indicators">
-                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                            <li data-target="#myCarousel" data-slide-to="1"></li>
-                            <li data-target="#myCarousel" data-slide-to="2"></li>                    
-                        </ol>
-    -->
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner" role="listbox">
                             <div class="item active">
@@ -88,22 +62,7 @@
                     <button class="filterButton btn inline" id="children">Children</button>
 				    <button class="filterButton btn inline" id="clothes">Clothing</button>
                     <button class="filterButton btn inline" id="community">Community</button>
-                    <button class="filterButton btn inline" id="food">Food</button>
-                      <!-- Sidebar -->
-           <!--         
-                    <div id="sidebar-wrapper">
-                        <ul class="sidebar-nav">
-                            <li class="sidebar-brand"><p>Refine Search</p></li>
-                            <li><button class="filterOn filterButton" id="all">All</button></li>
-                            <li><button class="filterButton" id="blood">Blood</button></li>
-                            <li><button class="filterButton" id="cancer">Cancer</button></li>
-                            <li><button class="filterButton" id="children">Children</button></li>
-                            <li><button class="filterButton" id="clothes">Clothing</button></li>
-                            <li><button class="filterButton" id="community">Community</button></li>
-                            <li><button class="filterButton" id="food">Food</button></li>
-                        </ul>
-                    </div> 
-                    -->             
+                    <button class="filterButton btn inline" id="food">Food</button>             
 				</div>
                 <!-- The next couple chunks of code are all the charities available to search for, along with basic information about each charity. -->
 				<div class="resultList" >

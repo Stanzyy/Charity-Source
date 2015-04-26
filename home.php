@@ -3,44 +3,10 @@
 <html lang='en'>
 	<head>
 		<meta charset='utf-8' />
-  <!--      <link rel="stylesheet" type="text/css" href="css/nick.css">
-		<link rel="stylesheet" type="text/css" href="css/gsarascss.css">
--->
         <title>About | Charity Source</title>
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
         <link rel="icon" href="images/favicon.ico" type="image/x-icon">
         <?php require_once("css.php");?>
-        <style type="text/css">
-        	.aboutCenter{
-				width: 1160px;
-				margin: 0px auto;
-				text-align: center;
-				height: 20em;
-				background-color: #fefefe;
-			}
-
-			.aboutItem{
-				margin-top: 1em;
-				margin-bottom: 2em;
-				clear: both;
-				border-bottom: 1px solid #231F20;
-			}
-
-			.aboutItem p{
-				text-align: left;
-				display: inline-block;
-				margin-bottom: 4em;
-				vertical-align: top;
-				margin-top: 5.6em;
-				letter-spacing: 1px;
-				line-height: 1.5em;
-			}
-
-			.title{
-				float: left;
-				margin-bottom: -2em;
-			}
-        </style>
 	</head>
 	<body>
 		<div class="wrapper container">

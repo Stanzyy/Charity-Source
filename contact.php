@@ -9,38 +9,11 @@ and open the template in the editor.
     <head>
         <title>Contact | Charity Source</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="css/nick.css">
-        <link rel="stylesheet" type="text/css" href="css/gsarascss.css">
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
         <link rel="icon" href="images/favicon.ico" type="image/x-icon">
         <?php require_once("css.php");?>
         <style>
-            #submitButton{
-                border: none;
-                width: 7em;
-	            height: 2em;
-                cursor: pointer;
-            }
-
-            #message{
-            	height: 9.3em;
-            	resize: none;
-            }
-
-            .contact-form-control{
-            	margin-top: 1em;
-            }
-
-            .contact-button{
-            	margin-left: 15px;
-            	margin-top: 1em;
-            }
-
-            .successDiv{
-            	display: none;
-            }
+            
         </style>
     </head>
     <body>

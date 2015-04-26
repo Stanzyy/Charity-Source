@@ -7,49 +7,6 @@
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
         <link rel="icon" href="images/favicon.ico" type="image/x-icon">
         <?php require_once("css.php");?>
-        <style type="text/css">
-			 .sponsorCenter{
-				width: 1160px;
-				margin: 0px auto;
-				text-align: center;
-				height: 20em;
-				background-color: #fefefe;
-			}
-
-			.sponsorItem{
-				margin-top: 1em;
-				margin-bottom: 3em;
-				clear: both;
-				border-bottom: 1px solid #231F20;
-				padding-bottom: 1em;
-			}
-
-			.sponsorImg{
-				height: 150px;
-				margin-top: 4.8em;
-				display: inline-block;
-			}
-
-			.sponsorText{
-				width: 88%;
-				text-align: left;
-				display: inline-block;
-				vertical-align: top;
-				margin-top: 5.6em;
-				margin-left: 2em;	
-				letter-spacing: 1px;
-				line-height: 1.5em;
-			}
-
-			.title{
-				float: left;
-				margin-bottom: -2em;
-			}
-
-			.lastItem{
-				border-bottom: none;
-			}
-        </style>
 	</head>
 	<body>
 		<div class="wrapper container">

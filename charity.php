@@ -29,26 +29,12 @@
     <head>
         <meta charset='utf-8' />
         <title><?php echo $charityName ?> | Charity Source</title>
-		<!-- Two links to style sheets used --> 
-    <!--    <link rel="stylesheet" type="text/css" href="css/egetchellcss.css">
-        <link rel="stylesheet" type="text/css" href="css/gsarascss.css">
-	-->	<!-- Links to favicon -->
+		<!-- Links to favicon -->
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
         <link rel="icon" href="images/favicon.ico" type="image/x-icon">
         <?php require_once("css.php");?>
 		<!-- jQuery link -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <style type="text/css">
-            .moreInfo{
-                text-decoration: underline;
-                color: blue;
-                cursor: pointer;
-            }
-
-            .gotIt{
-                cursor: pointer;
-            }
-        </style>
     </head>
     <body class='charityBody'>
         <div class="wrapper">

@@ -1,11 +1,10 @@
 @import url(http://fonts.googleapis.com/css?family=Lato);
 
- body {
-     padding-top: 70px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */   
-     background-color: #FEFEFE;
-     font-family: 'Lato';
- /*    min-height: 2000px;  */
- }
+body {
+    padding-top: 70px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */   
+    background-color: #FEFEFE;
+    font-family: 'Lato';
+}
 
 body p{
     line-height: 1.5em;
@@ -228,4 +227,405 @@ html {overflow-y: scroll;}
 
 .loginLink, uname, logout { 
     color: white;     
+}
+
+
+/*About page CSS*/
+.sponsorCenter{
+	width: 1160px;
+	margin: 0px auto;
+	text-align: center;
+	height: 20em;
+	background-color: #fefefe;
+}
+
+.sponsorItem{
+	margin-top: 1em;
+	margin-bottom: 3em;
+	clear: both;
+	border-bottom: 1px solid #231F20;
+	padding-bottom: 1em;
+}
+
+.sponsorImg{
+	height: 150px;
+	margin-top: 4.8em;
+	display: inline-block;
+}
+
+.sponsorText{
+	width: 88%;
+	text-align: left;
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 5.6em;
+	margin-left: 2em;	
+	letter-spacing: 1px;
+	line-height: 1.5em;
+}
+
+.title{
+	float: left;
+	margin-bottom: -2em;
+}
+
+.lastItem{
+	border-bottom: none;
+}
+
+/*Charity Page CSS*/
+.moreInfo{
+    text-decoration: underline;
+    color: blue;
+    cursor: pointer;
+}
+
+.gotIt{
+    cursor: pointer;
+}
+
+/*Gregs CSS, Needs to be sorted out*/
+/* Add scroll bar to all pages */
+html {overflow-y: scroll;}
+
+
+/*Form headings*/
+.formHead h3{
+    width: 4em;
+    display: inline-block;
+}
+            
+.formHead p{
+    display: inline-block;
+}
+
+/*Will display error messages if a login or signup failed*/
+#signinErrorContainer, #signupErrorConatiner{
+    visibility: hidden;
+}
+
+.content{
+    width: 1160px;
+    margin: 0px auto;
+}
+
+/*signin/signup forms*/
+#leftForm{
+    float: left;
+    width: 49%;
+    border-right: 1px solid #000;
+    height: 21em;
+}
+            
+#rightForm{
+    float: right;
+    width: 50%;
+    height: 21em;
+}
+
+/*Input Styling for signup/signin*/
+.inputField{
+    margin: 0px auto;
+    width: 25.5em;
+    margin-top: 1em;
+    height: 2em;
+}
+
+.inputField input{
+    width: 23em;
+}
+
+/*Button styling*/
+.submitButton{
+    width: 7em;
+	height: 2em;
+	border: 0px;
+    margin: 0px auto;
+	cursor: pointer;
+}
+
+.buttonHolder{
+    margin-top: 1em;
+}
+            
+.inputBox{
+    height: 2em;
+}
+
+
+/*Footer Styling*/
+
+/*This is CSS for a no JS modal popup box from http://www.webdesignerdepot.com/2012/10/creating-a-modal-window-with-html5-and-css3/ */
+.modalDialog {
+    position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+            
+.modalDialog:target {
+    opacity:1;
+    pointer-events: auto;
+}
+
+.modalDialog > div {
+    width: 400px;
+    position: relative;
+    margin: 10% auto;
+    padding: 5px 20px 13px 20px;
+    border-radius: 2px;
+    background: #fff;
+}
+            
+.close {
+    background: #606061;
+    color: #FFFFFF;
+    line-height: 25px;
+    position: absolute;
+    right: -12px;
+    text-align: center;
+    top: -10px;
+    width: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    box-shadow: 1px 1px 3px #000;
+}
+
+.close:hover { background: #00d9ff; }
+
+
+
+.bstrp-modal{
+    display: none;
+}
+
+/*Nick CSS, Should only be contact but should double check*/
+.person { /* float all pics to the left */
+    float: left
+}
+.person img { /* position the three pics that are in a row */
+    width:  200px;
+    height: 300px;
+    padding-right: 1em;
+    display: inline-block;
+}
+.person p { /* position names underneath each pic */
+    position: relative;
+}
+/*****************************About above Contact below**************************************************************/
+#submitButton { /*drop the submit button a little more below the text area */
+    position: relative;
+    top: 4.5em;
+}
+
+#name, #email, #subject, #message, .inputTitle { /* display the input fields in a block style */
+    display: block;
+}
+/*****************************Contact above Landing below ***************************************************/
+.headerImage, .who, .why, .checkUsOut { /* center everything and increase font size */
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    font-size: 3em;
+}
+#goToHomeButton{ /* increase size of home button */
+    font-size: 1em;
+    width: 92%
+}
+#landingLogo{ /* alter width of logo */
+    width: 92%
+}
+
+#submitButton{
+    border: none;
+    width: 7em;
+    height: 2em;
+    cursor: pointer;
+}
+
+#message{
+    height: 9.3em;
+	resize: none;
+}
+
+.contact-form-control{
+   	margin-top: 1em;
+}
+
+.contact-button{
+   	margin-left: 15px;
+   	margin-top: 1em;
+}
+
+.successDiv{
+	display: none;
+}
+
+/*Home CSS*/
+.aboutCenter{
+	width: 1160px;
+	margin: 0px auto;
+	text-align: center;
+	height: 20em;
+	background-color: #fefefe;
+}
+
+.aboutItem{
+	margin-top: 1em;
+	margin-bottom: 2em;
+	clear: both;
+	border-bottom: 1px solid #231F20;
+}
+
+.aboutItem p{
+	text-align: left;
+	display: inline-block;
+	margin-bottom: 4em;
+	vertical-align: top;
+	margin-top: 5.6em;
+	letter-spacing: 1px;
+	line-height: 1.5em;
+}
+
+.title{
+	float: left;
+	margin-bottom: -2em;
+}
+
+/*Index CSS*/
+.result{
+    width: 500px;
+    margin-top: 2em;
+    margin-left: 2.5em;
+    margin-bottom: 2em;
+    border: none;
+    cursor: pointer;
+}
+
+.result:hover{
+    border: 1px solid #000;
+    border-radius: 5px;
+	box-shadow: 3px 3px 2px #888888;
+}
+
+/*User Page*/
+#editLink, #saveLink, #cancelLink{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.displayHolder, .editHolder, .display, .editHolder{
+    display: inline-block;
+}
+
+/*CSS from the Getch*/
+.charityContent {
+    color: black;    
+    text-align: center;
+    background-color: lightgray;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+/* gets rid of links being underlined */
+a {
+    text-decoration: none;
+}
+
+.charityh2 {
+    padding: 1em 8px;
+    color: cornflowerblue;
+    background-color: white;
+    margin: 0 auto; 
+    text-align: center 
+}
+
+/* This code is what creates the four box table on the charity page. Padding is for the 
+words in the boxes. The border is create to visually separate the boxes. Height and 
+width controls the shape of the boxes. This is also where the change of the background color
+is controlled as well as the speed of the change. */
+.aboutStatsSingle {
+    box-sizing: border-box; 
+    padding: 2em;
+    border: 1px solid grey; 
+    margin-left: 5px;
+    width: 32.5%;
+    height: 300px;
+    float: left;
+    color: black;
+    background: linear-gradient(white, white 50%, skyblue 50%, cornflowerblue);
+    background-size: 200%;
+    transition: 0.2s;    
+}
+
+/* The paragraphs in the boxes are set to white so that they cannot be 
+seen until the cursor hovers over them  */
+.aboutStatsSingle p{
+    color: black;
+    font: Helvetica, Arial, sans-serif;
+}
+
+/* When the cursor hovers over the box, the grey background will move up  */
+.aboutStatsSingle:hover {
+    background-position: 50% 100%;
+}
+
+.summaryButton {
+    margin: 5px 5px;
+}
+.charityStatsSingle, .userStatsSingle {
+    box-sizing: border-box; 
+    margin-left: 5px;
+    height: 200px; 
+}
+
+a {
+    text-decoration: none;
+}
+
+/* This code is what creates the four box table on the home page. Padding is for the 
+words in the boxes. The border is create to visually separate the boxes. Height and 
+width controls the shape of the boxes. This is also where the change of the background color
+is controlled as well as the speed of the change. */
+.charityStatsSingle, .userStatsSingle {
+    box-sizing: border-box; 
+    padding-left: 1em;
+    border: 1px solid grey; 
+    margin-left: 5px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    width: 32.5%;
+    height: 200px;
+    float: left;
+    color: black;
+    background: linear-gradient(white, white 50%, skyblue 50%, cornflowerblue);
+    background-size: 200%;
+    transition: 0.2s;    
+}
+
+/* The paragraphs in the boxes are set to white so that they cannot be 
+seen until the cursor hovers over them and changes the background color 
+from white to grey */
+.charityStatsSingle p{
+    color: white;
+    font: Helvetica, Arial, sans-serif;
+}
+
+/* When the cursor hovers over the box, the grey background will move up  */
+.charityStatsSingle:hover {
+    background-position: 50% 100%;
 }
