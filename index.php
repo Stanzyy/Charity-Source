@@ -10,6 +10,7 @@
 -->        
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
         <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+        <?php require_once("css.php");?>
         <style type="text/css">
         .result{
             width: 500px;

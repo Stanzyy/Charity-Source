@@ -3,12 +3,10 @@
 <html lang='en'>
 	<head>
 		<meta charset='utf-8' />
-  <!--      <link rel="stylesheet" type="text/css" href="css/nick.css">
-		<link rel="stylesheet" type="text/css" href="css/gsarascss.css">
--->
         <title>The Team | Charity Source</title>
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
         <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+        <?php require_once("css.php");?>
         <style type="text/css">
 			 .sponsorCenter{
 				width: 1160px;

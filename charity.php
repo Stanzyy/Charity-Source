@@ -35,6 +35,7 @@
 	-->	<!-- Links to favicon -->
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
         <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+        <?php require_once("css.php");?>
 		<!-- jQuery link -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <style type="text/css">
