@@ -1,4 +1,3 @@
-<!-- list of php commands below.  Declaring variables, then generating data on the fly -->
 <?php session_start();?>
 <?php
     $link = mysqli_connect("127.0.0.1","root","","gsarastestdb")or die("Error" . mysqli_error($link));
