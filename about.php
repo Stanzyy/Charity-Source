@@ -6,16 +6,16 @@
         <title>The Team | Charity Source</title>
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
         <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-        <?php require_once("css.php");?>
+        <?php require_once("css.php");?> <!-- pulls in all our CSS -->
 	</head>
 	<body>
 		<div class="wrapper container">
-			<?php require_once('header.php');?>
+			<?php require_once('header.php');?> <!-- brings in the header thats on all our pagess -->
 			<div class="imgWrapper row text-center">
                 <img class="headingImg"src="images/logoLg.png" alt="Charity's Logo"/>
             </div> <!--/.imgWrapper -->
 			<div class="sponsorCenter">
-					<div class="sponsorItem">
+					<div class="sponsorItem"> <!-- div for each person -->
 						<h2 class="title">Nicolas Stanzione</h2>
 						<img src="images/nick.png" class="sponsorImg" />
 						<p class="sponsorText">Welcome to Charity Source. I'm Nick Stanzione. I am currently a senior in my bachelors studies in Computer Science at the University of Massachusetts Lowell. After I graduate in May 2015 I will be pursuing my Masters in Computer Science at UML in the plus one masters program. I love camping, video games, cats, and football. Our team and I had a lot of fun putting this project together and I hope you enjoy it. Thanks for stopping by. </p>
@@ -47,7 +47,7 @@ In my spare time, I love to play video games, snowmobile and spend time with fam
 						<p class="sponsorText">Hi, my name is Gregory Saras and I am a developer here at Charity Source. I enjoy developing on ASP.NET which is where most of my experience lies. I also have spent a lot of time with HTML5, CSS3, and JavaScript/jQuery. In my free time you will find me trophy hunting in PlayStation games. Word from the wise never try to perfect Advanced Warfare, its miserable.</p>
 					</div> <!--/.sponsorItem -->
 				</div> <!--/.sponsorCenter -->
-            <?php require_once('footer.php');?> 
+            <?php require_once('footer.php');?> <!-- pulls in our footer thats on every page -->
 		</div> <!--./wrapper -->
 	</body>
 </html>
