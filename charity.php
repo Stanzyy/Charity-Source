@@ -1,7 +1,8 @@
 <?php session_start();?>
 <?php
+    // connect to our database that we use for everything
     $link = mysqli_connect("127.0.0.1","root","","gsarastestdb")or die("Error" . mysqli_error($link));
-    $CharityQueryName = $_GET['charity'];
+    $CharityQueryName = $_GET['charity']; //GET request to get the name of the charity to pull data from in database
     $query = "SELECT * FROM `charities` WHERE `QueryName` ='" . $CharityQueryName."'";
     $result = mysqli_query($link, $query);
     while($row = mysqli_fetch_array($result))
@@ -31,7 +32,7 @@
 		<!-- Links to favicon -->
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
         <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-        <?php require_once("css.php");?>
+        <?php require_once("css.php");?> <!-- pulls in all our css -->
 		<!-- jQuery link -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     </head>
@@ -39,8 +40,8 @@
         <div class="wrapper">
             <?php require_once('header.php');?> 
             <div class="charityContent">
-             <!--   <h2 class='charityh2'><?php echo $charityName ?></h2> -->
-                <div class="imgWrapper row text-center">
+             <?php echo $charityName ?>
+                <div class="imgWrapper row text-center"> <!-- charity image -->
                     <img class="charityImg"src="images/2<?php echo $image ?>" alt="Charity's Logo"/>
                 </div> <!--/.imgWrapper -->
                 <div class="AboutCharityStatsAll container">
@@ -122,7 +123,7 @@
                         </div><!--/.aboutStatsSingle -->
                     </div> <!--/.row -->
                 </div> <!--/.AboutCharityStatsAll -->
-                <div class="paypal">
+                <div class="paypal"> <!-- below is the code copy and pasted from Paypal to create the button -->
                     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
                         <input type="hidden" name="cmd" value="_s-xclick">
                         <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
@@ -131,14 +132,11 @@
                         <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
                     </form> <!-- End of PayPal form --> 
                 </div><!--/.paypal -->
-                    
-                <!-- Decided not to include this feature below. -->
-                <!--<button class="summaryButton">View Full Summary</button>-->                
             </div> <!--/.charityContent -->
             <?php require_once('footer.php');?> <!-- Includes generic footer -->
         </div>
 
-        <!-- Revenue Modal -->
+        <!-- Revenue Modal which is the question marks that when clicked provide information on each word -->
         <div class="modal fade" id="revenueModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
