@@ -24,7 +24,8 @@
 			</div>
 			
 			<div class="sponsorCenter">
-					<!--Bio section for Nick-->
+				
+				<!--Bio section for Nick-->
 				<div class="sponsorItem">
 					<h2 class="title">Nicolas Stanzione</h2>
 					<img src="images/nick.png" class="sponsorImg" />
