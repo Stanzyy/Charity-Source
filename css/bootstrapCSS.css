@@ -10,6 +10,7 @@ body p{
     line-height: 1.5em;
 }
 
+/* Styles for footer of all pages */
 footer {
     background-color: #424749;
     position:fixed;
@@ -27,11 +28,11 @@ footer {
     margin-right: 0px;
 }
 
+/* Styles for navigation bar */
 @media(min-width:768px) {
     body {
         padding-top: 100px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
     }
-
     .navbar-fixed-top .navbar-brand {
         padding: 15px 0;
     }
@@ -48,62 +49,32 @@ footer {
     font-size: 150%;
 }
 
+/* Padding for index.php */
 .browseContent{
     padding: 2em;
 }
 
+/* Padding for charities listed on index.php */
 .filters{
     padding-bottom: 10px;
 }
 
-
+/* Margin for image inside of carousel */
 .carousel-inner img {
   margin: 0 auto;
-}
-
-.homePageContent{
-    padding: 2em;
-    text-align: center;   
 }
 
 /* Add scroll bar to all pages */
 html {overflow-y: scroll;}
 
-
-.aboutContent {
-    padding: 1em;
-}
-
+/* Floats the 'search by filter to the left on index.php */
 .sortText {
  float: right;   
 }
 
+/* Adds small padding to top of search section on index.php */
 .search{
  padding-top: 10px;   
-}
-
-#sidebar-wrapper {
-    margin-left: -310px;
-    left: 300px;
-    width: 120px;
-    background: #FEFEFE;
-    position: fixed;
-    height: 30em;                          
-    z-index: 1000;
-    transition: all 0.4s ease 0s;
-    border-right-style: solid;
-    border-color: lightgrey;
-}
-
-.sidebar-nav {                          
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.sidebar-nav li {
-  line-height: 40px;
-  text-indent: 20px;
 }
 
 /* Filter Buttons for browse.php */
@@ -135,10 +106,7 @@ html {overflow-y: scroll;}
     margin: auto;
 }
 
-.teamMembers {
- padding-bottom: 2em;   
-}
-
+/* Lines 110 to 134 style the carousel on index.php */
 .carousel-control.right{
     background-image: none;   
 }
@@ -155,27 +123,6 @@ html {overflow-y: scroll;}
     padding-top: 1.5em;
 }
 
-.width {
-    width: 100%;
-    margin-top: 1.5em;
-    height: 200px;
-}
-
-.imgWrapper {
-    width: 100%;
-    background-color: #424749;
-    padding-top: 2em;
-    padding-bottom: 1.5em;
-    margin-left: -8px;
-    height: 375px;
-}
-
-.charityImg{
-    width: 500px;
-    height: 300px;
-    margin-top: 1em;
-}
-
 .item {
     margin-top: 10px;
     background-color: #FEFEFE;
@@ -186,14 +133,34 @@ html {overflow-y: scroll;}
     margin: 0px auto;
 }
 
+/* Styles the images under the nav bar on certain pages */
+.imgWrapper {
+    width: 100%;
+    background-color: #424749;
+    padding-top: 2em;
+    padding-bottom: 1.5em;
+    margin-left: -8px;
+    height: 375px;
+}
+
+/* Stlyes the charity's logo image on charity.php */
+.charityImg{
+    width: 500px;
+    height: 300px;
+    margin-top: 1em;
+}
+
+/* sets the width for the search bar on index.php */
 #resultSearch {
  width: 30%;   
 }
 
+/* Sets filter buttons inline */
 .inline{
     display: inline-block;
 }
 
+/* Lines 164 to 175 stlyes data on charity.php */
 .aboutStatsSingle{
     padding: 1em;
 }
@@ -207,29 +174,18 @@ html {overflow-y: scroll;}
     padding-bottom: 5em;
 }
 
-.contactBanner {
-    color: #FEFEFE;
-    width: 100%;
-    background-color: #424749;
-    text-align: center;
-    height: 355px;
-}
-
+/* Add margin to the picture on home.php */
 .headingImg{
     margin-top: 1.5em;
 }
 
+/* Styles contact.php */
 .contactFormDiv{
     width: 1160px;
     margin: 0px auto;
 }
 
-.loginLink, uname, logout { 
-    color: white;     
-}
-
-
-/*About page CSS*/
+/*About page CSS line 189 to 220 */
 .sponsorCenter{
 	width: 1160px;
 	margin: 0px auto;
@@ -263,32 +219,23 @@ html {overflow-y: scroll;}
 	line-height: 1.5em;
 }
 
-.title{
-	float: left;
-	margin-bottom: -2em;
-}
-
+/* Removes bottom border from about.php */
 .lastItem{
 	border-bottom: none;
 }
 
-/*Charity Page CSS*/
-.moreInfo{
+/* Charity Page CSS lines 228 to 236 */
+.moreInfo {
     text-decoration: underline;
     color: blue;
     cursor: pointer;
 }
 
-.gotIt{
+.gotIt {
     cursor: pointer;
 }
 
-/*Gregs CSS, Needs to be sorted out*/
-/* Add scroll bar to all pages */
-html {overflow-y: scroll;}
-
-
-/*Form headings*/
+/* Form headings on signup.php */
 .formHead h3{
     width: 4em;
     display: inline-block;
@@ -412,70 +359,59 @@ html {overflow-y: scroll;}
     display: none;
 }
 
-/*Nick CSS, Should only be contact but should double check*/
-.person { /* float all pics to the left */
+/* About page styles lines 364-380 */
+
+/* Float all pics to the left */
+.person { 
     float: left
 }
-.person img { /* position the three pics that are in a row */
+
+/* Position the three pics that are in a row */
+.person img { 
     width:  200px;
     height: 300px;
     padding-right: 1em;
     display: inline-block;
 }
-.person p { /* position names underneath each pic */
+
+/* Position names underneath each pic */
+.person p { 
     position: relative;
 }
-/*****************************About above Contact below**************************************************************/
-#submitButton { /*drop the submit button a little more below the text area */
+
+/* Contact page styles lines 383-392 */
+/*drop the submit button a little more below the text area */
+#submitButton { 
     position: relative;
     top: 4.5em;
 }
 
-#name, #email, #subject, #message, .inputTitle { /* display the input fields in a block style */
+/* display the input fields in a block style */
+#name, #email, #subject, #message, .inputTitle { 
     display: block;
 }
-/*****************************Contact above Landing below ***************************************************/
-.headerImage, .who, .why, .checkUsOut { /* center everything and increase font size */
-    margin-left: auto;
-    margin-right: auto;
-    width: 70%;
-    font-size: 3em;
-}
-#goToHomeButton{ /* increase size of home button */
-    font-size: 1em;
-    width: 92%
-}
-#landingLogo{ /* alter width of logo */
-    width: 92%
-}
 
-#submitButton{
-    border: none;
-    width: 7em;
-    height: 2em;
-    cursor: pointer;
-}
-
-#message{
+/* Lines 395 to 411 style contact.php */
+#message {
     height: 9.3em;
 	resize: none;
 }
 
-.contact-form-control{
+.contact-form-control {
    	margin-top: 1em;
 }
 
-.contact-button{
+.contact-button {
    	margin-left: 15px;
    	margin-top: 1em;
 }
 
-.successDiv{
+.successDiv {
 	display: none;
 }
 
-/*Home CSS*/
-.aboutCenter{
+/* home.php CSS */
+.aboutCenter {
 	width: 1160px;
 	margin: 0px auto;
 	text-align: center;
@@ -483,14 +419,14 @@ html {overflow-y: scroll;}
 	background-color: #fefefe;
 }
 
-.aboutItem{
+.aboutItem {
 	margin-top: 1em;
 	margin-bottom: 2em;
 	clear: both;
 	border-bottom: 1px solid #231F20;
 }
 
-.aboutItem p{
+.aboutItem p {
 	text-align: left;
 	display: inline-block;
 	margin-bottom: 4em;
@@ -500,13 +436,13 @@ html {overflow-y: scroll;}
 	line-height: 1.5em;
 }
 
-.title{
+.title {
 	float: left;
 	margin-bottom: -2em;
 }
 
-/*Index CSS*/
-.result{
+/*index.php CSS*/
+.result {
     width: 500px;
     margin-top: 2em;
     margin-left: 2.5em;
@@ -515,18 +451,18 @@ html {overflow-y: scroll;}
     cursor: pointer;
 }
 
-.result:hover{
+.result:hover {
     border: 1px solid #000;
     border-radius: 5px;
 	box-shadow: 3px 3px 2px #888888;
 }
 
 /*User Page*/
-#editLink, #saveLink, #cancelLink{
+#editLink, #saveLink, #cancelLink {
     cursor: pointer;
     text-decoration: underline;
 }
 
-.displayHolder, .editHolder, .display, .editHolder{
+.displayHolder, .editHolder, .display, .editHolder {
     display: inline-block;
 }
