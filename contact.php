@@ -54,7 +54,7 @@
 				</div> <!--/.contactFormDiv -->
 
 				<div class="successDiv">
-					<p>Thank you for sending us a message. We will take a look at it and get back to you as soon as we can.</p>
+					<h1 class="contact-thanks">Thank you for sending us a message. We will take a look at it and get back to you as soon as we can.</h1>
 				</div>
 
 			</div><!--/.contactContent -->

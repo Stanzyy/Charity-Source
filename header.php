@@ -38,7 +38,7 @@
 							}
 							//If the user is logged in, show their name and sign out
 							else{
-								echo "<li><a href='#'><span id='uname'>Hi ".$_SESSION['firstName'] . "</span></a></li>  <li style='cursor:pointer;'><a id='logout' style='background-color:red;'>Log Out</a></li>";
+								echo "<li id='userNameNav'><a href='index.php'><span id='uname'>Hi ".$_SESSION['firstName'] . "</span></a></li>  <li style='cursor:pointer;'><a id='logout' style='background-color:red;'>Log Out</a></li>";
 							}            
 						?>
 						</div><!-- /.headerLogin-->
