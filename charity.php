@@ -196,7 +196,7 @@
         <script src="javascripts/trackDonate.js"></script>
         <script type="text/javascript" src="javascripts/canvasjs.min.js"></script> 
         <script type="text/javascript">
-            //Charity page namespace
+            //Charity page namespace. Kept in here because it uses php for the pie chart
             var charityPageJS = {
                 init: function(){
                     //Set up listener for clicking the '?' which means the user wants more information on the category
