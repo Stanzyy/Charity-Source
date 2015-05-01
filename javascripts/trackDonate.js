@@ -7,8 +7,8 @@ var trackDonate = {
     },
     
     track: function(){
-        //alert("button was clicked");
-        $.ajax({ //ajax call to update database with new donation
+        //ajax call to update database with new donation
+        $.ajax({ 
             type: "GET",
             url: "functions.php",
             data: {
@@ -27,6 +27,8 @@ var trackDonate = {
         
 }
 
-$(function(){ //initialize trackDonate variable
+
+$(function(){
+    //On ready, call function to create any event handlers we need.
     trackDonate.init();
 });

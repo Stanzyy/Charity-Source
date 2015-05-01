@@ -68,44 +68,7 @@
                         <div class="aboutStatsSingle col-xs-6 .col-md-4">
                             <h3>How Contributions Help</h3>
                             
-                            <!-- Script below generates the pie chart, pulling data from the database to populate it -->
-                            <script>						
-                                window.onload = function () {
-                                    var chart = new CanvasJS.Chart("chartContainer",
-                                    {
-                                        title:{
-                                            text: "Financial Percentages",
-                                            text: "Total Revenue = $<?php echo $totalRevenue ?>" 
-                                        },
-                                        animationEnabled: true,
-                                        legend:{
-                                            verticalAlign: "center",
-                                            horizontalAlign: "left",
-                                            fontSize: 15,
-                                            fontFamily: "Helvetica"        
-                                        },
-                                        theme: "theme2",
-                                        data: [
-                                        {        
-                                            type: "pie",       
-                                            indexLabelFontFamily: "Garamond",       
-                                            indexLabelFontSize: 15,
-                                            startAngle:-20,      
-                                            showInLegend: true,
-                                            toolTipContent:"{legendText} {y}%",
-                                            dataPoints: [
-                                                {  y: "<?php echo $privatePercent ?>", legendText:"Private Support", label: "$<?php echo $privateSupport ?>" },
-                                                {  y: "<?php echo $otherPercent ?>", legendText:"Other Support", label: "$<?php echo $otherSupport ?>" }
-                                            ]
-                                        }
-                                        ]
-                                    });
-                                    chart.render();
-                                }
-                            </script>
-                            
                             <!-- Link to canvasJS which was used to create the pie charts -->	
-                            <script type="text/javascript" src="javascripts/canvasjs.min.js"></script> 
                             <div id="chartContainer" style="height: 200px; width: 100%;"></div>
                         
                         </div> <!--/.aboutStatsSingle -->
@@ -231,6 +194,7 @@
 
         <!-- Link for tracking donations to the charity -->
         <script src="javascripts/trackDonate.js"></script>
+        <script type="text/javascript" src="javascripts/canvasjs.min.js"></script> 
         <script type="text/javascript">
             //Charity page namespace
             var charityPageJS = {
@@ -260,6 +224,37 @@
             //Wait for the document to load
             $(function(){
                 charityPageJS.init();
+                
+                var chart = new CanvasJS.Chart("chartContainer",
+                {
+                    title:{
+                        text: "Financial Percentages",
+                        text: "Total Revenue = $<?php echo $totalRevenue ?>" 
+                    },
+                    animationEnabled: true,
+                    legend:{
+                        verticalAlign: "center",
+                        horizontalAlign: "left",
+                        fontSize: 15,
+                        fontFamily: "Helvetica"        
+                    },
+                    theme: "theme2",
+                    data: [
+                    {        
+                        type: "pie",       
+                        indexLabelFontFamily: "Garamond",       
+                        indexLabelFontSize: 15,
+                        startAngle:-20,      
+                        showInLegend: true,
+                        toolTipContent:"{legendText} {y}%",
+                        dataPoints: [
+                            {  y: "<?php echo $privatePercent ?>", legendText:"Private Support", label: "$<?php echo $privateSupport ?>" },
+                            {  y: "<?php echo $otherPercent ?>", legendText:"Other Support", label: "$<?php echo $otherSupport ?>" }
+                        ]
+                    }
+                    ]
+                });
+                chart.render();
             });
         </script>
     </body>
