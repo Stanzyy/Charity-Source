@@ -77,12 +77,11 @@
 					</div>
 
 					<div class="modal-body">
-						<p>Would you like to view your profile?</p>
+						<p>Now that you have signed up, we will be able to recommend charities to donate to, as well as keep track of your donations.</p>
 					</div>
 
 					<div class="modal-footer">
-						<a href="index.php">No Thanks</a>
-						<a href="userPage.php">Sure</a>
+						<a href="index.php">Got it</a>
 					</div>
 				</div><!--/.modal-content-->
 			</div><!--/.modal-dialog-->
