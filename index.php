@@ -202,8 +202,15 @@
         <?php require_once('footer.php');?>
     
         <!--Grab the js libraries we need to run the shuffle grid-->
+
+        <!--Link to modernizr, shuffle requires modernizr to run.
+        http://modernizr.com/ -->
         <script src="javascripts/modernizr.js"></script>
+
+        <!--Link to shuffle.js which powers our browse page.
+        http://vestride.github.io/Shuffle/-->
         <script src="javascripts/jquery.shuffle.js"></script>
+        
         <script src="javascripts/browse.js"></script>
     </body>
 </html>

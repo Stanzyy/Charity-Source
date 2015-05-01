@@ -194,7 +194,11 @@
 
         <!-- Link for tracking donations to the charity -->
         <script src="javascripts/trackDonate.js"></script>
+
+        <!--Link to canas.js which runs the pie charts.
+        http://canvasjs.com/-->
         <script type="text/javascript" src="javascripts/canvasjs.min.js"></script> 
+        
         <script type="text/javascript">
             //Charity page namespace. Kept in here because it uses php for the pie chart
             var charityPageJS = {
