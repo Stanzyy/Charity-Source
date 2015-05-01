@@ -1,112 +1,137 @@
+/*GENERAL STYLING FOR PAGES*/
+
+/*Grab a font from Google*/
 @import url(http://fonts.googleapis.com/css?family=Lato);
 
-body {
+/* Add scroll bar to all pages. Fixes annoying jump when going from pages that do and do not need scrolling. */
+html{
+    overflow-y: scroll;
+}
+
+body{
     padding-top: 70px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */   
     background-color: #FEFEFE;
     font-family: 'Lato';
 }
 
+/*Space out paragraph line height for better readability*/
 body p{
     line-height: 1.5em;
 }
 
-/* Styles for footer of all pages */
-footer {
+/* Styles for navigation bar */
+.navbar-fixed-top .nav{
+    padding: 35px 0;
+    margin-right: 0px;
+}
+
+/* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+@media(min-width:768px){
+    body{
+        padding-top: 100px;
+    }
+
+    .navbar-fixed-top .navbar-brand{
+        padding: 15px 0;
+    }
+}/*End media query*/
+
+/* Hides the Charity Source logo image when the screen gets too small */
+@media only screen and (max-width: 770px) {
+    #logo{
+        display: none;
+    }
+}/*End media query*/
+
+.navbar-default{
+    background-color: #2290F5;
+    border-color: #2290F5;
+}
+
+.navbar-default .navbar-nav > li > a{
+    /*Change active text color here*/
+    color: #FEFEFE;
+    font-size: 150%;
+}
+
+/* Styles the images under the nav bar on certain pages */
+.imgWrapper{
+    width: 100%;
     background-color: #424749;
-    position:fixed;
-    left:0px;
-    bottom:0px;
-    height:30px;
-    width:100%;
+    padding-top: 2em;
+    padding-bottom: 1.5em;
+    margin-left: -8px;
+    height: 375px;
+}
+
+/* Removes bottom border from the last item on the about and team pages*/
+.lastItem{
+    border-bottom: none;
+}
+
+/* Styles for footer of all pages */
+footer{
+    background-color: #424749;
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    height: 30px;
+    width: 100%;
     color: white;
     padding-top: 5px;
     text-align: center;    
 }
 
-.navbar-fixed-top .nav {
-    padding: 35px 0;
-    margin-right: 0px;
+/*Class to use to make items display inline*/
+.inline{
+    display: inline-block;
 }
 
-/* Styles for navigation bar */
-@media(min-width:768px) {
-    body {
-        padding-top: 100px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
-    }
-    .navbar-fixed-top .navbar-brand {
-        padding: 15px 0;
-    }
-}
+/*END GENERAL STYLES*/
 
-.navbar-default {
-    background-color: #2290F5;
-    border-color: #2290F5;
-  /*  height: 15%; */
-}
+/*STYLING FOR BROWSE*/
 
-.navbar-default .navbar-nav > li > a {
-    color: #FEFEFE; /*Change active text color here*/
-    font-size: 150%;
-}
-
-/* Padding for index.php */
+/*Content padding*/
 .browseContent{
     padding: 2em;
 }
 
-/* Padding for charities listed on index.php */
+/*Filter padding*/
 .filters{
     padding-bottom: 10px;
 }
 
-/* Margin for image inside of carousel */
-.carousel-inner img {
-  margin: 0 auto;
+/* Floats the 'search by' filter to the left */
+.sortText{
+    float: right;   
 }
 
-/* Add scroll bar to all pages */
-html {overflow-y: scroll;}
-
-/* Floats the 'search by filter to the left on index.php */
-.sortText {
- float: right;   
-}
-
-/* Adds small padding to top of search section on index.php */
+/* Adds small padding to top of search section*/
 .search{
- padding-top: 10px;   
+    padding-top: 10px;   
 }
 
-/* Filter Buttons for browse.php */
+/* Filter Buttons*/
 .filterButton{
-    width: 80px;  height: 40px;
+    width: 80px;  
+    height: 40px;
     padding: 0px;
     margin: 5px;
-
 }
 
-/* Hides the sideb bar on browse.php if screen is too small */
-@media (max-width:1500px) {
-    #sidebar-wrapper {
-      left: 0;
-    }
-}
-
-/* Hides the Charity Source logo image when the screen gets too small */
-@media only screen and (max-width: 770px) {
-    #logo {
-        display: none;
-    }
+/* Margin for image inside of carousel */
+.carousel-inner img{
+    margin: 0 auto;
 }
 
 /* Centers the top charities' pictures in the carousel and set their sizes  */
 .carousel-inner > .item > img,
-.carousel-inner > .item > a > img {
+.carousel-inner > .item > a > img{
     width: 25%;
     margin: auto;
 }
 
-/* Lines 110 to 134 style the carousel on index.php */
+/*Carousel styling*/
 .carousel-control.right{
     background-image: none;   
 }
@@ -115,7 +140,7 @@ html {overflow-y: scroll;}
     background-image: none;   
 }
 
-.carouselWidth {
+.carouselWidth{
     width: 100%;
     background-color: #424749;
     height: 355px;
@@ -123,7 +148,7 @@ html {overflow-y: scroll;}
     padding-top: 1.5em;
 }
 
-.item {
+.item{
     margin-top: 10px;
     background-color: #FEFEFE;
 }
@@ -133,15 +158,29 @@ html {overflow-y: scroll;}
     margin: 0px auto;
 }
 
-/* Styles the images under the nav bar on certain pages */
-.imgWrapper {
-    width: 100%;
-    background-color: #424749;
-    padding-top: 2em;
-    padding-bottom: 1.5em;
-    margin-left: -8px;
-    height: 375px;
+/* sets the width for the search bar*/
+#resultSearch{
+    width: 30%;   
 }
+
+.result {
+    width: 500px;
+    margin-top: 2em;
+    margin-left: 2.5em;
+    margin-bottom: 2em;
+    border: none;
+    cursor: pointer;
+}
+
+.result:hover {
+    border: 1px solid #000;
+    border-radius: 5px;
+    box-shadow: 3px 3px 2px #888888;
+}
+
+/*END BROWSE CSS*/
+
+/*STYLING FOR CHARITY PAGES*/
 
 /* Stlyes the charity's logo image on charity.php */
 .charityImg{
@@ -150,43 +189,88 @@ html {overflow-y: scroll;}
     margin-top: 1em;
 }
 
-/* sets the width for the search bar on index.php */
-#resultSearch {
- width: 30%;   
-}
-
-/* Sets filter buttons inline */
-.inline{
-    display: inline-block;
-}
-
-/* Lines 164 to 175 stlyes data on charity.php */
-.aboutStatsSingle{
-    padding: 1em;
-}
-
-.padHere{
- padding-right: 5em;   
-}
-
-.paypal{
-    text-align: center;
-    padding-bottom: 5em;
-}
-
 /* Add margin to the picture on home.php */
 .headingImg{
     margin-top: 1.5em;
 }
 
-/* Styles contact.php */
+/*Styling for the data*/
+.aboutStatsSingle{
+    padding: 1em;
+}
+
+.padHere{
+    padding-right: 5em;   
+}
+
+
+/*Paypal button*/
+.paypal{
+    text-align: center;
+    padding-bottom: 5em;
+}
+
+
+/*Styling for the '?'' at the end of each stat we give*/ 
+.moreInfo{
+    text-decoration: underline;
+    color: blue;
+    cursor: pointer;
+}
+
+/*Hover for closing the informational modal*/
+.gotIt {
+    cursor: pointer;
+}
+
+/*Don't display the bootstrap modal on the page*/
+.bstrp-modal{
+    display: none;
+}
+
+/*END CHARITY PAGE STYLING*/
+
+/*CONTACT PAGE STYLING*/
+
 .contactFormDiv{
     width: 1160px;
     margin: 0px auto;
 }
 
-/*About page CSS line 189 to 220 */
-.sponsorCenter{
+/*drop the submit button a little more below the text area */
+#submitButton { 
+    position: relative;
+    top: 4.5em;
+}
+
+/* display the input fields in a block style */
+#name, #email, #subject, #message, .inputTitle { 
+    display: block;
+}
+
+#message{
+    height: 9.3em;
+    resize: none;
+}
+
+.contact-form-control{
+    margin-top: 1em;
+}
+
+.contact-button{
+    margin-left: 15px;
+    margin-top: 1em;
+}
+
+.successDiv{
+    display: none;
+}
+
+
+/*END CONTACT PAGE STYLING*/
+
+/*TEAM PAGE STYLING*/
+.teamCenter{
 	width: 1160px;
 	margin: 0px auto;
 	text-align: center;
@@ -194,7 +278,7 @@ html {overflow-y: scroll;}
 	background-color: #fefefe;
 }
 
-.sponsorItem{
+.teamItem{
 	margin-top: 1em;
 	margin-bottom: 3em;
 	clear: both;
@@ -202,13 +286,13 @@ html {overflow-y: scroll;}
 	padding-bottom: 1em;
 }
 
-.sponsorImg{
+.teamImg{
 	height: 150px;
 	margin-top: 4.8em;
 	display: inline-block;
 }
 
-.sponsorText{
+.teamText{
 	width: 88%;
 	text-align: left;
 	display: inline-block;
@@ -219,40 +303,46 @@ html {overflow-y: scroll;}
 	line-height: 1.5em;
 }
 
-/* Removes bottom border from about.php */
-.lastItem{
-	border-bottom: none;
+/* Float all pics to the left */
+.person{ 
+    float: left
 }
 
-/* Charity Page CSS lines 228 to 236 */
-.moreInfo {
-    text-decoration: underline;
-    color: blue;
-    cursor: pointer;
-}
-
-.gotIt {
-    cursor: pointer;
-}
-
-/* Form headings on signup.php */
-.formHead h3{
-    width: 4em;
-    display: inline-block;
-}
-            
-.formHead p{
+/* Position the three pics that are in a row */
+.person img{ 
+    width:  200px;
+    height: 300px;
+    padding-right: 1em;
     display: inline-block;
 }
 
-/*Will display error messages if a login or signup failed*/
-#signinErrorContainer, #signupErrorConatiner{
-    visibility: hidden;
+/* Position names underneath each pic */
+.person p{ 
+    position: relative;
 }
+
+/*END TEAM PAGE STYLING*/
+
+/*SIGNUP PAGE STYLING*/
 
 .content{
     width: 1160px;
     margin: 0px auto;
+}
+
+/*Form headings*/
+.formHead h3{
+    width: 4em;
+    display: inline-block;
+}
+
+.formHead p{
+    display: inline-block;
+}
+
+/*Error message initial styling. Will be displayed via JavaScript*/
+#signinErrorContainer, #signupErrorConatiner{
+    visibility: hidden;
 }
 
 /*signin/signup forms*/
@@ -298,120 +388,10 @@ html {overflow-y: scroll;}
     height: 2em;
 }
 
+/*END SIGNUP STYLING*/
 
-/*Footer Styling*/
-
-/*This is CSS for a no JS modal popup box from http://www.webdesignerdepot.com/2012/10/creating-a-modal-window-with-html5-and-css3/ */
-.modalDialog {
-    position: fixed;
-	font-family: Arial, Helvetica, sans-serif;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	background: rgba(0,0,0,0.8);
-	z-index: 99999;
-    opacity:0;
-    -webkit-transition: opacity 400ms ease-in;
-    -moz-transition: opacity 400ms ease-in;
-    transition: opacity 400ms ease-in;
-    pointer-events: none;
-}
-            
-.modalDialog:target {
-    opacity:1;
-    pointer-events: auto;
-}
-
-.modalDialog > div {
-    width: 400px;
-    position: relative;
-    margin: 10% auto;
-    padding: 5px 20px 13px 20px;
-    border-radius: 2px;
-    background: #fff;
-}
-            
-.close {
-    background: #606061;
-    color: #FFFFFF;
-    line-height: 25px;
-    position: absolute;
-    right: -12px;
-    text-align: center;
-    top: -10px;
-    width: 24px;
-    text-decoration: none;
-    font-weight: bold;
-    -webkit-border-radius: 12px;
-    -moz-border-radius: 12px;
-    border-radius: 12px;
-    -moz-box-shadow: 1px 1px 3px #000;
-    -webkit-box-shadow: 1px 1px 3px #000;
-    box-shadow: 1px 1px 3px #000;
-}
-
-.close:hover { background: #00d9ff; }
-
-
-
-.bstrp-modal{
-    display: none;
-}
-
-/* About page styles lines 364-380 */
-
-/* Float all pics to the left */
-.person { 
-    float: left
-}
-
-/* Position the three pics that are in a row */
-.person img { 
-    width:  200px;
-    height: 300px;
-    padding-right: 1em;
-    display: inline-block;
-}
-
-/* Position names underneath each pic */
-.person p { 
-    position: relative;
-}
-
-/* Contact page styles lines 383-392 */
-/*drop the submit button a little more below the text area */
-#submitButton { 
-    position: relative;
-    top: 4.5em;
-}
-
-/* display the input fields in a block style */
-#name, #email, #subject, #message, .inputTitle { 
-    display: block;
-}
-
-/* Lines 395 to 411 style contact.php */
-#message {
-    height: 9.3em;
-	resize: none;
-}
-
-.contact-form-control {
-   	margin-top: 1em;
-}
-
-.contact-button {
-   	margin-left: 15px;
-   	margin-top: 1em;
-}
-
-.successDiv {
-	display: none;
-}
-
-/* home.php CSS */
-.aboutCenter {
+/*ABOUT PAGE STYLING*/
+.aboutCenter{
 	width: 1160px;
 	margin: 0px auto;
 	text-align: center;
@@ -419,14 +399,14 @@ html {overflow-y: scroll;}
 	background-color: #fefefe;
 }
 
-.aboutItem {
+.aboutItem{
 	margin-top: 1em;
 	margin-bottom: 2em;
 	clear: both;
 	border-bottom: 1px solid #231F20;
 }
 
-.aboutItem p {
+.aboutItem p{
 	text-align: left;
 	display: inline-block;
 	margin-bottom: 4em;
@@ -436,28 +416,15 @@ html {overflow-y: scroll;}
 	line-height: 1.5em;
 }
 
-.title {
+.title{
 	float: left;
 	margin-bottom: -2em;
 }
 
-/*index.php CSS*/
-.result {
-    width: 500px;
-    margin-top: 2em;
-    margin-left: 2.5em;
-    margin-bottom: 2em;
-    border: none;
-    cursor: pointer;
-}
+/*END ABOUT PAGE STYLING*/
 
-.result:hover {
-    border: 1px solid #000;
-    border-radius: 5px;
-	box-shadow: 3px 3px 2px #888888;
-}
 
-/*User Page*/
+/*USER PAGE STYLING*/
 #editLink, #saveLink, #cancelLink {
     cursor: pointer;
     text-decoration: underline;
