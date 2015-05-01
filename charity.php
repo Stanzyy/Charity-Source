@@ -224,21 +224,28 @@
             //Wait for the document to load
             $(function(){
                 charityPageJS.init();
-                
+                // Create a new chart 
                 var chart = new CanvasJS.Chart("chartContainer",
                 {
-                    title:{
-                        text: "Financial Percentages",
+                    // Cret the title of the chart and include the charity's total revenue
+                    title:{                    
                         text: "Total Revenue = $<?php echo $totalRevenue ?>" 
                     },
+                    
+                    // Enabling the animation causes the chart to appear with an animation
                     animationEnabled: true,
+                    
+                    // Set the legend's position and font
                     legend:{
                         verticalAlign: "center",
                         horizontalAlign: "left",
                         fontSize: 15,
                         fontFamily: "Helvetica"        
                     },
+                    // Setting the theme controls the colors of the chart
                     theme: "theme2",
+                    
+                    // Set the type of chart, font, text, and include the data of the chart
                     data: [
                     {        
                         type: "pie",       
@@ -247,6 +254,8 @@
                         startAngle:-20,      
                         showInLegend: true,
                         toolTipContent:"{legendText} {y}%",
+                        
+                        // Used php to include the data so it is dynamically displayed depending on what charity is being showed
                         dataPoints: [
                             {  y: "<?php echo $privatePercent ?>", legendText:"Private Support", label: "$<?php echo $privateSupport ?>" },
                             {  y: "<?php echo $otherPercent ?>", legendText:"Other Support", label: "$<?php echo $otherSupport ?>" }
@@ -254,6 +263,8 @@
                     }
                     ]
                 });
+                
+                // Displays the chart
                 chart.render();
             });
         </script>
