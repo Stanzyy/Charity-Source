@@ -102,9 +102,9 @@
 
                 <div class="result clothes" data-name="SalvationArmy" data-popularity="1">
                     <a href="charity.php?charity=SalvationArmy">
-                        <h3 class = "charityHead"><img src="images/SalvationArmy.png" style="height: 100px; width: 100px;" />Salvation Army</h3>
+                        <h3 class = "charityHead"><img src="images/2SalvationArmy.png" style="height: 100px; width: 100px;" />Salvation Army</h3>
                     </a>
-                </div>
+                </div>  
 
                 <div class="result community" data-name="UnitedWay" data-popularity="2">
                     <a href="charity.php?charity=UnitedWay">
