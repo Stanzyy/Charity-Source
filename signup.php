@@ -27,8 +27,7 @@
     					<div class="inputField"><input required class="form-control" id="existingPassword" type="password" placeholder="Password"></div>
                         <div class="inputField buttonHolder"><button class="btn" id="signInButton" type="submit">Submit</button></div>
                     </form> <!--/#signinForm -->
-                </div><!--/#leftForm -->
-                <!--Comment to remove the blank space between the divs. This allows for the use of 100% width instead of 99%
+                </div><!--Comment to remove the blank space between the divs. This allows for the use of 100% width instead of 99%
              --><div id="rightForm">
                     <div class="formHead">
                         <h3>Sign Up</h3>
